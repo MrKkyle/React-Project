@@ -1,0 +1,226 @@
+body
+{
+	font-family: Arial;
+	margin: 0;
+}
+*
+{
+	box-sizing: border-box;
+}
+							/* The Background Image */
+
+.bg-img
+{
+
+	background-image: url("../Images/ruby-khoesial-kgwPdpvXHH0-unsplash.jpg");
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #cccccc;
+	position: fixed;
+	margin: 0;
+}
+img
+{
+	vertical-align: middle;
+}
+.text
+{
+	font-size: 12px;
+	color: white;
+	padding: 4px 6px;
+	width: 100%;
+	text-align: center;
+	bottom: 8px;
+	font-family: Lucida Sans;
+	background-color: #00000099;
+	border-radius: 2px;
+}
+
+.button
+{
+	padding: 0px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	width: 150px;
+	height: 40px;
+	position: relative;
+	background-size: cover;
+	color: black;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	margin: 0;
+	transition-duration: 0.4s;
+}
+.button:hover
+{
+	color: white;
+	border: 1px solid white;
+	background-position: center;
+}
+						
+
+								/* Full-width input fields */
+input[type = text], input[type = password]
+{
+	width: 100%;
+	padding: 15px;
+	margin: 8px 0; 
+	border: 1px solid #ccc;
+	display: inline-block;
+	box-sizing: border-box;
+} 
+input[type = email]
+{
+	width: 100%;
+	padding: 15px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	display: inline-block;
+	box-sizing: border-box;
+}
+input[type = comment]
+{
+	width: 100%;
+	padding: 15px;
+	margin: 8px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	box-sizing: border-box;
+	word-break: break-all;
+}
+.imgcontainer
+{
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+img.avatar
+{
+	border-radius: 60%;
+	background-image: url(../Images/2kxrvbw87yja1.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 200px;
+	height: 200px;
+    position: relative;
+    margin: 12px;
+}
+.modal-container
+{
+	padding: 16px;
+}
+span.psw
+{
+	float: right;
+	padding-top: 16px;
+}
+								/* The Modal (background) */
+.modal 
+{
+	display: block; 							/* Hidden by default */
+	position: fixed; 						/* Stay in place */
+	z-index: 2; 							/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; 							/* Full width */
+	height: 100%; 							/* Full height */
+	overflow: auto; 						/* Enable scroll if needed */
+	background-color: rgb(0,0,0); 			/* Fallback color */
+	background-color: rgba(0,0,0,0.4); 		/* Black w/ opacity */
+	padding-top: 60px;
+}
+								/* Modal Content/box */
+.modal-content
+{
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 40%;
+	height: 60%;
+	position: absolute;
+	top: 2%;
+	left: 35%;
+	z-index: 2;
+	left: 50%;
+    transform: translate(-50%, 0%); 
+	text-align: center
+}
+.splash
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #070707;
+	height: 100%;
+	z-index: 200;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+}
+.splash.display-none
+{
+	position: fixed;
+	opacity : 0;
+	top: 0;
+	left: 0;
+	width: 1880px;
+	height: 977px;
+	background: black;
+	z-index: -10; 	/* Makes it fall behind everything else */
+	color: white;
+	text-align: center;
+	transition: all 0.5s;
+	
+}
+@keyframes fadeIn
+{
+	to
+	{
+		opacity: 1;
+	}
+}
+.fade-in
+{
+	opacity: 0;
+	z-index: -11;
+	animation: fadeIn 1s ease-in forwards;
+}
+.error
+{
+	color: #FF0000;
+}
+
+/* width */
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+    background: #5c5c5e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+    background: whitesmoke;
+}
+
+hr
+{
+	width: 50%;
+}

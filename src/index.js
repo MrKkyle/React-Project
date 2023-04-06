@@ -6,8 +6,9 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
+import '../src/Css/JPN.css';
 
-export default function App()
+export default function JPN()
 {
     return ( 
         <div>
@@ -28,4 +29,4 @@ export default function App()
 
 /* ReactDOM enables us to render this element inside the real DOM*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(<JPN />);

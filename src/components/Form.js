@@ -21,17 +21,23 @@ function Form()
     */   
 
     return (
-    
-        <form onSubmit = {handleSubmit}>
-            <label>Username</label>
-            <span><input type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
+    <div className = 'modal'>
+        <form className = 'modal-content' method = 'post' onSubmit = {handleSubmit}>
 
-            <label>Password</label>
-            <span><input type = 'psw' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange} required></input></span>
+            <div className = 'img-container'>
+                <img className = 'avatar'></img>
+            </div>
+            <div className = 'modal-container'>
+                <label><b>Username</b></label>
+                <span><input type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
 
-            <button type = 'submit'>Submit</button>
+                <label><b>Password</b></label>
+                <span><input type = 'password' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange} required></input></span>
+
+                <button className = 'button' type = 'submit'>Submit</button>
+            </div>
         </form>
-    
+    </div>
     );
 }
 
