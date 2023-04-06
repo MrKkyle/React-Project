@@ -1,24 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Form from './components/Form'
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
+import NoPage from './pages/NoPage';
 
-/* Must start with a Caps letter */
-function Background()
+export default function App()
 {
-    return (
-        <>
-            <h2>Hi, I am a background</h2>
-            <Form />
-        </>
+    return ( 
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path = "/" element = {<Layout />}>
+                        <Route index element = {<Home />}></Route>
+                        <Route path = "blogs" element = {<Blogs />}></Route>
+                        <Route path = "contact" element = {<Contact />}></Route>
+                        <Route path = "*" element = {<NoPage />}></Route>
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+
+        </div>
     );
 }
 
-
-const element = <h1> Hello World</h1>;
-
 /* ReactDOM enables us to render this element inside the real DOM*/
-ReactDOM.render(<Background />, document.getElementById("root"));
-
-
-
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
