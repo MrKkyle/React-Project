@@ -9,10 +9,10 @@ body
 }
 							/* The Background Image */
 
-.bg-img
+.background-image
 {
 
-	background-image: url("../Images/ruby-khoesial-kgwPdpvXHH0-unsplash.jpg");
+	background-image: url(../Images/778122.png);
 	height: 100%;
 	width: 100%;
 	background-position: center;
@@ -102,7 +102,7 @@ input[type = comment]
 img.avatar
 {
 	border-radius: 60%;
-	background-image: url(../Images/2kxrvbw87yja1.jpg);
+	background-image: url(../Images/wr47krotuod91.png);
 	background-size: cover;
 	background-position: center;
 	width: 200px;

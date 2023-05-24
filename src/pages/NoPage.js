@@ -1,4 +1,4 @@
-
+/* Used when selected page cannot be found or unavailable */
 function NoPage()
 {
   return (

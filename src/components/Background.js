@@ -6,7 +6,7 @@ function Background()
     return (
         <>
             <h2>Hi, I will be the Background + form</h2>
-            <Form />
+            
         </>
     );
 }
