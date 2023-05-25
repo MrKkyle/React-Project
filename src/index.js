@@ -9,9 +9,9 @@ import Domain9 from './pages/Domain9';
 import WorldBosses from './pages/WorldBosses';
 import Enemies from './pages/Enemies';
 import NoPage from './pages/NoPage';
-import '../src/Css/JPN.css';
+import '../src/Css/main.css';
 
-export default function JPN()
+export default function Main()
 {
     return ( 
         <div>
@@ -35,4 +35,4 @@ export default function JPN()
 
 /* ReactDOM enables us to render this element inside the real DOM*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<JPN />);
+root.render(<Main />);
