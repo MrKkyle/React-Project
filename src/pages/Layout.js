@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import MyImage from '../Images/20200930_155017.jpg';
 
 const Layout = () => {
   return (
@@ -6,26 +7,24 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" id = "about">Home</Link>
           </li>
           <li>
-            <Link to="/aesperia">Aesperia</Link>
+            <Link to="/aesperia" id = "blog">Aesperia</Link>
+          </li>
+        
+          <li>
+            <img className = "avatar" src = {MyImage}></img>
           </li>
           <li>
-            <Link to="/vera">Vera</Link>
+            <Link to="/vera" id = "projects">Vera</Link>
           </li>
           <li>
-            <Link to="/domain9">Domain 9</Link>
-          </li>
-          <li>
-            <Link to="/worldbosses">WorldBosses</Link>
-          </li>
-          <li>
-            <Link to="/enemies">Enemies</Link>
+            <Link to="/domain9" id = "contact">Domain 9</Link>
           </li>
         </ul>
       </nav>
-
+      
       <Outlet />
     </>
   )

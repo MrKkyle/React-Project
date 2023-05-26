@@ -1,0 +1,74 @@
+.c
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mySidenav a
+{
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 17px;
+    width: 120px;
+    text-decoration: none;
+    color: rgb(122, 39, 39);
+    border-radius: 0 5px 5px 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+#mySidenav a:hover 
+{
+    left: 0;
+    font-size: 20px;
+}
+
+#about 
+{
+    top: 20px;
+    background-color: #04AA6D;
+}
+
+#blog 
+{
+    top: 80px;
+    background-color: #2196F3;
+}
+
+#projects 
+{
+    top: 140px;
+    background-color: #f44336;
+}
+
+#contact 
+{
+    top: 200px;
+    background-color: #555
+}
+ul
+{
+    list-style-type: none;
+}
+
+.button3 
+{
+
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	cursor: pointer;
+	width: 90px;
+	height: 40px;
+	position: relative;
+
+	margin: 10px;
+	color: black;
+	border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.button3:hover
+{
+	color: white;
+}
