@@ -1,13 +1,10 @@
-import aesperiaEnemies from './sub-domains/sd-Aesperia/Aesperia-Enemies';
-import aesperiaWorldBosses from './sub-domains/sd-Aesperia/Aesperia-WorldBosses';
-import artificialIsland from './sub-domains/sd-Aesperia/Artifical-Island';
-import hykros from './sub-domains/sd-Aesperia/Hykros';
-import Simulacra from './sub-domains/sd-Aesperia/Simulacra';
-import {Routes, Route, useNavigate} from 'react-router-dom';
 
+import {useNavigate} from 'react-router-dom';
+import '../Css/Background2.css';
 
 function Aesperia()
 {
+  
   const navigate = useNavigate();
 
   const navigateToSimulacra = () => 
@@ -37,22 +34,17 @@ function Aesperia()
     //navigate to /Hykros
     navigate('/Hykros');
   };
-
+  
   return (
-  <>
-    <h1>Aesperia</h1>
-    <>
-      <button className = "button3" onClick = {navigateToSimulacra}>Simulacra</button>
-      <br></br>
-      <button onClick = {navigateToEnemies}>Enemies</button>
-      <br></br>
-      <button onClick = {navigateToWorldBosses}>World Bosses</button>
-      <br></br>
-      <button onClick = {navigateToArtificialIsland}>Artificial Island</button>
-      <br></br>
-      <button onClick = {navigateToHykros}>Hykros</button>
-    </>
-  </>
+    <div className = "background">
+      <div className = "ul">
+          <li className = "ul li diamond1" onClick = {navigateToSimulacra}><div className = "image"> Simulacra</div></li>
+          <li className = "ul li diamond2" onClick = {navigateToEnemies}><div className = "image"> Enemies</div></li>
+          <li className = "ul li diamond3" onClick = {navigateToWorldBosses}><div className = "image"> World Bosses</div></li>
+          <li className = "ul li diamond6" onClick = {navigateToArtificialIsland}><div className = "image"> Artificial Island</div></li>
+          <li className = "ul li diamond5" onClick = {navigateToHykros}><div className = "image"> Hykros</div></li>
+      </div>
+    </div>
   );
   
 };

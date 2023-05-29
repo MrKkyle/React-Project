@@ -34,15 +34,15 @@ function Domain9()
 
   return (
   <>
-    <h1>Domain 9</h1>
-    <button onClick = {navigateToSimulacra}>Simulacra</button>
-    <br></br>
-    <button onClick = {navigateToEnemies}>Enemies</button>
-    <br></br>
-    <button onClick = {navigateToWorldBosses}>World Bosses</button>
-    <br></br>
-    <button onClick = {navigateToUnknown}>Unknown</button>
-    <br></br>
+    <div className = "background">
+      <div className = "ul">
+          <li className = "ul li diamond1" onClick = {navigateToSimulacra}><div className = "image"> Simulacra</div></li>
+          <li className = "ul li diamond2" onClick = {navigateToEnemies}><div className = "image"> Enemies</div></li>
+          <li className = "ul li diamond3" onClick = {navigateToWorldBosses}><div className = "image"> World Bosses</div></li>
+          <li className = "ul li diamond5" onClick = {navigateToUnknown}><div className = "image"> Artificial Island</div></li>
+
+      </div>
+    </div>
   </>
   );
   

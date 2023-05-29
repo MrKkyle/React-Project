@@ -25,7 +25,7 @@ li a
     display: block;
     color: white;
     text-align: center;
-    padding: 33px 25px;
+    padding: 22px 25px;
     text-decoration: none;
 }
 li a:hover 
@@ -35,7 +35,7 @@ li a:hover
 
 .avatar 
 {
-    width: 150px;
-    height: 80px;
+    width: 110px;
+    height: 60px;
     border-radius: 60%;
 }

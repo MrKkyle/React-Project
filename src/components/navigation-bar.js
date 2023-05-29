@@ -6,7 +6,6 @@ import Aesperia from '../pages/Aesperia';
 import Vera from '../pages/Vera';
 import Domain9 from '../pages/Domain9';
 import NoPage from '../pages/NoPage';
-import {useRef, useEffect} from 'react';
 
 // Import Style sheet below
 import '../Css/navigation-bar.css';

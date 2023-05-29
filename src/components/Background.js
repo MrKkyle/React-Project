@@ -1,11 +1,13 @@
-import Form from './Form';
+import '../Css/main.css'
 
 /* Must start with a Caps letter */
 function Background()
 {
     return (
         <>
-            <h2>Hi, I will be the Background + form</h2>
+            <div className = "background-image">
+
+            </div>
             
         </>
     );

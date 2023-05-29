@@ -1,13 +1,5 @@
-import veraEnemies from './sub-domains/sd-Vera/Vera-Enemies';
-import veraWorldBossses from './sub-domains/sd-Vera/Vera-WorldBosses';
-import graySpace from './sub-domains/sd-Vera/Grayspace';
-import Mirroria from './sub-domains/sd-Vera/Mirroria';
-import confoundingAbyss from './sub-domains/sd-Vera/Confounding-Abyss';
-import innars from './sub-domains/sd-Vera/Innars';
-import miasmicSwamp from './sub-domains/sd-Vera/Miasmic-Swamp';
-import twilightZone from './sub-domains/sd-Vera/Twilight-Zone';
-import Simulacra from './sub-domains/sd-Vera/Simulacra';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import '../Css/Background2.css';
 
 function Vera()
 {
@@ -17,12 +9,10 @@ function Vera()
     {
       navigate('/Simulacra');
     };
-
     const navigateToEnemies = () => 
     {
       navigate('/veraEnemies');
     };
-
     const navigateToGraySpace = () => 
     {
       navigate('/graySpace');
@@ -52,26 +42,19 @@ function Vera()
       navigate('/veraWorldBosses');
     };
     return (
-    <>
-      <h1>Vera</h1>
-      <button onClick = {navigateToSimulacra}>Simulacra</button>
-      <br></br>
-      <button onClick = {navigateToEnemies}>Enemies</button>
-      <br></br>
-      <button onClick = {navigateToWorldBosses}>WorldBosses</button>
-      <br></br>
-      <button onClick = {navigateToTwilightZone}>Twilight Zone</button>
-      <br></br>
-      <button onClick = {navigateToGraySpace}>GraySpace</button>
-      <br></br>
-      <button onClick = {navigateToMirroria}>Mirroria</button>
-      <br></br>
-      <button onClick = {navigateToConfoundingByss}>Confounding Abyss</button>
-      <br></br>
-      <button onClick = {navigateToMiasmicSwamp}>miasmic Swamp</button>
-      <br></br>
-      <button onClick = {navigateToInnars}>Innars</button>
-    </>
+    <div className = "background">
+        <div className = "ul">
+            <li className = "ul li diamond1" onClick = {navigateToSimulacra}><div className = "image"> Simulacra</div></li>
+            <li className = "ul li diamond2" onClick = {navigateToEnemies}><div className = "image"> Enemies</div></li>
+            <li className = "ul li diamond3" onClick = {navigateToWorldBosses}><div className = "image"> World Bosses</div></li>
+            <li className = "ul li diamond4" onClick = {navigateToTwilightZone}><div className = "image"> Twilight Zone</div></li>
+            <li className = "ul li diamond5" onClick = {navigateToGraySpace}><div className = "image"> GraySpace</div></li>
+            <li className = "ul li diamond6" onClick = {navigateToMirroria}><div className = "image"> Mirroria</div></li>
+            <li className = "ul li diamond7" onClick = {navigateToConfoundingByss}><div className = "image"> Confounding Abyss</div></li>
+            <li className = "ul li diamond8" onClick = {navigateToMiasmicSwamp}><div className = "image"> Miasmic Swamp</div></li>
+            <li className = "ul li diamond9" onClick = {navigateToInnars}><div className = "image"> Innars</div></li>
+        </div>
+    </div>
     );
 
 };

@@ -1,11 +1,12 @@
 import Background from '../components/Background';
+import NavigationBar2 from '../components/navigation-bar2';
 
 function Home()
 {
     return (
     <>
-      <h1>Home</h1>
       <Background />
+      <NavigationBar2 />
     </>
     );
 

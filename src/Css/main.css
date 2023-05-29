@@ -7,7 +7,6 @@ body
 {
 	box-sizing: border-box;
 }
-							/* The Background Image */
 .background-image
 {
 
@@ -87,10 +86,5 @@ img
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover 
 {
-    background: whitesmoke;
-}
-
-hr
-{
-	width: 50%;
+    background: rgb(53, 51, 51);
 }
