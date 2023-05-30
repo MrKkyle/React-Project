@@ -17,23 +17,6 @@ function Navigation_Bar2()
                 <a href = {Website} id = "contact">Website</a>
             </div>
         </div>
-
-        /*
-        <div id="mySidenav" class="sidenav">
-            <BrowserRouter>
-                <Routes>
-                    <Route path = "/" element = {<Layout />}>
-                        <Route index element = {<Home />}></Route>
-                        <Route path = "aesperia" element = {<Aesperia />}></Route>
-                        <Route path = "vera" element = {<Vera />}></Route>
-                        <Route path = "domain9" element = {<Domain9 />}></Route>
-                        <Route path = "*" element = {<NoPage />}></Route>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </div>
-
-        */
     );
 }
 

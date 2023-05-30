@@ -8,7 +8,7 @@ import {useRef, useEffect} from 'react';
 
 
 
-function SplashScreen() 
+function SplashScreen(props) 
 {
 	//initiliazed to null
 	let refSplash = useRef(null);
@@ -39,13 +39,16 @@ function SplashScreen()
 		//set the ref to the class that we would like to access
         <div className = "splash" id = "splash" ref = {refSplash}>
             <div className = "splash-text">
-                Add Text here
+                {props.Text}
             </div>
         </div>
     );
 }
 
-
+SplashScreen.defaultProps = 
+{
+	Text: "Add Text Here"
+};
 export default SplashScreen;
 
 

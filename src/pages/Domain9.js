@@ -1,8 +1,9 @@
-import domain9Enemies from './sub-domains/sd-Domain9/Domain9-Enemies';
-import domain9WorldBosses from './sub-domains/sd-Domain9/Domain9-WorldBosses';
-import domain9Unknown from './sub-domains/sd-Domain9/Unknown';
-import Simulacra from './sub-domains/sd-Domain9/Simulacra';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import Background2 from '../components/Background2';
+import Image1 from '../Images/wr47krotuod91.png';
+import Image2 from '../Images/wr47krotuod91.png';
+import Image3 from '../Images/wr47krotuod91.png';
+import Image4 from '../Images/wr47krotuod91.png';
 
 function Domain9()
 {
@@ -33,17 +34,11 @@ function Domain9()
   };
 
   return (
-  <>
-    <div className = "background">
-      <div className = "ul">
-          <li className = "ul li diamond1" onClick = {navigateToSimulacra}><div className = "image"> Simulacra</div></li>
-          <li className = "ul li diamond2" onClick = {navigateToEnemies}><div className = "image"> Enemies</div></li>
-          <li className = "ul li diamond3" onClick = {navigateToWorldBosses}><div className = "image"> World Bosses</div></li>
-          <li className = "ul li diamond5" onClick = {navigateToUnknown}><div className = "image"> Artificial Island</div></li>
-
-      </div>
-    </div>
-  </>
+    <Background2 onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+                onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
+                onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
+                onclick5 = {navigateToUnknown} image5 = {Image4} text5 = "Unknown" display5 = "block"
+    />
   );
   
 };
