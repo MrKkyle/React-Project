@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigation_Bar from './components/navigation-bar';
+import Navigation_Bar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
 
 

@@ -7,12 +7,10 @@ import {useRef, useEffect} from 'react';
 //let container = document.getElementById("cm0");
 
 
-
 function SplashScreen(props) 
 {
 	//initiliazed to null
 	let refSplash = useRef(null);
-	//let refRoot = useRef(null);
 
 	useEffect(()=> 
 	{

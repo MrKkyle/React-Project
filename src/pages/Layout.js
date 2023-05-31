@@ -12,7 +12,6 @@ const Layout = () => {
           <li>
             <Link to="/aesperia">Aesperia</Link>
           </li>
-        
           <li>
             <img className = "avatar" src = {MyImage}></img>
           </li>

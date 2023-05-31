@@ -19,28 +19,30 @@ body
 {
     position: absolute;
     width: 600px;
-    height: 600px;
+    height: 750px;
     margin: 0;
     padding: 0;
-    top: 10%;
+    top: 00%;
     left: 100%;
     transform: translate(-100%, 10%);
     opacity: 1;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
 .ul .li 
 {
     list-style: none;
     position: absolute;
     width: 200px;
     height: 200px;
-    background-color:aqua;
+    background-color:rgba(0, 0, 0, 0.3);
     transform: rotate(45deg);
     margin: -100px;
     overflow: hidden;
     opacity: 0.95;
     display: none;
+    border-radius: 5px;
+    border: 3px solid rgb(51, 48, 48);
 }
 .ul .li:hover 
 {
@@ -48,7 +50,7 @@ body
 }
 .ul .li.diamond1 
 {
-    top: 25%;
+    top: 30%;
     left: 25%;
 }
 .ul .li.diamond2
@@ -58,106 +60,81 @@ body
 }
 .ul .li.diamond3 
 {
-    top: 25%;
+    top: 30%;
     left: 75%;
 }
 .ul .li.diamond4
 {
-    top: 100%;
+    top: 90%;
     left: 50%;
 }
 .ul .li.diamond5
 {
-    top: 75%;
+    top: 70%;
     left: 75%;
 }
 .ul .li.diamond6
 {
-    top: 75%;
+    top: 70%;
     left: 25%;
 }
 .ul .li.diamond7
 {
-    top: 125%;
+    top: 110%;
     left: 25%;
 }
 .ul .li.diamond8
 {
-    top: 125%;
+    top: 110%;
     left: 75%;
 }
 .ul .li.diamond9
 {
-    top: 150%;
+    top: 130%;
     left: 50%;
 }
-.ul .li.diamond1 .image 
+.ul .li.diamond10
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 90%;
+    left: 100%;
 }
-.ul .li.diamond2 .image 
+.ul .li.diamond11
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 130%;
+    left: 100%;
 }
-.ul .li.diamond3 .image 
+.ul .li.diamond12
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 50%;
+    left: 100%;
 }
-.ul .li.diamond4 .image 
+.ul .li.diamond13
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 10%;
+    left: 50%;
 }
-.ul .li.diamond5 .image 
+.ul .li.diamond14
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 10%;
+    left: 100%;
 }
-.ul .li.diamond6 .image 
+.ul .li.diamond15
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 150%;
+    left: 75%;
 }
-.ul .li.diamond7 .image 
+.ul .li.diamond16
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: 150%;
+    left: 25%;
 }
-.ul .li.diamond8 .image 
+.ul .li.diamond17
 {
-    background: url(../Images/806821.png);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-45deg) scale( 1.42);
+    top: -10%;
+    left: 75%;
 }
-.ul .li.diamond9 .image 
+.ul .li .image
 {
-    background: url(../Images/806821.png);
     background-size: cover;
     width: 100%;
     height: 100%;
