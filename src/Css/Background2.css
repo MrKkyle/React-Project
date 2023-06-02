@@ -19,15 +19,17 @@ body
 {
     position: absolute;
     width: 600px;
-    height: 750px;
+    height: 915px;
     margin: 0;
     padding: 0;
-    top: 00%;
+    top: 0%;
     left: 100%;
-    transform: translate(-100%, 10%);
+    transform: translate(-100%, 0%);
     opacity: 1;
     overflow-x: hidden;
     overflow-y: auto;
+    animation: FadeIn ease-in-out 1s;
+    background-color: transparent;
 }
 .ul .li 
 {
@@ -42,7 +44,9 @@ body
     opacity: 0.95;
     display: none;
     border-radius: 5px;
-    border: 3px solid rgb(51, 48, 48);
+    border: 2px solid rgb(51, 48, 48);
+    animation: none;
+    
 }
 .ul .li:hover 
 {
@@ -55,7 +59,7 @@ body
 }
 .ul .li.diamond2
 {
-    top: 50%;
+    top: 46%;
     left: 50%;
 }
 .ul .li.diamond3 
@@ -65,72 +69,72 @@ body
 }
 .ul .li.diamond4
 {
-    top: 90%;
+    top: 78%;
     left: 50%;
 }
 .ul .li.diamond5
 {
-    top: 70%;
+    top: 62%;
     left: 75%;
 }
 .ul .li.diamond6
 {
-    top: 70%;
+    top: 62%;
     left: 25%;
 }
 .ul .li.diamond7
 {
-    top: 110%;
+    top: 94%;
     left: 25%;
 }
 .ul .li.diamond8
 {
-    top: 110%;
+    top: 94%;
     left: 75%;
 }
 .ul .li.diamond9
 {
-    top: 130%;
+    top: 110%;
     left: 50%;
 }
 .ul .li.diamond10
 {
-    top: 90%;
+    top: 78%;
     left: 100%;
 }
 .ul .li.diamond11
 {
-    top: 130%;
+    top: 110%;
     left: 100%;
 }
 .ul .li.diamond12
 {
-    top: 50%;
+    top: 46%;
     left: 100%;
 }
 .ul .li.diamond13
 {
-    top: 10%;
+    top: 14%;
     left: 50%;
 }
 .ul .li.diamond14
 {
-    top: 10%;
+    top: 14%;
     left: 100%;
 }
 .ul .li.diamond15
 {
-    top: 150%;
+    top: 126%;
     left: 75%;
 }
 .ul .li.diamond16
 {
-    top: 150%;
+    top: 126%;
     left: 25%;
 }
 .ul .li.diamond17
 {
-    top: -10%;
+    top: -2%;
     left: 75%;
 }
 .ul .li .image
@@ -154,9 +158,25 @@ body
     transform: translate(-42%, -50%);
     color: black;
     background-color: transparent;
+
 }
 .image .text:hover 
 {
     text-decoration: underline;
+    cursor: pointer;
+}
+@keyframes FadeIn
+{
+    0%{opacity: 0;}
+    25%{opacity: 0.25;}
+    50%{opacity: 0.5;}
+    75%{opacity: 0.75;}
+    100%{opacity: 0.95;}
 }
 
+@keyframes Fadeout 
+{
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 0;}
+}

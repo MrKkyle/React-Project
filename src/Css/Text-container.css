@@ -35,15 +35,13 @@
 {
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     padding: 10px;
     color: whitesmoke;
+    overflow: hidden;
     width: 100%;
-    animation: FadeIn ease 3s ;
-    
 }
-
 @keyframes FadeIn
 {
     0%{opacity: 0;}

@@ -14,7 +14,6 @@ export default function Main()
             <Navigation_Bar />
             <SplashScreen />
         </div>
-
     );
 }
 

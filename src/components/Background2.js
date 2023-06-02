@@ -8,7 +8,7 @@ function Background2(props)
         <>
 
             <div className = "background" id = "background">
-                <div className = "ul">
+                <div className = "ul" id = "table">
                     <li className = "ul li diamond1" onClick = {props.onclick1} style = {{display: (props.display1)}}><div className = "image" style = {{backgroundImage: `url(${props.image1})`}}><div className = "text">{props.text1}</div></div></li>
                     <li className = "ul li diamond2" onClick = {props.onclick2} style = {{display: (props.display2)}}><div className = "image" style = {{backgroundImage: `url(${props.image2})`}}><div className = "text">{props.text2}</div></div></li>
                     <li className = "ul li diamond3" onClick = {props.onclick3} style = {{display: (props.display3)}}><div className = "image" style = {{backgroundImage: `url(${props.image3})`}}><div className = "text">{props.text3}</div></div></li>

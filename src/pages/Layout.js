@@ -4,7 +4,7 @@ import MyImage from '../Images/20200930_155017.jpg';
 const Layout = () => {
   return (
     <>
-      <nav className = "Navi">
+      <nav className = "Navi" id = "navi">
         <ul>
           <li>
             <Link to="/">Home</Link>
