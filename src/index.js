@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigation_Bar from './components/Navigation-bar';
+import NavigationBar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
 
 
@@ -11,7 +10,7 @@ export default function Main()
 {
     return ( 
         <div>
-            <Navigation_Bar />
+            <NavigationBar />
             <SplashScreen />
         </div>
     );

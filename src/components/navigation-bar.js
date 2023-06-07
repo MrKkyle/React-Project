@@ -7,6 +7,27 @@ import Vera from '../pages/Vera';
 import Domain9 from '../pages/Domain9';
 import NoPage from '../pages/NoPage';
 
+import AesperiaEnemies from '../pages/sub-domains/sd-Aesperia/Aesperia-Enemies';
+import AesperiWorldBosses from '../pages/sub-domains/sd-Aesperia/Aesperia-WorldBosses';
+import ArtificialIsland from '../pages/sub-domains/sd-Aesperia/Artifical-Island';
+import Hykros from '../pages/sub-domains/sd-Aesperia/Hykros';
+import AesperiaSimulacra from '../pages/sub-domains/sd-Aesperia/Simulacra';
+
+import VeraEnemies from '../pages/sub-domains/sd-Vera/Vera-Enemies';
+import VeraWorldBosses from '../pages/sub-domains/sd-Vera/Vera-WorldBosses';
+import VeraSimulacra from '../pages/sub-domains/sd-Vera/Simulacra';
+import GraySpace from '../pages/sub-domains/sd-Vera/Grayspace';
+import TwilightZone from '../pages/sub-domains/sd-Vera/Twilight-Zone';
+import MiasmicSwamp from '../pages/sub-domains/sd-Vera/Miasmic-Swamp';
+import Mirroria from '../pages/sub-domains/sd-Vera/Mirroria';
+import ConfoundingAbyss from '../pages/sub-domains/sd-Vera/Confounding-Abyss';
+import Innars from '../pages/sub-domains/sd-Vera/Innars';
+
+
+import D9Enemies from '../pages/sub-domains/sd-Domain9/Domain9-Enemies';
+import D9WorldBosses from '../pages/sub-domains/sd-Domain9/Domain9-WorldBosses';
+import Unknown from '../pages/sub-domains/sd-Domain9/Unknown';
+
 // Import Style sheet below
 import '../Css/navigation-bar.css';
 function Navigation_Bar()
@@ -20,6 +41,27 @@ function Navigation_Bar()
                         <Route path = "aesperia" element = {<Aesperia />}></Route>
                         <Route path = "vera" element = {<Vera />}></Route>
                         <Route path = "domain9" element = {<Domain9 />}></Route>
+
+                        <Route path = "aesperiaSimulacra" element = {<AesperiaSimulacra />}></Route>
+                        <Route path = "aesperiaEnemies" element = {<AesperiaEnemies />}></Route>
+                        <Route path = "aesperiaWorldBosses" element = {<AesperiWorldBosses />}></Route>
+                        <Route path = "ArtificialIsland" element = {<ArtificialIsland />}></Route>
+                        <Route path = "Hykros" element = {<Hykros />}></Route>
+
+                        <Route path = "veraEnemies" element = {<VeraEnemies />}></Route>
+                        <Route path = "veraWorldBosses" element = {<VeraWorldBosses />}></Route>
+                        <Route path = "veraSimulacra" element = {<VeraSimulacra />}></Route>
+                        <Route path = "graySpace" element = {<GraySpace />}></Route>
+                        <Route path = "twilightZone" element = {<TwilightZone />}></Route>
+                        <Route path = "miasmicSwamp" element = {<MiasmicSwamp />}></Route>
+                        <Route path = "Mirroria" element = {<Mirroria />}></Route>
+                        <Route path = "confoundingAbyss" element = {<ConfoundingAbyss />}></Route>
+                        <Route path = "innars" element = {<Innars />}></Route>
+
+                        <Route path = "domain9Enemies" element = {<D9Enemies />}></Route>
+                        <Route path = "domain9WorldBosses" element = {<D9WorldBosses />}></Route>
+                        <Route path = "unknown" element = {<Unknown />}></Route>
+
                         <Route path = "*" element = {<NoPage />}></Route>
                     </Route>
                 </Routes>

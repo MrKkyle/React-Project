@@ -1,9 +1,10 @@
+import Slideshow from "../../../components/Slideshow";
 
 function WorldBosses()
 {
   return (
   <>
-    <h1>World Bosses</h1>
+    <Slideshow />
   </>
   );
   

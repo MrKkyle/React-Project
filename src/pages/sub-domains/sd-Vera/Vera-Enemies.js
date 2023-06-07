@@ -1,9 +1,10 @@
+import Slideshow from "../../../components/Slideshow";
 
 function Enemies()
 {
   return (
   <>
-    <h1>Enemies</h1>
+    <Slideshow />
   </>
   );
   

@@ -39,8 +39,6 @@ function Domain9()
             diamonds[z].style.animation = "Fadeout ease-in-out 0.7s";
             diamonds[z].style.opacity = "0";
           }
-
-          
         }
         dia.onmouseleave = function(event)
         {
