@@ -1,10 +1,10 @@
-import Slideshow from "../../../components/Slideshow";
+import Background3 from "../../../components/Background3";
 
 function Enemies()
 {
   return (
   <>
-    <Slideshow />
+    <Background3 />
   </>
   );
   

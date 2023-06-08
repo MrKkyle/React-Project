@@ -1,4 +1,4 @@
-import Slideshow from "../../../components/Slideshow";
+import Slideshow from "../components/Slideshow";
 
 function Simulacra()
 {

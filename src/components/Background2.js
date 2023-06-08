@@ -1,4 +1,4 @@
-import '../Css/Background2.css';
+import '../Css/Background.css';
 
 /* Must start with a Caps letter */
 function Background2(props)

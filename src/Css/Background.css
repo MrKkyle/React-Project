@@ -180,3 +180,57 @@ body
     50% {opacity: 0.5;}
     100% {opacity: 0;}
 }
+.container 
+{
+    position: relative;
+    width: 50%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    animation: fade-container ease-in-out 1s;
+    z-index: 1;
+}
+.container:hover 
+{
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+.text-container 
+{
+    padding: 10px;
+    text-align: center;  
+    font-size: 14px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+.container .text
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+.fade-container
+{
+	animation-name: fade-container;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade-container 
+{
+	from{top: 30%; opacity: 0;}
+	to {top: 50%; opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

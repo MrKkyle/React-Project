@@ -11,11 +11,10 @@ import AesperiaEnemies from '../pages/sub-domains/sd-Aesperia/Aesperia-Enemies';
 import AesperiWorldBosses from '../pages/sub-domains/sd-Aesperia/Aesperia-WorldBosses';
 import ArtificialIsland from '../pages/sub-domains/sd-Aesperia/Artifical-Island';
 import Hykros from '../pages/sub-domains/sd-Aesperia/Hykros';
-import AesperiaSimulacra from '../pages/sub-domains/sd-Aesperia/Simulacra';
+import Simulacra from '../pages/Simulacra';
 
 import VeraEnemies from '../pages/sub-domains/sd-Vera/Vera-Enemies';
 import VeraWorldBosses from '../pages/sub-domains/sd-Vera/Vera-WorldBosses';
-import VeraSimulacra from '../pages/sub-domains/sd-Vera/Simulacra';
 import GraySpace from '../pages/sub-domains/sd-Vera/Grayspace';
 import TwilightZone from '../pages/sub-domains/sd-Vera/Twilight-Zone';
 import MiasmicSwamp from '../pages/sub-domains/sd-Vera/Miasmic-Swamp';
@@ -42,7 +41,7 @@ function Navigation_Bar()
                         <Route path = "vera" element = {<Vera />}></Route>
                         <Route path = "domain9" element = {<Domain9 />}></Route>
 
-                        <Route path = "aesperiaSimulacra" element = {<AesperiaSimulacra />}></Route>
+                        <Route path = "aesperiaSimulacra" element = {<Simulacra />}></Route>
                         <Route path = "aesperiaEnemies" element = {<AesperiaEnemies />}></Route>
                         <Route path = "aesperiaWorldBosses" element = {<AesperiWorldBosses />}></Route>
                         <Route path = "ArtificialIsland" element = {<ArtificialIsland />}></Route>
@@ -50,7 +49,7 @@ function Navigation_Bar()
 
                         <Route path = "veraEnemies" element = {<VeraEnemies />}></Route>
                         <Route path = "veraWorldBosses" element = {<VeraWorldBosses />}></Route>
-                        <Route path = "veraSimulacra" element = {<VeraSimulacra />}></Route>
+                        <Route path = "veraSimulacra" element = {<Simulacra />}></Route>
                         <Route path = "graySpace" element = {<GraySpace />}></Route>
                         <Route path = "twilightZone" element = {<TwilightZone />}></Route>
                         <Route path = "miasmicSwamp" element = {<MiasmicSwamp />}></Route>
