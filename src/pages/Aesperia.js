@@ -62,31 +62,24 @@ function Aesperia()
 
   const navigateToSimulacra = () => 
   {
-    //navigate to /simulacra
     navigate('/aesperiaSimulacra');
   };
   const navigateToEnemies = () => 
   {
-    //navigate to /simulacra
     navigate('/aesperiaEnemies');
   };
   const navigateToWorldBosses = () => 
   {
-    //navigate to /simulacra
     navigate('/aesperiaWorldBosses');
   };
   const navigateToArtificialIsland = () => 
   {
-    //navigate to /simulacra
     navigate('/ArtificialIsland');
   };
   const navigateToHykros = () => 
   {
-    //navigate to /simulacra
     navigate('/Hykros');
   };
-
-
   return (
     <div>
       <Background2   onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"

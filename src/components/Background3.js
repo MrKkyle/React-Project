@@ -1,7 +1,7 @@
 import '../Css/Background.css';
 import {useEffect} from 'react';
 
-function Background3()
+function Background3(props)
 {
 
     useEffect(()=> 
@@ -21,26 +21,27 @@ function Background3()
                 setTimeout(typeWriter, speed);
             }
         }
-        window.addEventListener("load", event =>
-		{
-			setTimeout(() =>
-			{
-                typeWriter();
-            }, 3000);
-        })
+        
+        setTimeout(() =>
+        {
+            typeWriter();
+        }, 3000);
+        
 
     }, []);
     return (
     <>   
-        <div className = "background-image">
+        <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
             <div className = "container">
-                <div className = "text">Enemies</div>
+                <div className = "text">
+                    {props.Title}
+                    <hr />
+                </div>
                 <div className = "text-container">
-                    Here is something that might make you change your mind. How about we go to Japan, and enjoy it there, 
-                    instead of this junk country
+                    {props.Text}
                 </div>
             </div>
-            <div className = "ul" id = "table" style = {{width: '1880px', height: '915px', }}>
+            <div className = "ul" id = "table" style = {{width: '1880px', height: '915px', overflow: 'hidden'}}>
                 <li className = "ul li diamond1" style = {{display: 'block', left: '23%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
                 <li className = "ul li diamond2" style = {{display: 'block', left: '50%', top: '46%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
                 <li className = "ul li diamond3" style = {{display: 'block', left: '77%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
@@ -54,5 +55,10 @@ function Background3()
     );
   
 };
-    
+Background3.defaultProps = 
+{
+	Title: "Add a title here",
+    Text: "Add some text here",
+    Background: ""
+}
 export default Background3;
