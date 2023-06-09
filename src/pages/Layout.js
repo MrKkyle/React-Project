@@ -15,18 +15,24 @@ const Layout = () => {
   {
     navigate('/vera');
   };
-
   const navigateToDomain9 = () => 
   {
     navigate('/domain9');
+  };
+  const navigateToPVP = () => 
+  {
+    navigate('/PVP');
+  };
+  const navigateToEquipment = () => 
+  {
+    navigate('/equipment');
   };
 
   return (
     <>
       <div className = "navbar">
 
-        <Link to="/">Home</Link>
-
+        <Link className = "home" to="/">Home</Link>
 
         <div className = "dropdown">
           <button onClick = {navigateToAesperia} className = "dropbtn">Aesperia</button>
@@ -64,13 +70,13 @@ const Layout = () => {
         </div>
 
         <div className = "dropdown">
-          <button className = "dropbtn">Equipment</button>
+          <button onClick = {navigateToEquipment} className = "dropbtn">Equipment</button>
         </div>
 
         <div className = "dropdown">
-          <button className = "dropbtn">PvP</button>
+          <button onClick = {navigateToPVP} className = "dropbtn">PvP</button>
         </div>
-        
+
         <div className = "avatar">
           <img className = "avatar" src = {MyImage} />
         </div>

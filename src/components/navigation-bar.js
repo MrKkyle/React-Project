@@ -6,6 +6,8 @@ import Aesperia from '../pages/Aesperia';
 import Vera from '../pages/Vera';
 import Domain9 from '../pages/Domain9';
 import NoPage from '../pages/NoPage';
+import PVP from '../pages/PvP';
+import Equipment from '../pages/Equipment';
 
 import AesperiaEnemies from '../pages/sub-domains/sd-Aesperia/Aesperia-Enemies';
 import AesperiWorldBosses from '../pages/sub-domains/sd-Aesperia/Aesperia-WorldBosses';
@@ -40,6 +42,8 @@ function Navigation_Bar()
                         <Route path = "aesperia" element = {<Aesperia />}></Route>
                         <Route path = "vera" element = {<Vera />}></Route>
                         <Route path = "domain9" element = {<Domain9 />}></Route>
+                        <Route path = "PVP" element = {<PVP />}></Route>
+                        <Route path = "equipment" element = {<Equipment />}></Route>
 
                         <Route path = "aesperiaSimulacra" element = {<Simulacra />}></Route>
                         <Route path = "aesperiaEnemies" element = {<AesperiaEnemies />}></Route>
