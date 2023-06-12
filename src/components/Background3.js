@@ -9,7 +9,7 @@ function Background3(props)
         
         var txt = document.querySelector(".text-container").innerHTML;
         document.querySelector(".text-container").innerHTML = "";
-        var speed = 50;
+        var speed = 30;
         var i = 0;
         function typeWriter() 
         {

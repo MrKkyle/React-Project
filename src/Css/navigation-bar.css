@@ -33,12 +33,13 @@ li a:hover
     background-color: #111;
 }
 
-.avatar {
-    width: 110px;
-    height: 49px;
+.avatar 
+{
+    width: 95px;
+    height: 48px;
     position: absolute;
     right: 0;
-    top: 0%;
+    top: 2px;
 }
 
 .navbar 

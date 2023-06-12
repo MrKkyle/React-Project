@@ -1,11 +1,11 @@
 import {useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
 import Background2 from '../components/Background2';
-import Image1 from '../Images/wr47krotuod91.png';
-import Image2 from '../Images/wr47krotuod91.png';
-import Image3 from '../Images/wr47krotuod91.png';
-import Image4 from '../Images/wr47krotuod91.png';
-import Image_default from '../Images/778122.png';
+import Image1 from '../Images/1287431.jpg';
+import Image2 from '../Images/enemies.jpg';
+import Image3 from '../Images/worldboss.jpg';
+import Image4 from '../Images/domain9.png';
+import Image_default from '../Images/domain9.png';
 
 function Domain9()
 {
@@ -65,7 +65,7 @@ function Domain9()
   const navigateToSimulacra = () => 
   {
     //navigate to /simulacra
-    navigate('/Simulacra');
+    navigate('/Domain9Simulacra');
   };
 
   const navigateToEnemies = () => 
@@ -83,11 +83,12 @@ function Domain9()
   const navigateToUnknown = () => 
   {
     //navigate to /unknown
-    navigate('/domain9Unknown');
+    navigate('/unknown');
   };
 
   return (
-    <Background2 onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+    <Background2 background = {Image_default}
+                onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
                 onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
                 onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
                 onclick5 = {navigateToUnknown} image5 = {Image4} text5 = "Unknown" display5 = "block"

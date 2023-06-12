@@ -2,16 +2,16 @@ import {useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
 import Background2 from '../components/Background2';
 
-import Image1 from '../Images/wr47krotuod91.png';
-import Image2 from '../Images/wr47krotuod91.png';
-import Image3 from '../Images/wr47krotuod91.png';
-import Image4 from '../Images/wr47krotuod91.png';
-import Image5 from '../Images/wr47krotuod91.png';
-import Image6 from '../Images/wr47krotuod91.png';
-import Image7 from '../Images/wr47krotuod91.png';
-import Image8 from '../Images/wr47krotuod91.png';
-import Image9 from '../Images/wr47krotuod91.png';
-import Image_default from '../Images/778122.png';
+import Image1 from '../Images/1287431.jpg';
+import Image2 from '../Images/enemies.jpg';
+import Image3 from '../Images/worldboss.jpg';
+import Image4 from '../Images/Twilight_Zone.png';
+import Image5 from '../Images/Grayspace.png';
+import Image6 from '../Images/Mirroria.png';
+import Image7 from '../Images/Miasmic_Swamp.jpg';
+import Image8 from '../Images/confoundingAbyss.png';
+import Image9 from '../Images/innars.jpg';
+import Image_default from '../Images/1287431.jpg';
 
 function Vera()
 {
@@ -100,7 +100,8 @@ function Vera()
       navigate('/veraWorldBosses');
     };
     return (
-      <Background2 onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+      <Background2 background = {Image_default}
+      onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
       onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
       onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
       onclick4 = {navigateToTwilightZone} image4 = {Image4} text4 = "Twilight Zone" display4 = "block"

@@ -35,7 +35,7 @@ function SplashScreen(props)
 
     return ( 
 		//set the ref to the class that we would like to access
-        <div className = "splash" id = "splash" ref = {refSplash}>
+        <div className = "splash"  style = {{backgroundImage: `url(${props.background})`}}id = "splash" ref = {refSplash}>
             <div className = "splash-text">
                 {props.Text}
             </div>
@@ -45,7 +45,8 @@ function SplashScreen(props)
 
 SplashScreen.defaultProps = 
 {
-	Text: "Add Text Here"
+	Text: "Add Text Here",
+	background: ""
 };
 export default SplashScreen;
 

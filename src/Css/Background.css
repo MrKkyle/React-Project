@@ -5,7 +5,7 @@ body
 }
 .background
 {
-    background-image: url(../Images/778122.png);
+    background-image: url();
 	height: 100%;
 	width: 100%;
 	background-position: center;
@@ -156,7 +156,7 @@ body
     width: 60%;
     height: 38px;
     transform: translate(-42%, -50%);
-    color: black;
+    color: aliceblue;
     background-color: transparent;
 
 }
@@ -196,8 +196,8 @@ body
 }
 .text-container 
 {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 400px;
+    padding-right: 400px;
     text-align: center;  
     font-size: 14px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -206,6 +206,7 @@ body
     left: 2%;
     top: 2%;
     transform: translate(-3%, -2%);
+    line-height: 1.7;
 }
 .container .text 
 {

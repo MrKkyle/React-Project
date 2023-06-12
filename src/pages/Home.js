@@ -1,6 +1,6 @@
 import Background from '../components/Background';
 import NavigationBar2 from '../components/Navigation-bar2';
-import image from '../Images/765703.png';
+import image from '../Images/ToF_Wallpaper2022_01.png';
 import Discord from '../Images/Socials/discord.png';
 import Facebook from '../Images/Socials/facebook.png';
 import Twitter from '../Images/Socials/twitter.png';

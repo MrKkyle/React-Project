@@ -63,6 +63,7 @@ function Navigation_Bar()
 
                         <Route path = "domain9Enemies" element = {<D9Enemies />}></Route>
                         <Route path = "domain9WorldBosses" element = {<D9WorldBosses />}></Route>
+                        <Route path = "domain9Simulacra" element = {<Simulacra />}></Route>
                         <Route path = "unknown" element = {<Unknown />}></Route>
 
                         <Route path = "*" element = {<NoPage />}></Route>

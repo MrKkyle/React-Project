@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
 import '../Css/navigation-bar.css'
-import MyImage from '../Images/20200930_155017.jpg';
+import MyImage from '../Images/ToF logo.png';
 
 const Layout = () => {
 

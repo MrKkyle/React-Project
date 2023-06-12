@@ -1,12 +1,12 @@
 import {useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import Background2 from '../components/Background2';
-import Image1 from '../Images/wr47krotuod91.png';
-import Image2 from '../Images/au2gypfkx10a1.jpg';
-import Image3 from '../Images/wr47krotuod91.png';
-import Image4 from '../Images/au2gypfkx10a1.jpg';
-import Image5 from '../Images/wr47krotuod91.png';
-import Image_default from '../Images/778122.png';
+import Image1 from '../Images/1287431.jpg';
+import Image2 from '../Images/enemies.jpg';
+import Image3 from '../Images/worldboss.jpg';
+import Image4 from '../Images/tower-of-fantasy-1.5-artificial-island-update-1.jpg';
+import Image5 from '../Images/Hykros.jpg';
+import Image_default from '../Images/aesperia.jpg';
 
 function Aesperia()
 { 
@@ -82,7 +82,8 @@ function Aesperia()
   };
   return (
     <div>
-      <Background2   onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+      <Background2  background = {Image_default}
+                    onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
                      onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
                      onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
                      onclick4 = {navigateToArtificialIsland} image4 = {Image4} text4 = "Artificial-Island" display4 = "block"
