@@ -6,6 +6,8 @@ import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
 import Image4 from '../Images/tower-of-fantasy-1.5-artificial-island-update-1.jpg';
 import Image5 from '../Images/Hykros.jpg';
+import Image6 from '../Images/Banges.png';
+import Image7 from '../Images/SnowField.png';
 import Image_default from '../Images/aesperia.jpg';
 
 function Aesperia()
@@ -80,14 +82,24 @@ function Aesperia()
   {
     navigate('/Hykros');
   };
+  const navigateToBanges = () => 
+  {
+    navigate('/Banges');
+  };
+  const navigateToWarren = () => 
+  {
+    navigate('/Warren');
+  };
   return (
     <div>
       <Background2  background = {Image_default}
-                    onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+                     onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
                      onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
                      onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
                      onclick4 = {navigateToArtificialIsland} image4 = {Image4} text4 = "Artificial-Island" display4 = "block"
                      onclick5 = {navigateToHykros} image5 = {Image5} text5 = "Hykros" display5 = "block"
+                     onclick6 = {navigateToBanges} image6 = {Image6} text6 = "Banges" display6 = "block"
+                     onclick7 = {navigateToWarren} image7 = {Image7} text7 = "Warren-Snowfield" display7 = "block"
       />
     </div>
   );

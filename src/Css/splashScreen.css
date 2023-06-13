@@ -17,15 +17,12 @@
 	left: 0;
 	width: 100%;
 	background: #070707;
-	background-image: url();
 	background-size: cover;
+	background-image: #ccc;
 	background-position: center;
 	height: 100%;
 	z-index: 200;
 	color: white;
-	animation: fadeIn ease-out 2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: ease forwards;
 }
 .splash.display-none
 {

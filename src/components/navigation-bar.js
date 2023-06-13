@@ -12,6 +12,8 @@ import Equipment from '../pages/Equipment';
 import AesperiaEnemies from '../pages/sub-domains/sd-Aesperia/Aesperia-Enemies';
 import AesperiWorldBosses from '../pages/sub-domains/sd-Aesperia/Aesperia-WorldBosses';
 import ArtificialIsland from '../pages/sub-domains/sd-Aesperia/Artifical-Island';
+import Warren from '../pages/sub-domains/sd-Aesperia/Warren-snowfield';
+import Banges from '../pages/sub-domains/sd-Aesperia/Banges';
 import Hykros from '../pages/sub-domains/sd-Aesperia/Hykros';
 import Simulacra from '../pages/Simulacra';
 
@@ -50,6 +52,8 @@ function Navigation_Bar()
                         <Route path = "aesperiaWorldBosses" element = {<AesperiWorldBosses />}></Route>
                         <Route path = "ArtificialIsland" element = {<ArtificialIsland />}></Route>
                         <Route path = "Hykros" element = {<Hykros />}></Route>
+                        <Route path = "Banges" element = {<Banges />}></Route>
+                        <Route path = "Warren" element = {<Warren />}></Route>
 
                         <Route path = "veraEnemies" element = {<VeraEnemies />}></Route>
                         <Route path = "veraWorldBosses" element = {<VeraWorldBosses />}></Route>

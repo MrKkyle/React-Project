@@ -12,7 +12,7 @@ export default function Main()
     return ( 
         <div>
             <NavigationBar />
-            <SplashScreen Text = "Tower of Fantasy" background = {image}/>
+            <SplashScreen Text = "Tower of Fantasy" Background = {image}/>
         </div>
     );
 }

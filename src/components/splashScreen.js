@@ -21,21 +21,20 @@ function SplashScreen(props)
 
 		navigation.style.display = "none";
 		//perform the js for the splash
-		window.addEventListener("load", event =>
+
+		setTimeout(() =>
 		{
-			setTimeout(() =>
-			{
-				splash.classList.add("display-none");
-				navigation.style.display = "block";
-			}, 2000);
-		})
+			splash.classList.add("display-none");
+			navigation.style.display = "block";
+			
+		}, 2000);
 	}, []);
 
 	
 
     return ( 
 		//set the ref to the class that we would like to access
-        <div className = "splash"  style = {{backgroundImage: `url(${props.background})`}}id = "splash" ref = {refSplash}>
+        <div className = "splash"  style = {{backgroundImage: `url(${props.Background})`}} id = "splash" ref = {refSplash}>
             <div className = "splash-text">
                 {props.Text}
             </div>
@@ -46,7 +45,7 @@ function SplashScreen(props)
 SplashScreen.defaultProps = 
 {
 	Text: "Add Text Here",
-	background: ""
+	Background : "#ccc"
 };
 export default SplashScreen;
 

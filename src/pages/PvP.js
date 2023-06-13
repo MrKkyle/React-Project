@@ -9,11 +9,11 @@ function PVP()
     Break from Destiny: 
     Break from Destiny is one of the PVP gamemode in Tower of Fantasy. In Break from Destiny, 
     players can participate in Break from Destiny seasons to compete against up to 30 Wanderers 
-    in a "battle royale"-like format, and the last remaining Wanderer will win the game. 
+    in a "battle royale" - like format, and the last remaining Wanderer will win the game. 
 
     Critical Abyss:
     The Critical Abyss is one of the PVP gamemode in Tower of Fantasy. In The Critical Abyss, players 
-    can participate in Team 8v8s to obtain the currency Critical PointCritical Point, which can be 
+    can participate in Team 8v8s to obtain the currency Critical Point, which can be 
     used to redeem items in the Points Store. Version/2.4 has added roles to select as well as major
     balancing adjustments to ensure fair match.
 

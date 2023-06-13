@@ -34,7 +34,7 @@ function Background3(props)
             <div className = "container">
                 <div className = "text">
                     {props.Title}
-                    <hr />
+                    <hr style = {{display: props.hr}}/>
                 </div>
                 <div className = "text-container">
                     {props.Text}
@@ -58,6 +58,7 @@ Background3.defaultProps =
 {
 	Title: "Add a title here",
     Text: "Add some text here",
-    Background: ""
+    Background: "",
+    hr : "block"
 }
 export default Background3;

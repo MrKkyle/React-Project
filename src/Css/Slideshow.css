@@ -7,92 +7,71 @@
 	height: 100%;
 
 }
-.slide1 
+.slide 
 {
-	display: block;
-	position: relative;
-	float:left;
-	height: 100%;
-	width: 40%;
-	background-color:rgb(0, 0, 0, 0.8);
-	background-position: center;
-	background-size: cover;
-	
-}
-.slide1:hover 
-{
-	background-color:rgb(0, 0, 0, 0.9);
-}
-.slide2 
-{
-	display: block;
-	position: relative;
-	float: right;
-	height: 100%;
-	width: 60%;
-	background-color:rgb(184, 134, 11, 0.8); 
-	background-position: center;
-	background-size: cover;
-
-}
-.slide2:hover 
-{
-	background-color:rgb(184, 134, 11, 0.9); 
+    display: block;
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 .character-pic 
 {
-	width: 80%;
-	height: 60%;
-	position: relative;
-	left: 50%;
-	top: 35%;
-	transform: translate(-50%, -50%);
-	background-color:beige;
-	border-top-left-radius: 5px;
+	width: 39%;
+    height: 65%;
+    position: absolute;
+    left: 76%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-
-	background-position: center;
-	background-size: cover;
+    background-position: center;
+    background-size: cover;
 
 }
-.character-info 
+.character-info
 {
-	width: 80%;
-	height: 20%;
-	position: relative;
-	left: 50%;
-	top: 15%;
-	transform: translate(-50%, -50%);
-	border-bottom-left-radius: 5px;
+	width: 39%;
+    height: 12%;
+    position: relative;
+    left: 76%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-	background-color:blanchedalmond;
+    background-color: blanchedalmond;
+    overflow: auto;
 }
 .weapon
 {
-	width: 80%;
-	height: 60%;
-	position: relative;
-	left: 50%;
-	top: 35%;
-	transform: translate(-50%, -50%);
-	border-top-left-radius: 5px;
+    width: 30%;
+    height: 59%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-	background-color:beige;
-	background-position: center;
-	background-size: cover;
+    background-color: beige;
+    background-position: center;
+    background-size: cover;
 }
 .weapon-info
 {
-	width: 80%;
-	height: 20%;
-	position: relative;
-	left: 50%;
-	top: 15%;
-	transform: translate(-50%, -50%);
-	border-bottom-left-radius: 5px;
+    width: 30%;
+    height: 12%;
+    position: relative;
+    left: 20%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-	background-color:blanchedalmond;
+    background-color: blanchedalmond;
+    overflow: auto;
 }
+
 /* Slideshow container */
 .slideshow-container
 {

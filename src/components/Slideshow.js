@@ -1,5 +1,7 @@
 import '../Css/Slideshow.css';
 import {useEffect} from 'react';
+import Background3 from './Background3';
+import image from '../Images/1287431.jpg';
 
 import weapon1 from '../Images/weapons/Icon_Weapon_Clover_Cross.jpg';
 import weapon2 from '../Images/weapons/Icon_Weapon_Flaming_Revolver.jpg';
@@ -81,14 +83,13 @@ function Slideshow(props)
     
     return (
         <div className = "slideshow-container">
+            <Background3 Background = {image} Text = "" Title = "" hr = "none"/>
             {information.map((info) => 
             (
                 <div key = {info.id} className = "mySlides fade">
-                    <div className = "slide1">
+                    <div className = "slide">
                         <div className = "weapon" style = {{backgroundImage: `url(${info.weapon_img})`}}></div>
                         <div className = "weapon-info"><div className = "text">{info.weapon_description}</div></div>
-                    </div>
-                    <div className = "slide2">
                         <div className = "character-pic" style = {{backgroundImage: `url(${info.character_img})`}}></div>
                         <div className = "character-info"><div className = "text">{info.character_description}</div></div>
                     </div>

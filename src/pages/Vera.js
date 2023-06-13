@@ -11,7 +11,7 @@ import Image6 from '../Images/Mirroria.png';
 import Image7 from '../Images/Miasmic_Swamp.jpg';
 import Image8 from '../Images/confoundingAbyss.png';
 import Image9 from '../Images/innars.jpg';
-import Image_default from '../Images/1287431.jpg';
+import Image_default from '../Images/Vera.png';
 
 function Vera()
 {
@@ -65,7 +65,7 @@ function Vera()
     const navigate = useNavigate();
     const navigateToSimulacra = () => 
     {
-      navigate('/Simulacra');
+      navigate('/veraSimulacra');
     };
     const navigateToEnemies = () => 
     {

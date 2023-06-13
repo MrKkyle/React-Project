@@ -5,7 +5,6 @@ body
 }
 .background
 {
-    background-image: url();
 	height: 100%;
 	width: 100%;
 	background-position: center;
@@ -18,8 +17,8 @@ body
 .ul 
 {
     position: absolute;
-    width: 600px;
-    height: 915px;
+    width: 1880px;
+    height: 980px;
     margin: 0;
     padding: 0;
     top: 0%;
@@ -55,47 +54,47 @@ body
 .ul .li.diamond1 
 {
     top: 30%;
-    left: 25%;
+    left: 76%;
 }
 .ul .li.diamond2
 {
     top: 46%;
-    left: 50%;
+    left: 84%;
 }
 .ul .li.diamond3 
 {
     top: 30%;
-    left: 75%;
+    left: 92%;
 }
 .ul .li.diamond4
 {
     top: 78%;
-    left: 50%;
+    left: 84%;
 }
 .ul .li.diamond5
 {
     top: 62%;
-    left: 75%;
+    left: 92%;
 }
 .ul .li.diamond6
 {
     top: 62%;
-    left: 25%;
+    left: 76%;
 }
 .ul .li.diamond7
 {
     top: 94%;
-    left: 25%;
+    left: 76%;
 }
 .ul .li.diamond8
 {
     top: 94%;
-    left: 75%;
+    left: 92%;
 }
 .ul .li.diamond9
 {
     top: 110%;
-    left: 50%;
+    left: 84%;
 }
 .ul .li.diamond10
 {
@@ -115,7 +114,7 @@ body
 .ul .li.diamond13
 {
     top: 14%;
-    left: 50%;
+    left: 84%;
 }
 .ul .li.diamond14
 {
@@ -125,17 +124,17 @@ body
 .ul .li.diamond15
 {
     top: 126%;
-    left: 75%;
+    left: 76%;
 }
 .ul .li.diamond16
 {
     top: 126%;
-    left: 25%;
+    left: 92%;
 }
 .ul .li.diamond17
 {
     top: -2%;
-    left: 75%;
+    left: 92%;
 }
 .ul .li .image
 {
