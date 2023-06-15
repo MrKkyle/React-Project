@@ -107,18 +107,3 @@ function Aesperia()
 };
 
 export default Aesperia;
-
-/*
-var i = 0;
-var txt = 'Shadrach, Meshach and Abednego replied to him, “King Nebuchadnezzar, we do not need to defend ourselves before you in this matter. If we are thrown into the blazing furnace, the God we serve is able to deliver us from it, and he will deliver us from Your Majesty’s hand. ';
-var speed = 50;
-function typeWriter() 
-{
-  if (i < txt.length)
-  {
-    document.getElementById("txtbody").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-*/

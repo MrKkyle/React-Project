@@ -59,9 +59,11 @@ ul
 {
     list-style-type: none;
 }
-a img 
+#mySidenav a img 
 {
     vertical-align: middle;
     position: relative;
     left: 5px;
+    width: auto;
+    height: auto;
 }

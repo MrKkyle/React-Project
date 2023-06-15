@@ -86,34 +86,4 @@ const Layout = () => {
     </>
   )
 };
-
-/*
-<nav className = "Navi" id = "navi">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/aesperia">Aesperia</Link>
-          </li>
-          <li>
-            <img className = "avatar" src = {MyImage}></img>
-          </li>
-          <li>
-            <Link to="/vera">Vera</Link>
-          </li>
-          <li>
-            <Link to="/domain9">Domain 9</Link>
-          </li>
-          <div className = "dropdown">
-            <button className = "dropbtn">Dropdown<i className = "fa fa-caret-down"></i></button>
-            <div className = "dropdown-content">
-              <a href = "#">Link 1</a>
-              <a href = "#">Link 1</a>
-            </div>
-            
-          </div>
-        </ul>
-      </nav>
-*/
 export default Layout
