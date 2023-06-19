@@ -9,7 +9,7 @@ function Background3(props)
         
         var txt = document.querySelector(".text-container").innerHTML;
         document.querySelector(".text-container").innerHTML = "";
-        var speed = 30;
+        var speed = 28;
         var i = 0;
         function typeWriter() 
         {
@@ -24,7 +24,7 @@ function Background3(props)
         setTimeout(() =>
         {
             typeWriter();
-        }, 3000);
+        }, 1000);
         
 
     }, []);

@@ -195,17 +195,17 @@ body
 }
 .text-container 
 {
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 500px;
+    padding-right: 500px;
     text-align: center;  
-    font-size: 14px;
+    font-size: 16px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: aliceblue;
     position: relative;
     left: 2%;
     top: 2%;
     transform: translate(-3%, -2%);
-    line-height: 1.7;
+    line-height: 2.8;
 }
 .container .text 
 {
