@@ -23,7 +23,6 @@ function Background3(props)
         
         navbar.onclick = function(event)
         {
-            console.log("JA");
             txt = ""
         }
         
