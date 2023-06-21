@@ -6,7 +6,7 @@ function Background3(props)
 
     useEffect(()=> 
     {
-        
+        let navbar = document.querySelector(".navbar");
         var txt = document.querySelector(".text-container").innerHTML;
         document.querySelector(".text-container").innerHTML = "";
         var speed = 28;
@@ -21,17 +21,24 @@ function Background3(props)
             }
         }
         
+        navbar.onclick = function(event)
+        {
+            console.log("JA");
+            txt = ""
+        }
+        
         setTimeout(() =>
         {
             typeWriter();
-        }, 1000);
-        
+        }, 2000);
+
+    
 
     }, []);
     return (
     <>   
         <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
-            <div className = "container">
+            <div className = "container" id = "container">
                 <div className = "text">
                     {props.Title}
                     <hr style = {{display: props.hr}}/>

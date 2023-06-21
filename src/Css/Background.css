@@ -198,14 +198,15 @@ body
     padding-left: 500px;
     padding-right: 500px;
     text-align: center;  
-    font-size: 16px;
+    font-size: 15px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: aliceblue;
     position: relative;
     left: 2%;
     top: 2%;
     transform: translate(-3%, -2%);
-    line-height: 2.8;
+    line-height: 1.5;
+    white-space: pre-line;
 }
 .container .text 
 {

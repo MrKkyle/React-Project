@@ -42,6 +42,8 @@ const Layout = () => {
             <Link to="/aesperiaWorldBosses">WorldBosses</Link>
             <Link to="/ArtificialIsland">Artificial Island</Link>
             <Link to="/Hykros">Hykros</Link>
+            <Link to="/Banges">Banges</Link>
+            <Link to="/Warren">Warren</Link>
           </div>
         </div>
 

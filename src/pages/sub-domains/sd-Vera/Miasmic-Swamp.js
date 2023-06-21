@@ -6,10 +6,8 @@ function MiasmicSwamp()
   return (
   <>
     <Background3 Background = {image} Title = "Miasmic Swamp" Text = {`
-    The Miasmic Swamp is an area in Vera. The Miasmic Swamp is a region flush with lush 
-    green landscapes and exotic flora. It is the only open world area with rain and 
-    thunderstorm weathers in Vera. This is the conventional way of going to Innars 
-    through the Grandsea Tunnel before the connection of Spacerifts in between the cities.
+    The Miasmic Swamp is an area in Vera. The Miasmic Swamp is a region flush with lush green landscapes and exotic flora. It is the only open world area with rain and 
+    thunderstorm weathers in Vera. This is the conventional way of going to Innars through the Grandsea Tunnel before the connection of Spacerifts in between the cities.
     `}/>
   </>
   );
