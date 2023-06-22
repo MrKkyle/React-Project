@@ -198,8 +198,8 @@ body
     padding-left: 500px;
     padding-right: 500px;
     text-align: center;  
-    font-size: 15px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-family: monospace;
     color: aliceblue;
     position: relative;
     left: 2%;
@@ -227,9 +227,10 @@ body
 
 @keyframes fade-container 
 {
-	from{top: 30%; opacity: 0;}
+	from {top: 30%; opacity: 0;}
 	to {top: 0%; opacity: 1;}
 }
+
 
 
 

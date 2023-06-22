@@ -2,10 +2,6 @@
 import '../Css/splashScreen.css';
 import {useRef, useEffect} from 'react';
 
-/* Splash Screen */
-//Add any containers that you would like to remove 
-//let container = document.getElementById("cm0");
-
 
 function SplashScreen(props) 
 {

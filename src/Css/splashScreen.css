@@ -18,11 +18,17 @@
 	width: 100%;
 	background: #070707;
 	background-size: cover;
-	background-image: #ccc;
 	background-position: center;
 	height: 100%;
 	z-index: 200;
 	color: white;
+}
+
+.splashScreen2 .splash 
+{
+	text-align: center;
+	line-height: 90vh;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .splash.display-none
 {
@@ -66,5 +72,13 @@
 	to
 	{
 		display: block;
+	}
+}
+
+@keyframes fadeIn
+{
+	to
+	{
+		opacity: 1;
 	}
 }
