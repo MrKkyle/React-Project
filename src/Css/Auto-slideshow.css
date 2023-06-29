@@ -29,7 +29,7 @@ img
 
 .auto-slideshow-container .text 
 {
-    color: #f2f2f2;
+    color: #131212;
     font-size: 15px;
     padding: 8px 12px;
     top: 8px;
@@ -37,6 +37,7 @@ img
     text-align: center;
     position: relative;
     background-color: transparent;
+    font-family: monospace;
 }
 
 .active 

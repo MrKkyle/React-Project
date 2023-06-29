@@ -5,7 +5,7 @@ function Simulacra()
 {
   return (
   <>
-    <Slideshow/>
+    <Slideshow />
   </>
   );
   

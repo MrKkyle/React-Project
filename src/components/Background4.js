@@ -1,5 +1,5 @@
 import '../Css/Background.css';
-import Background from '../Images/image.png';
+
 
 function Background4(props)
 {
@@ -21,6 +21,6 @@ function Background4(props)
 
 Background4.defaultProps = 
 {
-  Background: Background
+  Background: ""
 }
 export default Background4;

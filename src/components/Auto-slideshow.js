@@ -1,8 +1,7 @@
 import {useEffect} from 'react';
 import '../Css/Auto-slideshow.css';
 import image1 from '../Images/ToF_Wallpaper2022_09.png';
-import image2 from '../Images/ToF_Wallpaper2022_07.png';
-import image3 from '../Images/ToF_Wallpaper2022_10.png';
+
 
 function Auto_Slideshow(props)
 {
@@ -25,7 +24,7 @@ function Auto_Slideshow(props)
           setTimeout(() =>
             {
                 showSlides();
-            }, 2000); // Change image every 2 seconds
+            }, 5000); // Change image every 2 seconds
         }
     }, []);
 
@@ -34,18 +33,28 @@ function Auto_Slideshow(props)
         <div className = "auto-slideshow-container">
 
             <div className = "mySlides fade">
-                <img src = {image1} style = {{width: '100%'}}></img>
-                <div className = "text">{props.text1}</div>
+                <img src = {props.Image1} style = {{width: '100%'}}></img>
+                <div className = "text">{props.Text1}</div>
             </div>
 
             <div className = "mySlides fade">
-                <img src = {image2} style = {{width: '100%'}}></img>
-                <div className = "text">{props.text2}</div>
+                <img src = {props.Image2} style = {{width: '100%'}}></img>
+                <div className = "text">{props.Text2}</div>
             </div>
 
             <div className = "mySlides fade">
-                <img src = {image3} style = {{width: '100%'}}></img>
-                <div className = "text">{props.text3}</div>
+                <img src = {props.Image3} style = {{width: '100%'}}></img>
+                <div className = "text">{props.Text3}</div>
+            </div>
+
+            <div className = "mySlides fade">
+                <img src = {props.Image4} style = {{width: '100%'}}></img>
+                <div className = "text">{props.Text4}</div>
+            </div>
+
+            <div className = "mySlides fade">
+                <img src = {props.Image5} style = {{width: '100%'}}></img>
+                <div className = "text">{props.Text5}</div>
             </div>
 
         </div>
@@ -56,8 +65,11 @@ function Auto_Slideshow(props)
 
 Auto_Slideshow.defaultProps = 
 { 
-    text1: "Add text here", 
-    text2: "Add text here", 
-    text3: "Add text here"
+    Image1: image1,
+    Image2: image1,
+    Image3: image1,
+    Text1: "Add text here", 
+    Text2: "Add text here", 
+    Text3: "Add text here"
 }
 export default Auto_Slideshow;
