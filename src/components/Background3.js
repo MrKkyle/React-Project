@@ -31,7 +31,15 @@ function Background3(props)
             typeWriter();
         }, 2000);
 
-    
+        /* Removes any background color if there is no text */
+        let diamond = document.querySelectorAll(".ul.li");
+        for(let i = 0; i < diamond.length; i++)
+        {
+            if(diamond[i].firstChild.firstChild.innerHTML == "")
+            {
+                diamond[i].firstChild.firstChild.style.backgroundColor = "transparent";
+            }
+        }
 
     }, []);
     return (
@@ -46,7 +54,7 @@ function Background3(props)
                     {props.Text}
                 </div>
             </div>
-            <div className = "ul" id = "table" style = {{width: '1880px', height: '915px', overflow: 'hidden'}}>
+            <div className = "ul" id = "table" style = {{width: '1880px', height: '980px', overflow: 'hidden'}}>
                 <li className = "ul li diamond1" style = {{display: 'block', left: '23%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
                 <li className = "ul li diamond2" style = {{display: 'block', left: '50%', top: '46%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
                 <li className = "ul li diamond3" style = {{display: 'block', left: '77%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
