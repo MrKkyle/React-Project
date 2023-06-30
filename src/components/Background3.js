@@ -35,7 +35,7 @@ function Background3(props)
         let diamond = document.querySelectorAll(".ul.li");
         for(let i = 0; i < diamond.length; i++)
         {
-            if(diamond[i].firstChild.firstChild.innerHTML == "")
+            if(diamond[i].firstChild.firstChild.innerHTML === "")
             {
                 diamond[i].firstChild.firstChild.style.backgroundColor = "transparent";
             }

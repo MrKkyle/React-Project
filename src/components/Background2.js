@@ -1,5 +1,5 @@
 import '../Css/Background.css';
-import {useRef, useEffect} from 'react';
+import {useEffect} from 'react';
 
 /* Must start with a Caps letter */
 function Background2(props)
@@ -10,7 +10,7 @@ function Background2(props)
         let diamond = document.querySelectorAll(".ul.li");
         for(let i = 0; i < diamond.length; i++)
         {
-            if(diamond[i].firstChild.firstChild.innerHTML == "")
+            if(diamond[i].firstChild.firstChild.innerHTML === "")
             {
                 diamond[i].firstChild.firstChild.style.backgroundColor = "transparent";
             }
