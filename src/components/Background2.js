@@ -1,9 +1,22 @@
 import '../Css/Background.css';
+import {useRef, useEffect} from 'react';
 
 /* Must start with a Caps letter */
 function Background2(props)
 {
-    /* Each should have their own inner.text and background.image */
+    useEffect(()=> 
+	{
+        /* Removes any background color if there is no text */
+        let diamond = document.querySelectorAll(".ul.li");
+        for(let i = 0; i < diamond.length; i++)
+        {
+            if(diamond[i].firstChild.firstChild.innerHTML == "")
+            {
+                diamond[i].firstChild.firstChild.style.backgroundColor = "transparent";
+            }
+        }
+    }, []);
+
     return (
         <>
 
