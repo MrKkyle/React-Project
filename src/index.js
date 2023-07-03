@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NavigationBar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
+import Form from './components/Form';
 import image from './Images/ToF_Wallpaper2022_01.png';
 
 
@@ -11,8 +12,8 @@ export default function Main()
 {
     return ( 
         <div>
-            <NavigationBar />
-            <SplashScreen Text = "Tower of Fantasy" Background = {image}/>
+            <Form />
+            
         </div>
     );
 }

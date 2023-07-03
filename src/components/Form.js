@@ -1,7 +1,9 @@
 import {useState} from "react";
+import $ from "jquery";
 function Form()
 {
     const[inputs, setInputs] = useState({});
+    const [result, setResult] = useState("");
     const handleChange = (event) =>
     {
         const name = event.target.name;
@@ -12,7 +14,17 @@ function Form()
     const handleSubmit = (event) =>
     {
         event.preventDefault();
-        console.log(inputs);
+        const form = $(event.target);
+        $.ajax
+        ({
+            type: "post",
+            url: 'http://localhost:8000/submit.php',
+            data: form.serialize(),
+            success(data) 
+            {
+                setResult(data);
+            },
+        });
     }
 
     /* name property is required when creating forms, 
@@ -22,7 +34,7 @@ function Form()
 
     return (
     <div className = 'modal'>
-        <form className = 'modal-content' method = 'post' onSubmit = {handleSubmit}>
+        <form className = 'modal-content' method = 'post' onSubmit={(event) => handleSubmit(event)}>
 
             <div className = 'img-container'>
                 <img className = 'avatar'></img>
@@ -37,6 +49,7 @@ function Form()
                 <button className = 'button' type = 'submit'>Submit</button>
             </div>
         </form>
+        <h1>{result}</h1>
     </div>
     );
 }
