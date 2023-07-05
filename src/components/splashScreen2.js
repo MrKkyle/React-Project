@@ -7,9 +7,6 @@ function SplashScreen2(props)
     useEffect(()=> 
 	{
         let splash = document.querySelector(".splash");
-
-        
-        console.log("YES");
         setTimeout(() =>
         {
             splash.classList.add("display-none");

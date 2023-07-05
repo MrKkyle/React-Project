@@ -30,7 +30,7 @@ function Auto_Slideshow(props)
 
     return (
     <>
-        <div className = "auto-slideshow-container">
+        <div className = "auto-slideshow-container" style = {{display: props.Display}}>
 
             <div className = "mySlides fade">
                 <img src = {props.Image1} style = {{width: '100%'}}></img>

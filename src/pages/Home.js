@@ -11,13 +11,14 @@ import Twitter from '../Images/Socials/twitter.png';
 import Website from '../Images/Socials/web.png';
 
 
-function Home()
+function Home(props)
 {
     return (
     <>
-      <Auto_Slideshow Image1 = {image1} Image2 = {image2} Image3 = {image3} Image4 = {image4} Image5 = {image5}
+      <Auto_Slideshow id ="slideshow" Display = "block"
+      Image1 = {image1} Image2 = {image2} Image3 = {image3} Image4 = {image4} Image5 = {image5}
       Text1 = "" Text2 = "" Text3 = "" Text4 = "" Text5 = ""/>
-      <NavigationBar2 
+      <NavigationBar2 id = "navi-2" Display = "block"
         text1 = "Discord" onclick1 = {'https://www.toweroffantasy-global.com/collaboration/nitro/'} Social1 = {Discord}
         text2 = "Facebook" onclick2 = {'https://www.facebook.com/TowerofFantasy.Official'} Social2 = {Facebook}
         text3 = "Twitter " onclick3 = {'https://twitter.com/ToF_EN_Official'} Social3 = {Twitter}
@@ -27,4 +28,5 @@ function Home()
     );
 };
   
+
 export default Home;

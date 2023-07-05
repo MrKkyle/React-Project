@@ -2,36 +2,27 @@
     header('Access-Control-Allow-Origin: http://localhost:3000');
 
     $user = $_POST['username'];
-    echo ("Hello from server: $user");
+    $key = $_POST['password'];
 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "api-database";
 
-/*
-header("Access-Control-Allow-Origin: *");
-$rest_json = file_get_contents("php://input");
-$_POST = json_decode($rest_json, true);
-echo("submitted");
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    if($conn->connect_error)
+    {
+        die("Connection Failed: " . $conn->connect_error);
+    }
+    $query = mysqli_query($conn, "SELECT * FROM `api-credentials` WHERE username = '$user' AND passCode = '$key'");
 
-$name = $_POST['username'];
-$passCode = $_POST['password'];
-
-echo("Here is the name " . $name);
-
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "api-database";
-
-
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-if($conn->connect_error)
-{
-    die("Connection Failed: " . $conn->connect_error);
-}
-
-$names = mysqli_real_escape_string($conn, $_POST['name']);
-echo("S" . $names);
-*/
+    if(mysqli_num_rows($query) > 0)
+    {
+        echo("login-true");
+    }
+    else
+    {
+        echo("login-false");
+    }
 
 ?>
