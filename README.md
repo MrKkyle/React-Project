@@ -4,10 +4,15 @@ The project is based off the game Tower of Fantasy, you can view the official we
 
 Website description:
 -The website uses a simple ajax request to a php file to detect if the user has logged in.
+
 -Once logged in, a simple message will be displayed to confirm that the user has been logged in. 
+
 -If the login is rejected, an error message will be given, and the page will be reloaded.
+
 -A register feature is also available, that connects to the database, and if successful, a prompt is given to the user to then return to the login page.
--This website supports a login + edit feature, where the user is prompted upon entering the website, to login, register(if new) or to enter as a guest mode, 
+
+-This website supports a login + edit feature, where the user is prompted upon entering the website, to login, register(if new) or to enter as a guest mode
+
 -Guest mode will allow the user to bypass any security features and solely view the website.
 -However, users entering as guests have their editing privilege's retracted. 
 -Only users who register and login are able to edit the information on the website.
