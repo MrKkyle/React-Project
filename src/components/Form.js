@@ -103,7 +103,7 @@ function Form(props)
     <div>
         <div className = 'modal1' id = "login-form" style = {{display: props.Display}}>
             <form className = 'modal-content' method = 'post' onSubmit={(event) => handleSubmit(event)}>
-
+                
                 <div className = 'img-container'>
                     <img className = 'avatar' src = {logo}></img>
                 </div>
@@ -116,7 +116,9 @@ function Form(props)
 
                     <button id = "login" className = 'button' type = 'submit'>Login</button> or <a id = "director" style={{ textDecoration: 'underline', cursor: 'pointer'}}>Register</a>
                     <br />
-                    or continue in <button id = "guest" className = "redirect-button">Guest Mode</button>
+                    <br />
+                    <hr /> or <hr />
+                    <button id = "guest" className = "redirect-button">Guest Mode</button>
                     
                 </div>
             </form>
