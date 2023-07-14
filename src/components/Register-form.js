@@ -6,6 +6,7 @@ import logo from '../Images/ToF logo.png';
 import '../Css/Form.css';
 function Register_Form(props)
 {
+    
     const[inputs, setInputs] = useState({});
     const [resulter, setResulter] = useState("");
     
@@ -43,14 +44,25 @@ function Register_Form(props)
         let redirect_main = document.getElementById("rdct-main");
         let register_form = document.getElementById("register-form");
         let login_form = document.getElementById("login-form");
+        let message = document.getElementById("message2");
+        let back = document.getElementById("back");
 
+        //redirect message
         redirect.addEventListener("click", () =>
         {
             redirect_main.style.display = "none";
             login_form.style.display = "block";
         });
 
-        let message = document.getElementById("message2");
+        //Close button
+        back.addEventListener("click" , () => 
+        {
+            register_form.style.display = "none";
+            login_form.style.animation = "FadeIn ease-in 1s";
+            login_form.style.display = "block";
+        });
+
+        //function to check login status
         function checkRegister() 
         {
             if(message.innerHTML !== "")
@@ -58,12 +70,11 @@ function Register_Form(props)
                 message.style.display = "block";
                 if(message.innerHTML === "register-true")
                 {
-                    console.log("pass");
                     message.innerHTML = "Registered Sucessfully";
                     message.style.backgroundColor = "rgb(6, 133, 6)";
                     setTimeout(() =>
                     {
-                        register_form.style.animation = "FadeOut ease-out 1s";
+                        register_form.style.animation = "Fadeout ease-out 1s";
                         register_form.style.display = "none";
                         redirect_main.style.display = "block";
                     
@@ -71,7 +82,6 @@ function Register_Form(props)
                 }
                 else if(message.innerHTML === "register-false")
                 {
-                    console.log("Fail");
                     message.innerHTML = "Registration Failed";
                     message.style.backgroundColor = "rgb(175, 11, 11)";
                     setTimeout(() =>
@@ -90,6 +100,7 @@ function Register_Form(props)
     return (
     <div>
         <div className = 'modal1' id = "register-form" style = {{display: props.Display}}>
+        <span className = "close" id = "back" title = "Close Modal">&times;</span>
             <form className = 'modal-content' method = 'post' onSubmit={(event) => handleSubmit(event)}>
 
                 <div className = 'img-container'>

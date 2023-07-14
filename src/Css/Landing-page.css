@@ -1,6 +1,5 @@
-.landing-page .background-image
+.landing-page .background-video
 {
-
 	height: 100%;
 	width: 100%;
 	background-position: center;
@@ -47,20 +46,36 @@
 	text-align: center;
 	border-radius: 5px;
 }
-
 .modal-content:hover
 {
 	opacity: 1;
 }
+.blocks
+{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color:rgb(25, 235, 235);
+	transition-duration: 0.5s;
+	padding: 50px;
+	font-family: monospace;
+	text-align: center;
+}
+.blocks:hover 
+{
+	width: 400px;
+}
 .login 
 {
-
+	background-color: aliceblue;
 }
 .register 
 {
-    
+	background-color:rgb(114, 206, 206);
 }
 .guest 
 {
-	
+	background-color:rgb(124, 117, 117);
 }

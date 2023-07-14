@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import NavigationBar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
 import Form from './components/Form';
@@ -25,10 +24,6 @@ export default function Main()
         </div>
     );
 }
-/*
-<NavigationBar />
-<SplashScreen Text = "Tower of Fantasy" Background = {image}/>
-*/
 
 /* ReactDOM enables us to render this element inside the real DOM*/
 const root = ReactDOM.createRoot(document.getElementById('root'));
