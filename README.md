@@ -1,6 +1,6 @@
 # React-Project Motivation
 I felt the need to broaden my front-end skills besides HTML/CSS, and react was the recommended choice.
-The project is based off the game Tower of Fantasy, you can view the official website _https://www.toweroffantasy-global.com/home.html_.
+The project is based off the game Tower of Fantasy, you can view the official website here: _https://www.toweroffantasy-global.com/home.html_.
 
 # Main Features
 - _The information and pictures displayed on the website are all original works of Tower of Fantasy._
