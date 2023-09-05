@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import NavigationBar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
 import Form from './components/Form';
