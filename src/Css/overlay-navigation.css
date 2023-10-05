@@ -55,3 +55,15 @@
         right: 35px;
     }
 }
+#open 
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+    background-color: #242424;
+    color: white;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
