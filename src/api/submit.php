@@ -1,6 +1,8 @@
 <?php
+    session_start();
     header('Access-Control-Allow-Origin: http://localhost:3000');
 
+    
     $user = $_POST['username'];
     $key = $_POST['password'];
 
@@ -14,8 +16,8 @@
     {
         die("Connection Failed: " . $conn->connect_error);
     }
-    $query = mysqli_query($conn, "SELECT * FROM `api-credentials` WHERE username = '$user' AND passCode = '$key'");
 
+    $query = mysqli_query($conn, "SELECT * FROM `api-credentials` WHERE username = '$user' AND passCode = '$key'");
     if(mysqli_num_rows($query) > 0)
     {
         echo("login-true");

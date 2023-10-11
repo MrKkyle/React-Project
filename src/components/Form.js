@@ -3,7 +3,6 @@ import {useEffect} from 'react';
 import $ from "jquery";
 
 import video from '../Images/annabella-from-tower-of-fantasy.1920x1080.mp4';
-import logo from '../Images/ToF logo.png';
 import '../Css/Form.css';
 function Form(props)
 {
@@ -22,14 +21,22 @@ function Form(props)
     {
         event.preventDefault();
         const form = $(event.target);
+        /* Submits the user Information */
         $.ajax
         ({
-            type: "post",
-            url: 'http://localhost:8000/submit.php',
+            type: "POST",
+            url: "http://localhost:8000/submit.php",
             data: form.serialize(),
             success(data) 
             {
                 setResult(data);
+
+                /* Sets and Returns the sessions variables */
+                $.post( "http://localhost:8000/session_variables.php", {action: "login"})
+                .done(function( _data) 
+                {
+                    console.log("Data Loaded: " + _data);
+                });
             },
         });
     }
@@ -37,7 +44,6 @@ function Form(props)
     useEffect(()=> 
     {
         let navigation = document.getElementById("navigation");
-        let navi2 = document.getElementById("navi-2");
         let video = document.getElementById("video");
         navigation.style.display = "none";
 
@@ -94,8 +100,10 @@ function Form(props)
             //guest mode
             guest.addEventListener("click", () =>
             {
-                login_form.style.display = "none";
                 register_form.style.display = "none";
+                login_form.style.animation = "Fadeout ease-out 1s";
+                login_form.style.display = "none";
+                login_form.style.opacity = "0";
                 video.style.display = "none";
                 navigation.style.display = "block";
                 clearTimeout(sop);
@@ -110,11 +118,8 @@ function Form(props)
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = 'modal1' id = "login-form" style = {{display: props.Display}}>
-            <form className = 'modal-content' method = 'post' onSubmit={(event) => handleSubmit(event)}>
+            <form className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                 
-                <div className = 'img-container'>
-                    <img className = 'avatar' src = {logo}></img>
-                </div>
                 <div className = 'modal-container'>
                     <label><b>Username</b></label>
                     <span><input type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} ></input></span>
@@ -122,10 +127,10 @@ function Form(props)
                     <label><b>Password</b></label>
                     <span><input type = 'password' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange}></input></span>
 
-                    <button id = "login" className = 'button' type = 'submit'>Login</button> or <a id = "director" style={{textDecoration: 'underline', cursor: 'pointer'}}>Register</a>
+                    <button id = "login" className = 'button' type = 'submit'>Login</button> <a id = "or">or</a> <a id = "director">Register</a>
                     <br />
                     <br />
-                    <hr /> or <hr />
+                    <hr /> <a id = "or">or</a> <hr />
                     <button id = "guest" className = "redirect-button">Guest Mode</button>
                     
                 </div>

@@ -2,7 +2,6 @@ import {useState} from "react";
 import {useEffect} from 'react';
 import $ from "jquery";
 
-import logo from '../Images/ToF logo.png';
 import '../Css/Form.css';
 function Register_Form(props)
 {
@@ -101,16 +100,13 @@ function Register_Form(props)
     <div>
         <div className = 'modal1' id = "register-form" style = {{display: props.Display}}>
         <span className = "close" id = "back" title = "Close Modal">&times;</span>
-            <form className = 'modal-content' method = 'post' onSubmit={(event) => handleSubmit(event)}>
+            <form className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
 
-                <div className = 'img-container'>
-                    <img className = 'avatar' src = {logo}></img>
-                </div>
                 <div className = 'modal-container'>
-                    <label><b>Username</b></label>
+                    <label>Username</label>
                     <span><input type = 'text' placeholder = "Enter a name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
 
-                    <label><b>Password</b></label>
+                    <label>Password</label>
                     <span><input type = 'password' placeholder = "Enter a password" name = "password" value = {inputs.password || ""} onChange = {handleChange} required></input></span>
 
                     <button className = 'button' type = 'submit'>Register</button>

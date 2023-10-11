@@ -14,28 +14,20 @@
 .modal-content
 {
 	position: relative;
-	background-color: #fefefe;
+	background-color: rgba(0, 0, 0, 0.329);
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid #888;
 	width: 550px;
-	opacity: 0.9;
+	opacity: 0.85;
 	text-align: center;
 	border-radius: 5px;
 	z-index: 20;
+    transition-duration: 0.4s;
 }
-
 .modal-content:hover
 {
 	opacity: 1;
-}
-
-.cancelbtn
-{
-	width: auto;
-	padding: 10px 18px;
-	background-color: #f44336;
 }
 .modal1 .button
 {
@@ -60,20 +52,6 @@
 	border: 1px solid rgb(0, 0, 0);
 	background-position: center;
 }
-.imgcontainer
-{
-	margin: 24px 0 12px 0;
-	position: relative;
-}
-
-.modal-content .avatar
-{
-	width: 300px;
-	height: 208px;
-	border-radius: 40%;
-	position: relative;
-}
-
 .modal-container
 {
 	padding: 16px;
@@ -81,12 +59,18 @@
 
 input[type = text], input[type = password]
 {
-	width: 100%;
+    width: 460px;
 	padding: 15px;
-	margin: 8px 0; 
-	border: 1px solid #cccccc;
+	margin: 15px 0; 
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid black;
 	display: inline-block;
 	box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0px;
+    color: white;
 }
 .info-message 
 {
@@ -192,7 +176,6 @@ input[type = text], input[type = password]
 	font-size: 14px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
-
 }
 .video 
 {
@@ -218,4 +201,25 @@ input[type = text], input[type = password]
 {
 	color: red;
 	cursor: pointer;
+}
+label 
+{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#director, #or
+{
+    color: white;
+    padding: 2px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.4s;
+}
+#director:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
 }
