@@ -21,6 +21,9 @@ function Form(props)
     {
         event.preventDefault();
         const form = $(event.target);
+
+        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
+
         /* Submits the user Information */
         $.ajax
         ({
@@ -33,6 +36,7 @@ function Form(props)
 
                 /* Sets and Returns the sessions variables */
                 $.post( "http://localhost:8000/session_variables.php", {action: "login"})
+                
                 .done(function( _data) 
                 {
                     console.log("Data Loaded: " + _data);
@@ -44,8 +48,10 @@ function Form(props)
     useEffect(()=> 
     {
         let navigation = document.getElementById("navigation");
+        let navi_2 = document.getElementById("mySidenav");
         let video = document.getElementById("video");
         navigation.style.display = "none";
+        navi_2.style.display = "none";
 
         let director = document.getElementById("director");
         let register_form = document.getElementById("register-form");
@@ -82,6 +88,7 @@ function Form(props)
                         login_form.style.opacity = "0";
                         video.style.display = "none";
                         navigation.style.display = "block";
+                        navi_2.style.dispaly = "block";
                     }, 2000);
                 }
                 else if(message.innerHTML === "login-false")

@@ -1,7 +1,7 @@
 <?php
     session_start();
     header('Access-Control-Allow-Origin: http://localhost:3000');
-
+    header('Access-Control-Allow-Credentials: true');
     
     $user = $_POST['username'];
     $key = $_POST['password'];
