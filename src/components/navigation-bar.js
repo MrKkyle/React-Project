@@ -35,7 +35,7 @@ import Unknown from '../pages/sub-domains/sd-Domain9/Unknown';
 
 // Import Style sheet below
 import '../Css/navigation-bar.css';
-function Navigation_Bar(props )
+function Navigation_Bar(props)
 {
     return (
         <div id = "navigation" style = {{display: props.Display}}>

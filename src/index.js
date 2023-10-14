@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavigationBar from './components/Navigation-bar';
+import Navigation_Bar from './components/Navigation-bar';
 import SplashScreen from './components/splashScreen';
 import Form from './components/Form';
 import Register_Form from './components/Register-form';
@@ -17,7 +17,7 @@ export default function Main()
             <Form Display = "block"/>
             <Register_Form Display = "none"/>
             <SplashScreen Text = "Tower of Fantasy" Background = {image}/>
-            <NavigationBar Display = "block"/>
+            <Navigation_Bar Display = "block"/>
         </div>
     );
 }

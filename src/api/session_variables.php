@@ -4,8 +4,6 @@
     header('Access-Control-Allow-Credentials: true');
     /* If connection is successful, Set sessions variables */
 
-    $isLogged = "xd";
-
     /* If action variable = login */
     if ($_POST["action"] == "login")
     {

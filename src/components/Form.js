@@ -33,7 +33,7 @@ function Form(props)
             success(data) 
             {
                 setResult(data);
-
+                console.log(data);
                 /* Sets and Returns the sessions variables */
                 $.post( "http://localhost:8000/session_variables.php", {action: "login"})
                 
@@ -129,10 +129,10 @@ function Form(props)
                 
                 <div className = 'modal-container'>
                     <label><b>Username</b></label>
-                    <span><input type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} ></input></span>
+                    <span><input type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
 
                     <label><b>Password</b></label>
-                    <span><input type = 'password' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange}></input></span>
+                    <span><input type = 'password' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange} required></input></span>
 
                     <button id = "login" className = 'button' type = 'submit'>Login</button> <a id = "or">or</a> <a id = "director">Register</a>
                     <br />
