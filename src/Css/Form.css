@@ -31,26 +31,29 @@
 }
 .modal1 .button
 {
-	padding: 0px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	cursor: pointer;
-	width: 150px;
-	height: 40px;
-	position: relative;
-	background-size: cover;
-	color: black;
-	border: 1px solid #5a5a5a;
-	border-radius: 4px;
-	margin: 0;
-	transition-duration: 0.4s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    border-radius: 4px;
+    margin: 0;
+    transition-duration: 0.6s;
 }
 .modal1 .button:hover
 {
 	color: rgb(7, 3, 3);
-	border: 1px solid rgb(0, 0, 0);
-	background-position: center;
+    border: transparent;
+    background-color: aliceblue;
 }
 .modal-container
 {
@@ -210,16 +213,38 @@ label
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#director, #or
+#or
 {
     color: white;
-    padding: 2px;
+    padding: 0px;
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.4s;
 }
+#director
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    border-radius: 4px;
+    margin: 0;
+    transition-duration: 0.6s;
+}
 #director:hover
 {
-    text-decoration: underline;
     cursor: pointer;
+    color: rgb(7, 3, 3);
+    border: transparent;
+    background-color: aliceblue;
 }
