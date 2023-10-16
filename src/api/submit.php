@@ -21,15 +21,6 @@
     if(mysqli_num_rows($query) > 0)
     {
         $result = array("username"=>$user, "key"=>$key, "Status"=>"login-true");
-
-/*
-        $result =
-        [
-            "username" => $user,
-            "key" => $key,
-            "status" => "login-true"
-        ];
-*/
         echo json_encode($result);
 
     }

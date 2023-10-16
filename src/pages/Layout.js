@@ -82,6 +82,10 @@ const Layout = () => {
         <div className = "avatar">
           <img className = "avatar" src = {MyImage} />
         </div>
+
+        <div className = "drop" id = "user">
+          <img className = "user" src = {MyImage} />
+        </div>
       </div>
       
       <Outlet />
