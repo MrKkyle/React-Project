@@ -2,7 +2,6 @@
     session_start();
     header('Access-Control-Allow-Origin: http://localhost:3000');
     header('Access-Control-Allow-Credentials: true');
-    /* If connection is successful, Set sessions variables */
 
     /* If action variable = login */
     if ($_POST["action"] == "login")

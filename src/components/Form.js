@@ -4,6 +4,7 @@ import $ from "jquery";
 
 import video from '../Images/annabella-from-tower-of-fantasy.1920x1080.mp4';
 import '../Css/Form.css';
+import { json } from "react-router-dom";
 function Form(props)
 {
 
@@ -29,20 +30,13 @@ function Form(props)
         ({
             type: "POST",
             url: "http://localhost:8000/submit.php",
-            data: form.serialize(),
-            success(data) 
-            {
+            data: form.serialize(), // important to maintain the form data output
+            dataType: 'json',
+            success(data) {
                 setResult(data);
                 console.log(data);
-                /* Sets and Returns the sessions variables */
-                $.post( "http://localhost:8000/session_variables.php", {action: "login"})
-                
-                .done(function( _data) 
-                {
-                    console.log("Data Loaded: " + _data);
-                });
             },
-        });
+        })
     }
 
     useEffect(()=> 
@@ -142,7 +136,7 @@ function Form(props)
                     
                 </div>
             </form>
-            <div className = "info-message" id = "message">{result}</div>
+            <div className = "info-message" id = "message">{result['Status']}</div>
         </div>   
     </div>    
     );
