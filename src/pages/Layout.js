@@ -2,6 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
 import '../Css/navigation-bar.css'
 import MyImage from '../Images/ToF logo.png';
+import userImage from '../Images/Screenshot 2023-08-31 144726.png';
 
 const Layout = () => {
 
@@ -79,12 +80,8 @@ const Layout = () => {
           <button onClick = {navigateToPVP} className = "dropbtn">PvP</button>
         </div>
 
-        <div className = "avatar">
-          <img className = "avatar" src = {MyImage} />
-        </div>
-
-        <div className = "drop" id = "user">
-          <img className = "user" src = {MyImage} />
+        <div className = "avatar" id = "user">
+          <img className = "avatar" src = {userImage} />
         </div>
       </div>
       

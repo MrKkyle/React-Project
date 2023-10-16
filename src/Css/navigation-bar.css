@@ -41,18 +41,9 @@ li a:hover
     right: 0;
     top: 0px;
 }
-.drop 
+.avatar:hover 
 {
-    float: right;
-    overflow: hidden;
-}
-.user
-{
-    width: 95px;
-    height: 48px;
-    position: absolute;
-    right: 96px;
-    top: 0px;
+    cursor: pointer;
 }
 
 .navbar 
