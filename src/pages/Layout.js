@@ -31,7 +31,7 @@ const Layout = () => {
 
   return (
     <>
-      <div className = "navbar">
+      <div className = "navbar" id = "navigation">
 
         <Link className = "home" to="/">Home</Link>
 

@@ -193,10 +193,10 @@ input[type = text], input[type = password]
 .close
 {
 	position: absolute;
-	right: 8px;
+	right: 15px;
 	top: 0;
 	color: #f1eded;
-	font-size: 35px;
+	font-size: 50px;
 	font-weight: bold;
 }
 .close:hover,

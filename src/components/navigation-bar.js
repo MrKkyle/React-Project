@@ -38,7 +38,7 @@ import '../Css/navigation-bar.css';
 function Navigation_Bar(props)
 {
     return (
-        <div id = "navigation" style = {{display: props.Display}}>
+        <div style = {{display: props.Display}}>
             <BrowserRouter>
                 <Routes>
                     <Route path = "/" element = {<Layout />}>
