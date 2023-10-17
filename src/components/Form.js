@@ -46,6 +46,7 @@ function Form(props)
 
     useEffect(()=> 
     {
+        let video2 = document.getElementById("video2");
         let navigation = document.getElementById("navigation");
         let navi_2 = document.getElementById("mySidenav");
         let video = document.getElementById("video");
@@ -105,6 +106,7 @@ function Form(props)
                             {
                                 navigation.style.opacity = "1";
                                 navi_2.style.opacity = "1";
+                                video2.style.display = "block";
                             }, 800);
                         }, 1500);
                         
@@ -136,7 +138,7 @@ function Form(props)
                 {
                     login_form.style.display = "none";
                     login_form.style.opacity = "0";
-                    video.style.display = "none";
+                    video2.style.display = "none";
                 }, 1500);
                 setTimeout(() =>
                 {
@@ -148,6 +150,7 @@ function Form(props)
                     {
                         navigation.style.opacity = "1";
                         navi_2.style.opacity = "1";
+                        video2.style.display = "block";
                     }, 800);
                 }, 1500);
             });

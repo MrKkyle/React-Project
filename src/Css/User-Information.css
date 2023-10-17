@@ -101,10 +101,11 @@
 .snip1376 figcaption 
 {
     width: 100%;
-    background-color: #ffffff;
+    background: linear-gradient(0deg, rgb(166 226 255) 1%, rgb(224 181 225) 100%);
     padding: 10px;
     position: relative;
     text-align: center;
+    font-size: 15px;
 }
 .snip1376 figcaption:before 
 {
@@ -115,4 +116,41 @@
     left: 0;
     width: 100px;
     height: 100px;
+}
+
+.snip1376 input[type = password]
+{
+    text-align: center;
+    border-bottom: transparent;
+    color: black;
+    padding: 0px;
+    font-family: 'Quattrocento', Arial, sans-serif;
+    width: auto;
+    margin: 15px 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 15px;
+}
+.snip1376 input[type = text]
+{
+    text-align: center;
+    border-bottom: transparent;
+    color: black;
+    padding: 0px;
+    font-family: 'Quattrocento', Arial, sans-serif;
+    width: auto;
+    margin: 15px 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 15px;
 }

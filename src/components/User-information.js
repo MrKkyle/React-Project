@@ -1,31 +1,40 @@
 import {useEffect} from 'react';
 import '../Css/User-Information.css';
-import image from '../Images/Screenshot 2023-08-31 144726.png'
 function UserInformation(props)
 {
 
     useEffect(()=> 
     {
+        document.getElementById("radio").addEventListener("click", () =>
+        {
+            var x = document.getElementById("_password");
+            if (x.type === "password") 
+            {
+                x.type = "text";
+            } 
+            else 
+            {
+                x.type = "password";
+            }
+        });
 
 
     }, []);
     return (
         <div className = "userInformation" id = "user-information">
             <span className = "close" id = "close" title = "Close Modal">&times;</span>
-            <div className = "modal1">
+            <div className = "modal1" id = "modal">
                 
                 <figure className = "snip1376">
-                    <img src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg" />
+                    <img src = {props.Image} />
                     <figcaption>
                         <h2>{props.Heading1}</h2>
-                        <p id = "_username">
-                            {props.Text1}
-                        </p>
+                        <p id = "_username"></p>
 
                         <h2>{props.Heading2}</h2>
-                        <p id = "_password">
-                            {props.Text2}
-                        </p>
+                        <input type = "password" id = "_password"></input>
+                        <br />
+                        <input id = "radio" type = "checkbox" />Show Password
                     </figcaption>
                 </figure>
             </div>

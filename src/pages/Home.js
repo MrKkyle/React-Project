@@ -7,7 +7,8 @@ import Discord from '../Images/Socials/discord.png';
 import Facebook from '../Images/Socials/facebook.png';
 import Twitter from '../Images/Socials/twitter.png';
 import Website from '../Images/Socials/web.png';
-import { json } from 'react-router-dom';
+import image from '../Images/Screenshot 2023-08-31 144726.png';
+import video from '../Images/ruby-in-tower-of-fantasy.3840x2160.mp4';
 
 
 function Home(props)
@@ -16,6 +17,7 @@ function Home(props)
     {
         window.onload = function(event)
         {
+            let video = document.getElementById("video2");
             let _user = document.getElementById("_username");
             let _pass = document.getElementById("_password");
             
@@ -30,10 +32,11 @@ function Home(props)
                 success(data) 
                 {
                     _user.innerHTML = data['username'];
-                    _pass.innerHTML = data['key']
+                    _pass.value = data['key']
                 },
             });
         }
+
         let user = document.getElementById("user");
         let navigation = document.getElementById("navigation");
         let navi2 = document.getElementById("mySidenav");
@@ -50,7 +53,9 @@ function Home(props)
                 navi2.style.display = "none";
                 user_information.style.animation = "FadeIn 1s ease-in";
                 user_information.style.display = "block";
-                user_information.style.opacity = "1";
+
+
+
             }, 900);
         });
 
@@ -75,6 +80,7 @@ function Home(props)
         let button2 = document.getElementById("2");
 
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
+        /*
         button1.addEventListener("click", () =>
         {
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
@@ -92,23 +98,23 @@ function Home(props)
                 console.log("Data Loaded: " + _data);
             });
         });
+        */
 
     }, []);
 
     return (
     <div>
-      <NavigationBar2 id = "navi-2" Display = "block"
+        <NavigationBar2 id = "navi-2" Display = "block"
         text1 = "Discord" onclick1 = {'https://www.toweroffantasy-global.com/collaboration/nitro/'} Social1 = {Discord}
         text2 = "Facebook" onclick2 = {'https://www.facebook.com/TowerofFantasy.Official'} Social2 = {Facebook}
         text3 = "Twitter " onclick3 = {'https://twitter.com/ToF_EN_Official'} Social3 = {Twitter}
         text4 = "Website " onclick4 = {'https://www.toweroffantasy-global.com'} Social4 = {Website}
-      />
+        />
 
-      <UserInformation />
-      <button className = "button" id = "1">Validate values</button>
-      <button className = "button" id = "2">Logout values</button>
-      <button className = "button" id = "3">Validate login values</button>
-
+        <UserInformation Heading1 = "Username" Heading2 = "Password" Image = {image}/>
+        <video loop autoPlay muted className = "video" id = "video2" style = {{display: 'none'}}>
+            <source src = {video} type = "video/mp4"></source>
+        </video>
       
     </div>
     );

@@ -52,6 +52,8 @@ li a:hover
     background-color: rgb(51, 51, 51, 0.95);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.2s;
+    position: relative;
+    z-index: 1;
 }
 .navbar:hover 
 {
