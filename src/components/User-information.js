@@ -6,8 +6,7 @@ function UserInformation(props)
 
     useEffect(()=> 
     {
-        let navigation = document.getElementById("navigation");
-        navigation.style.display = "none";
+
 
     }, []);
     return (
@@ -16,17 +15,17 @@ function UserInformation(props)
             <div className = "modal1">
                 
                 <figure className = "snip1376">
-                    <img src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg" alt = "sample17" />
+                    <img src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample17.jpg" />
                     <figcaption>
-                        <h2>Linguina Nettlewater</h2>
-                        <p>
-                            I'm looking for something that can deliver a 50-pound payload of 
-                            snow on a small feminine target. Can you suggest something? Hello? 
+                        <h2>{props.Heading1}</h2>
+                        <p id = "_username">
+                            {props.Text1}
                         </p>
-                        <div className = "icons"><a href = "#"><i className = "ion-social-reddit-outline"></i></a>
-                        <a href = "#"> <i className = "ion-social-twitter-outline"></i></a>
-                        <a href = "#"> <i className = "ion-social-vimeo-outline"></i></a>
-                        </div>
+
+                        <h2>{props.Heading2}</h2>
+                        <p id = "_password">
+                            {props.Text2}
+                        </p>
                     </figcaption>
                 </figure>
             </div>

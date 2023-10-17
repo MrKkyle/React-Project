@@ -7,37 +7,73 @@ import Discord from '../Images/Socials/discord.png';
 import Facebook from '../Images/Socials/facebook.png';
 import Twitter from '../Images/Socials/twitter.png';
 import Website from '../Images/Socials/web.png';
+import { json } from 'react-router-dom';
 
 
 function Home(props)
 {
     useEffect(()=> 
     {
-
+        window.onload = function(event)
+        {
+            let _user = document.getElementById("_username");
+            let _pass = document.getElementById("_password");
+            
+            //Retrieve data for the page
+            $.ajax
+            ({
+                type: "POST",
+                action: 'validate',
+                url: "http://localhost:8000/submit.php",
+                data: {action: 'validate'}, //the data you submit with the request
+                dataType: 'json',
+                success(data) 
+                {
+                    _user.innerHTML = data['username'];
+                    _pass.innerHTML = data['key']
+                },
+            });
+        }
         let user = document.getElementById("user");
         let navigation = document.getElementById("navigation");
+        let navi2 = document.getElementById("mySidenav");
         let user_information = document.getElementById("user-information");
+        let close = document.getElementById("close");
         user.addEventListener("click", () =>
         {
             navigation.style.animation = "Fadeout 1s ease-out";
+            navi2.style.animation = "Fadeout 1s ease-out";
             
             setTimeout(() =>
             {
                 navigation.style.display = "none";
-                user_information.style.animation = "fadeIn 1s ease-in";
+                navi2.style.display = "none";
+                user_information.style.animation = "FadeIn 1s ease-in";
                 user_information.style.display = "block";
                 user_information.style.opacity = "1";
-
             }, 900);
-            
         });
 
+        close.addEventListener("click", () => 
+        {   
+            user_information.style.animation = "Fadeout 1s ease-out";
+            
+            setTimeout(() =>
+            {
+                user_information.style.display = "none";
+                navigation.style.animation = "FadeIn 1s ease-in";
+                navigation.style.display = "block";
+                navigation.style.opacity = "1";
+                navi2.style.animation = "FadeIn 1s ease-in";
+                navi2.style.display = "block";
+                navi2.style.opacity = "1";
 
-
-
+            }, 900);
+        });
 
         let button1 = document.getElementById("1");
         let button2 = document.getElementById("2");
+
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         button1.addEventListener("click", () =>
         {
@@ -57,7 +93,6 @@ function Home(props)
             });
         });
 
-
     }, []);
 
     return (
@@ -72,6 +107,9 @@ function Home(props)
       <UserInformation />
       <button className = "button" id = "1">Validate values</button>
       <button className = "button" id = "2">Logout values</button>
+      <button className = "button" id = "3">Validate login values</button>
+
+      
     </div>
     );
 };
