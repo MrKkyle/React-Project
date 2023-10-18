@@ -1,11 +1,11 @@
 import Background3 from "../components/Background3";
-import image from '../Images/ToF_Wallpaper2022_01.png';
+
 
 function Equipment()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Equipment" Text = {`
+    <Background3 Title = "Equipment" Text = {`
     Equipment are items that can be equipped to boost certain stats of the Wanderer. Equipment comes in all rarities.
     Each piece of Equipment can have 2 or 3 fixed base stats based on their type, and 2-4 random substats. 
     

@@ -1,11 +1,11 @@
 import Background3 from "../components/Background3";
-import image from '../Images/2.jpg';
+
 
 function PVP()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "PvP" Text = {`
+    <Background3 Title = "PvP" Text = {`
     Break from Destiny: 
     ____________________
     In Break from Destiny, players can participate in Break from Destiny seasons to compete against up to 30 Wanderers 

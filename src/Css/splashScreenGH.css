@@ -15,13 +15,13 @@ Splash Simple here
     background-size: auto;
 }
 
-#one { background-image: url(../Images/1.jpg); }
-#two { background-image: url(../Images/1287431.jpg);}
-#three { background-image: url(../Images/Banges.png); }
-#four { background-image: url(../Images/confoundingAbyss.png); }
-#five {background-image: url(../Images/Grayspace.png);}
-#six {background-image: url(../Images/SnowField.png);}
-#seven {background-image: url(../Images/Mirroria.png);}
+#one { background-image: url(); }
+#two { background-image: url();}
+#three { background-image: url(); }
+#four { background-image: url(); }
+#five {background-image: url();}
+#six {background-image: url();}
+#seven {background-image: url();}
 
 .splashTxt
 {
