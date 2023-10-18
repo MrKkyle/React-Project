@@ -101,6 +101,10 @@ const Layout = () => {
                 <button onClick = {navigateToPVP} className = "dropbtn">PvP</button>
             </div>
 
+            <div className = "logout">
+                <button id = "logout" className = "dropbtn">Logout</button>
+            </div>
+
             <div className = "avatar" id = "user">
                 <img className = "avatar" src = {userImage} />
             </div>

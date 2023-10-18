@@ -84,7 +84,6 @@ li a:hover
     float: left;
     overflow: hidden;
 }
-
 .dropdown .dropbtn 
 {
     font-size: 16px;
@@ -97,8 +96,26 @@ li a:hover
     margin: 0;
 }
 
+.logout 
+{
+    float: left;
+    overflow: hidden;
+}
+.logout .dropbtn 
+{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    position: absolute;
+    right: 95px;
+}
 
-.navbar a:hover, .dropdown:hover .dropbtn 
+.navbar a:hover, .dropdown:hover .dropbtn, .logout:hover
 {
     background-color: rgb(72, 101, 128);
 
