@@ -54,7 +54,7 @@ const Layout = () => {
         <>
         <div className = "navbar" id = "navigation">
 
-            <Link className = "home" to="/">Home</Link>
+            <Link id = "home" className = "home" to="/">Home</Link>
 
             <div className = "dropdown">
                 <button onClick = {navigateToAesperia} className = "dropbtn">Aesperia</button>

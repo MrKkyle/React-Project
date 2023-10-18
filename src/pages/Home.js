@@ -17,11 +17,7 @@ function Home(props)
 {
     useEffect(()=> 
     {
-        window.onload = function(event)
-        {
-            
-        }
-
+    
         let user = document.getElementById("user");
         let navigation = document.getElementById("navigation");
         let user_information = document.getElementById("user-information");
@@ -99,7 +95,8 @@ function Home(props)
     <div>
 
         <UserInformation Heading1 = "Username" Heading2 = "Password" Image = {image}/>
-        <video loop autoPlay muted className = "video" id = "video2" style = {{display: 'none'}}>
+
+        <video loop autoPlay muted className = "video" id = "video2">
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = "user-tooltip" id = "_tooltip">User Information</div>

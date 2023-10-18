@@ -101,7 +101,7 @@ function Form(props)
                             setTimeout(() =>
                             {
                                 navigation.style.opacity = "1";
-                                video2.style.display = "block";
+                                if((!video2 == null)){ video2.style.display = "block"; }
                             }, 100);
                         }, 1500);
                         
