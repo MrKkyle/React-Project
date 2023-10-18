@@ -10,7 +10,7 @@ import Website from '../Images/Socials/web.png';
 */
 import UserInformation from '../components/User-information';
 import image from '../Images/Screenshot 2023-08-31 144726.png';
-import video from '../Images/ruby-in-tower-of-fantasy.3840x2160.mp4';
+import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
 
 
 function Home(props)

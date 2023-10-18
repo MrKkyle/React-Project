@@ -1,5 +1,5 @@
 import Background3 from "../../../components/Background3";
-import image from '../../../Images/tower-of-fantasy-1.5-artificial-island-update-1.jpg';
+import image from '../../../Images/Artificial-Island.jpg';
 
 function ArtificialIsland()
 {

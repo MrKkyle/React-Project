@@ -5,7 +5,7 @@ import Background2 from '../components/Background2';
 import Image1 from '../Images/1287431.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
-import Image4 from '../Images/tower-of-fantasy-1.5-artificial-island-update-1.jpg';
+import Image4 from '../Images/Artificial-Island.jpg';
 import Image5 from '../Images/Hykros.jpg';
 import Image6 from '../Images/Banges.png';
 import Image7 from '../Images/SnowField.png';
