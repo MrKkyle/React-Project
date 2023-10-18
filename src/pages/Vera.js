@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
 import Background2 from '../components/Background2';
 
-import Image1 from '../Images/1287431.jpg';
+import Image1 from '../Images/Simulacra.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
 import Image4 from '../Images/Twilight_Zone.png';

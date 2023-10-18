@@ -1,7 +1,7 @@
 import '../Css/Slideshow.css';
 import {useEffect} from 'react';
 import Background3 from './Background3';
-import image from '../Images/1287431.jpg';
+import image from '../Images/Simulacra.jpg';
 
 import weapon1 from '../Images/weapons/Icon_Weapon_Clover_Cross.jpg';
 import weapon2 from '../Images/weapons/Icon_Weapon_Flaming_Revolver.jpg';
