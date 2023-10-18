@@ -1,5 +1,8 @@
 import '../Css/Background.css';
 import {useEffect} from 'react';
+import $ from "jquery";
+import image from '../Images/Screenshot 2023-08-31 144726.png';
+import UserInformation from './User-information';
 
 /* Must start with a Caps letter */
 function Background2(props)
@@ -15,6 +18,77 @@ function Background2(props)
                 diamond[i].firstChild.firstChild.style.backgroundColor = "transparent";
             }
         }
+
+        /* Additional Scripts not originally part of background2 */
+        let table = document.getElementById("table");
+        let user = document.getElementById("user");
+        let navigation = document.getElementById("navigation");
+        let user_information = document.getElementById("user-information");
+        let close = document.getElementById("close");
+        user.addEventListener("click", () =>
+        {
+            let _user = document.getElementById("_username");
+            let _pass = document.getElementById("_password");
+            //Retrieve data for the page
+            $.ajax
+            ({
+                type: "POST",
+                action: 'validate',
+                url: "http://localhost:8000/submit.php",
+                data: {action: 'validate'}, //the data you submit with the request
+                dataType: 'json',
+                success(data) 
+                {
+                    console.log(data);
+                    _user.innerHTML = data['username'];
+                    _pass.value = data['key']
+                },
+            });
+
+            table.style.animation = "Fadeout 1s ease-out";
+            navigation.style.animation = "Fadeout 1s ease-out";
+            setTimeout(() =>
+            {
+                table.style.display = "none";
+                navigation.style.display = "none";
+                user_information.style.animation = "FadeIn 1s ease-in";
+                user_information.style.display = "block";
+            }, 900);
+        });
+
+        close.addEventListener("click", () => 
+        {   
+            user_information.style.animation = "Fadeout 1s ease-out";
+            
+            setTimeout(() =>
+            {
+                user_information.style.display = "none";
+                navigation.style.animation = "FadeIn 1s ease-in";
+                navigation.style.display = "block";
+                navigation.style.opacity = "1";
+                table.style.animation = "FadeIn 1s ease-in";
+                table.style.display = "block";
+                table.style.opacity = "1";
+
+            }, 900);
+        });
+
+        let tooltip = document.getElementById("_tooltip");
+
+        user.addEventListener("mouseenter", () =>
+        {
+            tooltip.style.animation = "FadeIn 0.5s ease-in";
+            tooltip.style.display = "block";
+
+            
+        });
+        user.addEventListener("mouseleave", () =>
+        {
+            tooltip.style.animation = "Fadeout 0.5s ease-out";
+            tooltip.style.display = "none";
+
+        });
+        
     }, []);
 
     return (
@@ -41,6 +115,8 @@ function Background2(props)
                     <li className = "ul li diamond17" style = {{display: (props.display17)}}><div className = "image"><div className = "text"></div></div></li>
                 </div>
             </div>
+            <UserInformation Heading1 = "Username" Heading2 = "Password" Image = {image}/>
+            <div className = "user-tooltip" id = "_tooltip">User Information</div>
         </>    
     );
 }

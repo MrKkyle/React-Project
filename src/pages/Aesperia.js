@@ -13,30 +13,6 @@ import Image_default from '../Images/aesperia.jpg';
 
 function Aesperia()
 { 
-    window.onload = function(event)
-    {
-        /* Sets and Returns the sessions variables */
-
-        $.get( "http://localhost:8000/session_variables.php", function( data ) 
-        {
-            alert( "Data Received: " + data );
-        });
-
-        /*  
-        $.ajax
-        ({
-            type: "GET",
-            url: "http://localhost:8000/session_variables.php",
-            data: form.serialize(),
-            success(data) 
-            {
-
-            },
-        });
-        
-        */
-    }
-
     useEffect(()=> 
     {
         let background = document.getElementById("background");

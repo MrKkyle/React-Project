@@ -48,20 +48,18 @@ function Form(props)
     {
         let video2 = document.getElementById("video2");
         let navigation = document.getElementById("navigation");
-        let navi_2 = document.getElementById("mySidenav");
         let video = document.getElementById("video");
-        navigation.style.display = "none";
-        navi_2.style.display = "none";
-        navigation.style.opacity = "0";
-        navi_2.style.opacity = "0";
-
         let director = document.getElementById("director");
         let register_form = document.getElementById("register-form");
         let login_form = document.getElementById("login-form");
         let guest = document.getElementById("guest");
-
         let r1 = document.getElementById("r1");
         let r2 = document.getElementById("r2");
+
+        /* Setup login page */
+        navigation.style.display = "none";
+        navigation.style.opacity = "0";
+        video.style.zIndex = "1";
 
 
         //redirects to registration page
@@ -99,15 +97,12 @@ function Form(props)
                         setTimeout(() =>
                         {
                             navigation.style.animation = "FadeIn ease-in 1s";
-                            navi_2.style.animation = "FadeIn ease-in 1s";
                             navigation.style.display = "block";
-                            navi_2.style.display = "block";
                             setTimeout(() =>
                             {
                                 navigation.style.opacity = "1";
-                                navi_2.style.opacity = "1";
                                 video2.style.display = "block";
-                            }, 800);
+                            }, 100);
                         }, 1500);
                         
                     }, 2000);
@@ -143,13 +138,10 @@ function Form(props)
                 setTimeout(() =>
                 {
                     navigation.style.animation = "FadeIn ease-in 1s";
-                    navi_2.style.animation = "FadeIn ease-in 1s";
                     navigation.style.display = "block";
-                    navi_2.style.display = "block";
                     setTimeout(() =>
                     {
                         navigation.style.opacity = "1";
-                        navi_2.style.opacity = "1";
                         video2.style.display = "block";
                     }, 800);
                 }, 1500);
@@ -175,7 +167,7 @@ function Form(props)
                     <button id = "login" className = 'button' type = 'submit'>Login</button> <a id = "or">or</a> <a id = "director">Register</a>
                     <br />
                     <br />
-                    <hr /> <a id = "or">or</a> <hr />
+                    <hr /> <a id = "or" style = {{top: '-5px',position:'relative',fontSize:'17px'}}>or</a> <hr />
                     <button id = "guest" className = "redirect-button">Guest Mode</button>
                     
                 </div>

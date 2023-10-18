@@ -38,6 +38,7 @@ export default function Main()
             <Form Display = "block"/>
             <Register_Form Display = "none"/>
             <Navigation_Bar Display = "block"/>
+            
         </div>
     );
 }
