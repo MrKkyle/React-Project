@@ -122,11 +122,17 @@ function Form(props)
 
             //guest mode
 
+            let login_f = document.getElementById("login-f");
             guest.addEventListener("click", () =>
             {
+                /* Prevent the form from being submitted */
+                login_f.onsubmit = function(event)
+                {
+                    event.preventDefault();
+                }
+                /* Remove requried field preventing form submission */
                 r1.required = false;
                 r2.required = false;
-                clearTimeout(sop);
                 register_form.style.display = "none";
                 login_form.style.animation = "Fadeout ease-out 1.5s";
                 setTimeout(() =>
@@ -134,7 +140,7 @@ function Form(props)
                     login_form.style.display = "none";
                     login_form.style.opacity = "0";
                     video.style.display = "none";
-                    video2.style.display = "none";
+                    if((!video2 == null)){ video2.style.display = "none"; }
                 }, 1500);
                 setTimeout(() =>
                 {
@@ -146,6 +152,7 @@ function Form(props)
                         if((!video2 == null)){ video2.style.display = "block"; }
                     }, 800);
                 }, 1500);
+                clearTimeout(sop);
             });
         }
         checkLogin();
@@ -157,7 +164,7 @@ function Form(props)
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = 'modal1' id = "login-form" style = {{display: props.Display}}>
-            <form className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
+            <form id = "login-f"className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                 <div className = 'modal-container'>
                     <label><b>Username</b></label>
                     <span><input id = "r1" type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
