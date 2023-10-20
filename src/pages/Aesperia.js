@@ -19,7 +19,6 @@ function Aesperia()
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
         /* Get the form */
-        let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
         /* Login form submission event */
         /* allows time for a form submission to be processed first */
@@ -75,7 +74,6 @@ function Aesperia()
             }
             dia.onmouseleave = function(event)
             {
-            //background.style.backgroundImage = `url(${Image_default})`;
             dia.style.borderStyle = "";
             dia.style.border = "2px solid rgb(51, 48, 48)";
             background.style.zIndex = "";
@@ -93,36 +91,36 @@ function Aesperia()
         }
     }, []);
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const navigateToSimulacra = () => 
-  {
+    const navigateToSimulacra = () => 
+    {
     navigate('/aesperiaSimulacra');
-  };
-  const navigateToEnemies = () => 
-  {
+    };
+    const navigateToEnemies = () => 
+    {
     navigate('/aesperiaEnemies');
-  };
-  const navigateToWorldBosses = () => 
-  {
+    };
+    const navigateToWorldBosses = () => 
+    {
     navigate('/aesperiaWorldBosses');
-  };
-  const navigateToArtificialIsland = () => 
-  {
+    };
+    const navigateToArtificialIsland = () => 
+    {
     navigate('/ArtificialIsland');
-  };
-  const navigateToHykros = () => 
-  {
+    };
+    const navigateToHykros = () => 
+    {
     navigate('/Hykros');
-  };
-  const navigateToBanges = () => 
-  {
+    };
+    const navigateToBanges = () => 
+    {
     navigate('/Banges');
-  };
-  const navigateToWarren = () => 
-  {
+    };
+    const navigateToWarren = () => 
+    {
     navigate('/Warren');
-  };
+    };
   return (
     <div>
         <Background2
@@ -134,7 +132,7 @@ function Aesperia()
                         onclick6 = {navigateToBanges} image6 = {Image6} text6 = "Banges" display6 = "block"
                         onclick7 = {navigateToWarren} image7 = {Image7} text7 = "Warren-Snowfield" display7 = "block"
         />
-        <video loop autoPlay muted className = "video" id = "video3">
+        <video loop autoPlay muted className = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>
     </div>

@@ -6,7 +6,6 @@ import Image1 from '../Images/Simulacra.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
 import Image4 from '../Images/domain9.png';
-import Image_default from '../Images/domain9.png';
 import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
 
 function Domain9()
@@ -17,7 +16,6 @@ function Domain9()
     $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
         /* Get the form */
-        let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
         /* allows time for a form submission to be processed first */
         setTimeout(() =>
@@ -127,7 +125,7 @@ function Domain9()
                     onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
                     onclick5 = {navigateToUnknown} image5 = {Image4} text5 = "Unknown" display5 = "block"
         />
-        <video loop autoPlay muted className = "video" id = "video4">
+        <video loop autoPlay muted className = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>
     </div>

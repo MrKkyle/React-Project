@@ -11,7 +11,6 @@ import Image6 from '../Images/Mirroria.png';
 import Image7 from '../Images/Miasmic_Swamp.jpg';
 import Image8 from '../Images/confoundingAbyss.png';
 import Image9 from '../Images/innars.jpg';
-import Image_default from '../Images/Vera.png';
 import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
 
 function Vera()
@@ -77,7 +76,6 @@ function Vera()
         }
         dia.onmouseleave = function(event)
         {
-          //background.style.backgroundImage = `url(${Image_default})`;
           dia.style.borderStyle = "";
           background.style.zIndex = "";
           dia.style.border = "2px solid rgb(51, 48, 48)";
@@ -134,7 +132,7 @@ function Vera()
     };
     return (
         <div>
-            <Background2 background = {Image_default}
+            <Background2
             onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
             onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
             onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
@@ -145,7 +143,7 @@ function Vera()
             onclick8 = {navigateToConfoundingByss} image8 = {Image8} text8 = "Confounding Abyss" display8 = "block"
             onclick9 = {navigateToInnars} image9 = {Image9} text9 = "Innars" display9 = "block"
             />
-            <video loop autoPlay muted className = "video" id = "video5">
+            <video loop autoPlay muted className = "video">
                 <source src = {video} type = "video/mp4"></source>
             </video>
         </div>

@@ -56,12 +56,14 @@ function Form(props)
         let r1 = document.getElementById("r1");
         let r2 = document.getElementById("r2");
         let ul = document.getElementById("table");
+        let container = document.getElementById("container");
 
         /* Setup login page */
         navigation.style.display = "none";
         navigation.style.opacity = "0";
         video.style.zIndex = "1";
         ul.style.zIndex = "0";
+        container.style.zIndex = "0";
 
 
         //redirects to registration page
@@ -105,6 +107,7 @@ function Form(props)
                                 navigation.style.opacity = "1";
                                 if((!video2 == null)){ video2.style.display = "block"; }
                                 ul.style.zIndex = "1";
+                                container.style.zIndex = "2";
                             }, 100);
                         }, 1500);
                         
@@ -154,6 +157,7 @@ function Form(props)
                         navigation.style.opacity = "1";
                         if((!video2 == null)){ video2.style.display = "block"; }
                         ul.style.zIndex = "1";
+                        container.style.zIndex = "2";
                     }, 800);
                 }, 1500);
                 clearTimeout(sop);

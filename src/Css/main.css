@@ -17,7 +17,7 @@ body
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #cccccc;
-	position: fixed;
+	position: absolute;
 	margin: 0;
 }
 img
