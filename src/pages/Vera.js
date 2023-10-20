@@ -2,7 +2,6 @@ import {useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
 import $ from "jquery";
 import Background2 from '../components/Background2';
-
 import Image1 from '../Images/Simulacra.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
@@ -13,6 +12,7 @@ import Image7 from '../Images/Miasmic_Swamp.jpg';
 import Image8 from '../Images/confoundingAbyss.png';
 import Image9 from '../Images/innars.jpg';
 import Image_default from '../Images/Vera.png';
+import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
 
 function Vera()
 {
@@ -24,16 +24,17 @@ function Vera()
     /* Get the form */
     let login_form = document.getElementById("login-f");
     let _information = document.getElementById("_information");
-    /* Login form submission event */
-    login_form.onsubmit = function(event)
+    /* allows time for a form submission to be processed first */
+    setTimeout(() =>
     {
         $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
         .done(function( _data) 
         {
+            console.log("Here");
             if(_data == "true") { _information.style.display = "block"; }
             else { _information.style.display = "none"; }
         });
-    }
+    }, 500);
 
     /* Guest mode button event */
     let guest_button = document.getElementById("guest");
@@ -61,6 +62,7 @@ function Vera()
         {
           //Background + text changes 
           background.style.backgroundImage = child_image;
+          background.style.zIndex = "1";
           dia.style.border = "2px solid rgb(22 21 21)";
 
           //hide all other elements besides this one
@@ -75,9 +77,11 @@ function Vera()
         }
         dia.onmouseleave = function(event)
         {
-          background.style.backgroundImage = `url(${Image_default})`;
+          //background.style.backgroundImage = `url(${Image_default})`;
           dia.style.borderStyle = "";
+          background.style.zIndex = "";
           dia.style.border = "2px solid rgb(51, 48, 48)";
+
 
           //show all diamonds
           for(let z = 0; z < diamonds.length; z++)
@@ -129,18 +133,23 @@ function Vera()
       navigate('/veraWorldBosses');
     };
     return (
-      <Background2 background = {Image_default}
-      onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
-      onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
-      onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
-      onclick4 = {navigateToTwilightZone} image4 = {Image4} text4 = "Twilight Zone" display4 = "block"
-      onclick5 = {navigateToGraySpace} image5 = {Image5} text5 = "GraySpace" display5 = "block"
-      onclick6 = {navigateToMirroria} image6 = {Image6} text6 = "Mirroria" display6 = "block"
-      onclick7 = {navigateToMiasmicSwamp} image7 = {Image7} text7 = "Miasmic Swamp" display7 = "block"
-      onclick8 = {navigateToConfoundingByss} image8 = {Image8} text8 = "Confounding Abyss" display8 = "block"
-      onclick9 = {navigateToInnars} image9 = {Image9} text9 = "Innars" display9 = "block"
+        <div>
+            <Background2 background = {Image_default}
+            onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
+            onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
+            onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
+            onclick4 = {navigateToTwilightZone} image4 = {Image4} text4 = "Twilight Zone" display4 = "block"
+            onclick5 = {navigateToGraySpace} image5 = {Image5} text5 = "GraySpace" display5 = "block"
+            onclick6 = {navigateToMirroria} image6 = {Image6} text6 = "Mirroria" display6 = "block"
+            onclick7 = {navigateToMiasmicSwamp} image7 = {Image7} text7 = "Miasmic Swamp" display7 = "block"
+            onclick8 = {navigateToConfoundingByss} image8 = {Image8} text8 = "Confounding Abyss" display8 = "block"
+            onclick9 = {navigateToInnars} image9 = {Image9} text9 = "Innars" display9 = "block"
+            />
+            <video loop autoPlay muted className = "video" id = "video5">
+                <source src = {video} type = "video/mp4"></source>
+            </video>
+        </div>
 
-/>
     );
 
 };

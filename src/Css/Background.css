@@ -11,7 +11,7 @@ body
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #cccccc;
-	position: fixed;
+	position: absolute;
 	margin: 0;
     top: 0;
     left: 0;
@@ -31,6 +31,7 @@ body
     overflow-y: auto;
     animation: FadeIn ease-in-out 1s;
     background-color: transparent;
+    z-index: 1;
 }
 .ul .li 
 {

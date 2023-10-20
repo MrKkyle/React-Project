@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
 import {useEffect} from 'react';
+import $ from "jquery";
 import '../Css/navigation-bar.css'
 import userImage from '../Images/Screenshot 2023-08-31 144726.png';
 
@@ -46,6 +47,34 @@ const Layout = () => {
             tooltip.style.animation = "Fadeout 0.5s ease-out";
             tooltip.style.display = "none";
 
+        });
+
+        let navigation = document.getElementById("navigation");
+        let login_video = document.getElementById("video");
+        let login_form = document.getElementById("login-form");
+        let logout_button = document.getElementById("logout");
+
+        /* Will be different for the different types of pages */
+        let pageBackground = document.getElementById("video2");
+        logout_button.addEventListener("click", () =>
+        {
+            /* Send logout request */
+            $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
+            .done(function( _data) 
+            {
+                console.log("Data sent: " + _data);
+                /* Fade Out */
+                navigation.style.animation = "Fadeout ease-out 1s";
+                navigation.style.display = "none";
+                pageBackground.style.animation = "Fadeout ease-out 1s";
+                pageBackground.style.display = "none";
+
+                /* Fade in */
+                login_video.style.animation = "FadeIn ease-in 1s";
+                login_video.style.display = "block";
+                login_form.style.animation = "FadeIn ease-in 1s";
+                login_form.style.display = "block"; 
+            });
         });
 
     }, []);

@@ -1,13 +1,5 @@
 import {useEffect} from 'react';
 import $ from "jquery";
-
-/*
-import NavigationBar2 from '../components/Navigation-bar2';
-import Discord from '../Images/Socials/discord.png';
-import Facebook from '../Images/Socials/facebook.png';
-import Twitter from '../Images/Socials/twitter.png';
-import Website from '../Images/Socials/web.png';
-*/
 import UserInformation from '../components/User-information';
 import image from '../Images/Screenshot 2023-08-31 144726.png';
 import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
@@ -73,12 +65,17 @@ function Home(props)
         /* Login form submission event */
         login_form.onsubmit = function(event)
         {
-            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-            .done(function( _data) 
+            /* allows time for a form submission to be processed first */
+            setTimeout(() =>
             {
-                if(_data == "true") { _information.style.display = "block"; }
-                else { _information.style.display = "none"; }
-            });
+                $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+                .done(function( _data) 
+                {
+                    console.log("Here");
+                    if(_data == "true") { _information.style.display = "block"; }
+                    else { _information.style.display = "none"; }
+                });
+            }, 500);
         }
 
         /* Guest mode button event */

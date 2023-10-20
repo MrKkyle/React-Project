@@ -33,7 +33,7 @@ function Form(props)
             dataType: 'json',
             success(data) {
                 setResult(data);
-                console.log(data);
+                console.log("Form Data submitted: " + data);
             },
         });
 
@@ -55,11 +55,13 @@ function Form(props)
         let guest = document.getElementById("guest");
         let r1 = document.getElementById("r1");
         let r2 = document.getElementById("r2");
+        let ul = document.getElementById("table");
 
         /* Setup login page */
         navigation.style.display = "none";
         navigation.style.opacity = "0";
         video.style.zIndex = "1";
+        ul.style.zIndex = "0";
 
 
         //redirects to registration page
@@ -102,6 +104,7 @@ function Form(props)
                             {
                                 navigation.style.opacity = "1";
                                 if((!video2 == null)){ video2.style.display = "block"; }
+                                ul.style.zIndex = "1";
                             }, 100);
                         }, 1500);
                         
@@ -150,6 +153,7 @@ function Form(props)
                     {
                         navigation.style.opacity = "1";
                         if((!video2 == null)){ video2.style.display = "block"; }
+                        ul.style.zIndex = "1";
                     }, 800);
                 }, 1500);
                 clearTimeout(sop);
@@ -159,7 +163,7 @@ function Form(props)
     }, []);
 
     return (
-    <div>
+    <div id = "_login_">
         <video loop autoPlay muted className = "video" id = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>
