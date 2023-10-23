@@ -15,7 +15,6 @@ function Aesperia()
 { 
     useEffect(()=> 
     {
-
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         /* Get the form */
         let _information = document.getElementById("_information");
@@ -87,6 +86,45 @@ function Aesperia()
                 }
             }
         }
+
+        /* Logout button event*/
+        let navigation = document.getElementById("navigation");
+        let logout = document.getElementById("logout");
+        let logout_confirm = document.querySelector(".logout-confirm");
+        let logout_yes = document.getElementById("yes-btn");
+        let logout_no = document.getElementById("no-btn");
+        let table = document.getElementById("table");
+        let video3 = document.getElementById("video3");
+        logout.addEventListener("click", () => 
+        {
+            logout_confirm.style.display = "block";
+            logout_yes.onclick = function(event)
+            {
+                $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
+                .done(function( _data) 
+                {
+                    console.log("Data sent: " + _data);
+                    /* Fade Out */
+                    navigation.style.animation = "Fadeout 1.5s ease-out";
+                    video3.style.animation = "Fadeout 1.5s ease-out";
+                    table.style.animation = "Fadeout 1.5s ease-out";
+
+                    /* Fade in */
+                    setTimeout(() =>
+                    {
+                        /* Perform animations */
+                        navigation.style.display = "none";
+                        table.style.display = "none";
+                        video3.style.display = "none";
+                        window.location.reload();
+                    }, 1000);
+                });
+            }   
+            logout_no.onclick = function(event)
+            {
+                logout_confirm.style.display = "none";
+            }
+        });
     }, []);
 
     const navigate = useNavigate();
@@ -130,9 +168,13 @@ function Aesperia()
                         onclick6 = {navigateToBanges} image6 = {Image6} text6 = "Banges" display6 = "block"
                         onclick7 = {navigateToWarren} image7 = {Image7} text7 = "Warren-Snowfield" display7 = "block"
         />
-        <video loop autoPlay muted className = "video">
+        <video loop autoPlay muted className = "video" id = "video3">
             <source src = {video} type = "video/mp4"></source>
         </video>
+        <div className = "logout-confirm">
+            Proceed to Logout?<br /><br />
+            <button className = "no-btn" id = "no-btn">No</button> <button className = "yes-btn" id ="yes-btn">Yes</button>
+        </div>
     </div>
   );
   

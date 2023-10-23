@@ -15,82 +15,121 @@ import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.
 
 function Vera()
 {
-  useEffect(()=> 
-  {
+    useEffect(()=> 
+    {
     
-    $.ajaxSetup({ xhrFields: { withCredentials: true }, });
+        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
-    /* Get the form */
-    let _information = document.getElementById("_information");
-    /* allows time for a form submission to be processed first */
-    setTimeout(() =>
-    {
-        $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-        .done(function( _data) 
+        /* Get the form */
+        let _information = document.getElementById("_information");
+        /* allows time for a form submission to be processed first */
+        setTimeout(() =>
         {
-            if(_data === "true") { _information.style.display = "block"; }
-            else { _information.style.display = "none"; }
+            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+            .done(function( _data) 
+            {
+                if(_data === "true") { _information.style.display = "block"; }
+                else { _information.style.display = "none"; }
+            });
+        }, 500);
+
+        /* Guest mode button event */
+        let guest_button = document.getElementById("guest");
+        guest_button.addEventListener("click", () =>
+        {
+            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+            .done(function( _data) 
+            {
+                _information.style.display = "none";
+            });
         });
-    }, 500);
 
-    /* Guest mode button event */
-    let guest_button = document.getElementById("guest");
-    guest_button.addEventListener("click", () =>
-    {
-        $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-        .done(function( _data) 
+        let background = document.getElementById("background");
+        let diamonds = document.querySelectorAll(".ul.li");
+        
+        for(let i = 0; i < diamonds.length; i++)
         {
-            _information.style.display = "none";
+            let dia = diamonds[i];
+            //Child elements to identify empty diamond| takes the image for the background
+            let child = dia.firstElementChild.firstElementChild;
+            let child_image = dia.firstElementChild.style.backgroundImage;
+            diamonds[i].onmouseover = function(event)
+            {
+                if(dia.onmouseover && child.innerHTML !== "")
+                {
+                    //Background + text changes 
+                    background.style.backgroundImage = child_image;
+                    background.style.zIndex = "1";
+                    dia.style.border = "2px solid rgb(22 21 21)";
+
+                    //hide all other elements besides this one
+                    for(let z = 0; z < diamonds.length; z++)
+                    {
+                    //fadeout other containers besides this one
+                    dia.style.animation = "none";
+                    dia.style.opacity = "1";
+                    diamonds[z].style.animation = "Fadeout ease-in-out 0.7s";
+                    diamonds[z].style.opacity = "0";
+                    }
+                }
+                dia.onmouseleave = function(event)
+                {
+                    dia.style.borderStyle = "";
+                    background.style.zIndex = "";
+                    dia.style.border = "2px solid rgb(51, 48, 48)";
+
+
+                    //show all diamonds
+                    for(let z = 0; z < diamonds.length; z++)
+                    {
+                    dia.style.animation = "none";
+                    diamonds[z].style.display = "block";
+                    diamonds[z].style.animation = "FadeIn ease-in 0.7s";
+                    diamonds[z].style.opacity = "1";
+                    }
+                }
+            }
+        }
+        /* Logout button event*/
+        let navigation = document.getElementById("navigation");
+        let logout = document.getElementById("logout");
+        let logout_confirm = document.querySelector(".logout-confirm");
+        let logout_yes = document.getElementById("yes-btn");
+        let logout_no = document.getElementById("no-btn");
+        let table = document.getElementById("table");
+        let video4 = document.getElementById("video4");
+        logout.addEventListener("click", () => 
+        {
+            logout_confirm.style.display = "block";
+            logout_yes.onclick = function(event)
+            {
+                $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
+                .done(function( _data) 
+                {
+                    console.log("Data sent: " + _data);
+                    /* Fade Out */
+                    navigation.style.animation = "Fadeout 1.5s ease-out";
+                    video4.style.animation = "Fadeout 1.5s ease-out";
+                    table.style.animation = "Fadeout 1.5s ease-out";
+
+                    /* Fade in */
+                    setTimeout(() =>
+                    {
+                        /* Perform animations */
+                        navigation.style.display = "none";
+                        table.style.display = "none";
+                        video4.style.display = "none";
+                        window.location.reload();
+                    }, 1000);
+                });
+            }   
+            logout_no.onclick = function(event)
+            {
+                logout_confirm.style.display = "none";
+            }
         });
-    });
 
-    let background = document.getElementById("background");
-    let diamonds = document.querySelectorAll(".ul.li");
-    
-    for(let i = 0; i < diamonds.length; i++)
-    {
-      let dia = diamonds[i];
-      //Child elements to identify empty diamond| takes the image for the background
-      let child = dia.firstElementChild.firstElementChild;
-      let child_image = dia.firstElementChild.style.backgroundImage;
-      diamonds[i].onmouseover = function(event)
-      {
-        if(dia.onmouseover && child.innerHTML !== "")
-        {
-          //Background + text changes 
-          background.style.backgroundImage = child_image;
-          background.style.zIndex = "1";
-          dia.style.border = "2px solid rgb(22 21 21)";
-
-          //hide all other elements besides this one
-          for(let z = 0; z < diamonds.length; z++)
-          {
-            //fadeout other containers besides this one
-            dia.style.animation = "none";
-            dia.style.opacity = "1";
-            diamonds[z].style.animation = "Fadeout ease-in-out 0.7s";
-            diamonds[z].style.opacity = "0";
-          }
-        }
-        dia.onmouseleave = function(event)
-        {
-          dia.style.borderStyle = "";
-          background.style.zIndex = "";
-          dia.style.border = "2px solid rgb(51, 48, 48)";
-
-
-          //show all diamonds
-          for(let z = 0; z < diamonds.length; z++)
-          {
-            dia.style.animation = "none";
-            diamonds[z].style.display = "block";
-            diamonds[z].style.animation = "FadeIn ease-in 0.7s";
-            diamonds[z].style.opacity = "1";
-          }
-        }
-      }
-    }
-  }, []);
+    }, []);
     const navigate = useNavigate();
     const navigateToSimulacra = () => 
     {
@@ -141,9 +180,14 @@ function Vera()
             onclick8 = {navigateToConfoundingByss} image8 = {Image8} text8 = "Confounding Abyss" display8 = "block"
             onclick9 = {navigateToInnars} image9 = {Image9} text9 = "Innars" display9 = "block"
             />
-            <video loop autoPlay muted className = "video">
+            <video loop autoPlay muted className = "video"  id = "video4">
                 <source src = {video} type = "video/mp4"></source>
             </video>
+            
+            <div className = "logout-confirm">
+                Proceed to Logout?<br /><br />
+                <button className = "no-btn" id = "no-btn">No</button> <button className = "yes-btn" id ="yes-btn">Yes</button>
+            </div>
         </div>
 
     );

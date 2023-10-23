@@ -33,7 +33,7 @@ function Form(props)
             dataType: 'json',
             success(data) {
                 setResult(data);
-                console.log("Form Data submitted: " + data);
+                console.log(data);
             },
         });
 
@@ -172,7 +172,7 @@ function Form(props)
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = 'modal1' id = "login-form" style = {{display: props.Display}}>
-            <form id = "login-f"className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
+            <form id = "login-f" className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                 <div className = 'modal-container'>
                     <label><b>Username</b></label>
                     <span><input id = "r1" type = 'text' placeholder = "Enter your name"  name = "username" value = {inputs.username || ""} onChange = {handleChange} required></input></span>
@@ -180,10 +180,10 @@ function Form(props)
                     <label><b>Password</b></label>
                     <span><input id = "r2" type = 'password' placeholder = "Enter password" name = "password" value = {inputs.password || ""} onChange = {handleChange} required></input></span>
 
-                    <button id = "login" className = 'button' type = 'submit'>Login</button> <a id = "or">or</a> <a id = "director">Register</a>
+                    <button id = "login" className = 'button' type = 'submit'>Login</button> <a href = "#" id = "or">or</a> <a href = "#" id = "director">Register</a>
                     <br />
                     <br />
-                    <hr /> <a id = "or" style = {{top: '-5px',position:'relative',fontSize:'17px'}}>or</a> <hr />
+                    <hr /> <a href = "#" id = "or" style = {{top: '-5px',position:'relative',fontSize:'17px'}}>or</a> <hr />
                     <button id = "guest" className = "redirect-button">Guest Mode</button>
                     
                 </div>

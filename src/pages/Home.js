@@ -3,7 +3,7 @@ import $ from "jquery";
 import UserInformation from '../components/User-information';
 import image from '../Images/Screenshot 2023-08-31 144726.png';
 import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
-
+import '../Css/main.css';
 
 function Home(props)
 {
@@ -57,6 +57,7 @@ function Home(props)
             }, 900);
         });
 
+
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
         /* Get the form */
@@ -72,7 +73,7 @@ function Home(props)
                 .done(function( _data) 
                 {
                     console.log("Here");
-                    if(_data == "true") { _information.style.display = "block"; }
+                    if(_data === "true") { _information.style.display = "block"; }
                     else { _information.style.display = "none"; }
                 });
             }, 500);
@@ -88,26 +89,42 @@ function Home(props)
                 _information.style.display = "none";
             });
         });
-        
-        /*
-        button1.addEventListener("click", () =>
-        {
-            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-            .done(function( _data) 
-            {
-                console.log("Data Loaded: " + _data);
-            });
-        });
 
-        button2.addEventListener("click", () =>
+        /* Logout button event*/
+        let logout = document.getElementById("logout");
+        let logout_confirm = document.querySelector(".logout-confirm");
+        let logout_yes = document.getElementById("yes-btn");
+        let logout_no = document.getElementById("no-btn");
+        let video2 = document.getElementById("video2");
+        logout.addEventListener("click", () => 
         {
-            $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
-            .done(function( _data) 
+
+            logout_confirm.style.display = "block";
+            logout_yes.onclick = function(event)
             {
-                console.log("Data Loaded: " + _data);
-            });
+                $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
+                .done(function( _data) 
+                {
+                    console.log("Data sent: " + _data);
+                    /* Fade Out */
+                    navigation.style.animation = "Fadeout 1.5s ease-out";
+                    video2.style.animation = "Fadeout 1.5s ease-out";
+
+                    /* Fade in */
+                    setTimeout(() =>
+                    {
+                        /* Perform animations */
+                        navigation.style.display = "none";
+                        video2.style.display = "none";
+                        window.location.reload();
+                    }, 1000);
+                });
+            }   
+            logout_no.onclick = function(event)
+            {
+                logout_confirm.style.display = "none";
+            }
         });
-        */
 
     }, []);
 
@@ -120,6 +137,12 @@ function Home(props)
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = "user-tooltip" id = "_tooltip">User Information</div>
+        <div className = "alpha"></div>
+
+        <div className = "logout-confirm">
+            Proceed to Logout?<br /><br />
+            <button className = "no-btn" id = "no-btn">No</button> <button className = "yes-btn" id ="yes-btn">Yes</button>
+        </div>
       
     </div>
     );
