@@ -72,7 +72,6 @@ function Home(props)
                 $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
                 .done(function( _data) 
                 {
-                    console.log("Here");
                     if(_data === "true") { _information.style.display = "block"; }
                     else { _information.style.display = "none"; }
                 });
@@ -90,7 +89,7 @@ function Home(props)
             });
         });
 
-        /* Logout button event*/
+        /* Logout button event */
         let logout = document.getElementById("logout");
         let logout_confirm = document.querySelector(".logout-confirm");
         let logout_yes = document.getElementById("yes-btn");
@@ -107,8 +106,8 @@ function Home(props)
                 {
                     console.log("Data sent: " + _data);
                     /* Fade Out */
-                    navigation.style.animation = "Fadeout 1.5s ease-out";
-                    video2.style.animation = "Fadeout 1.5s ease-out";
+                    navigation.style.animation = "Fadeout 1s ease-out";
+                    video2.style.animation = "Fadeout 1s ease-out";
 
                     /* Fade in */
                     setTimeout(() =>
@@ -117,7 +116,7 @@ function Home(props)
                         navigation.style.display = "none";
                         video2.style.display = "none";
                         window.location.reload();
-                    }, 1000);
+                    }, 500);
                 });
             }   
             logout_no.onclick = function(event)

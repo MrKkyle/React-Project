@@ -95,7 +95,7 @@ function Domain9()
         let logout_yes = document.getElementById("yes-btn");
         let logout_no = document.getElementById("no-btn");
         let table = document.getElementById("table");
-        let video5 = document.getElementById("video4");
+        let video5 = document.getElementById("video5");
         logout.addEventListener("click", () => 
         {
             logout_confirm.style.display = "block";
