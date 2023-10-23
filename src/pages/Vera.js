@@ -21,7 +21,6 @@ function Vera()
     $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
     /* Get the form */
-    let login_form = document.getElementById("login-f");
     let _information = document.getElementById("_information");
     /* allows time for a form submission to be processed first */
     setTimeout(() =>
@@ -29,8 +28,7 @@ function Vera()
         $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
         .done(function( _data) 
         {
-            console.log("Here");
-            if(_data == "true") { _information.style.display = "block"; }
+            if(_data === "true") { _information.style.display = "block"; }
             else { _information.style.display = "none"; }
         });
     }, 500);

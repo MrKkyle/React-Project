@@ -15,9 +15,8 @@ function Aesperia()
 { 
     useEffect(()=> 
     {
-        
-        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
 
+        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         /* Get the form */
         let _information = document.getElementById("_information");
         /* Login form submission event */
@@ -27,8 +26,7 @@ function Aesperia()
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
-                console.log("Here");
-                if(_data == "true") { _information.style.display = "block"; }
+                if(_data === "true") { _information.style.display = "block"; }
                 else { _information.style.display = "none"; }
             });
         }, 500);
@@ -49,45 +47,45 @@ function Aesperia()
         
         for(let i = 0; i < diamonds.length; i++)
         {
-        let dia = diamonds[i];
-        //Child elements to identify empty diamond| takes the image for the background
-        let child = dia.firstElementChild.firstElementChild;
-        let child_image = dia.firstElementChild.style.backgroundImage;
-        diamonds[i].onmouseover = function(event)
-        {
-            if(dia.onmouseover && child.innerHTML !== "")
+            let dia = diamonds[i];
+            //Child elements to identify empty diamond| takes the image for the background
+            let child = dia.firstElementChild.firstElementChild;
+            let child_image = dia.firstElementChild.style.backgroundImage;
+            diamonds[i].onmouseover = function(event)
             {
-            //Background + text changes 
-            background.style.backgroundImage = child_image;
-            background.style.zIndex = "1";
-            dia.style.border = "2px solid rgb(22 21 21)";
+                if(dia.onmouseover && child.innerHTML !== "")
+                {
+                //Background + text changes 
+                background.style.backgroundImage = child_image;
+                background.style.zIndex = "1";
+                dia.style.border = "2px solid rgb(22 21 21)";
 
-            //hide all other elements besides this one
-            for(let z = 0; z < diamonds.length; z++)
-            {
-                //fadeout other containers besides this one
-                dia.style.animation = "none";
-                dia.style.opacity = "1";
-                diamonds[z].style.animation = "Fadeout ease-in-out 0.7s";
-                diamonds[z].style.opacity = "0";
-            }
-            }
-            dia.onmouseleave = function(event)
-            {
-            dia.style.borderStyle = "";
-            dia.style.border = "2px solid rgb(51, 48, 48)";
-            background.style.zIndex = "";
+                //hide all other elements besides this one
+                for(let z = 0; z < diamonds.length; z++)
+                {
+                    //fadeout other containers besides this one
+                    dia.style.animation = "none";
+                    dia.style.opacity = "1";
+                    diamonds[z].style.animation = "Fadeout ease-in-out 0.7s";
+                    diamonds[z].style.opacity = "0";
+                }
+                }
+                dia.onmouseleave = function(event)
+                {
+                dia.style.borderStyle = "";
+                dia.style.border = "2px solid rgb(51, 48, 48)";
+                background.style.zIndex = "";
 
-            //show all diamonds
-            for(let z = 0; z < diamonds.length; z++)
-            {
-                dia.style.animation = "none";
-                diamonds[z].style.display = "block";
-                diamonds[z].style.animation = "FadeIn ease-in 0.7s";
-                diamonds[z].style.opacity = "1";
+                //show all diamonds
+                for(let z = 0; z < diamonds.length; z++)
+                {
+                    dia.style.animation = "none";
+                    diamonds[z].style.display = "block";
+                    diamonds[z].style.animation = "FadeIn ease-in 0.7s";
+                    diamonds[z].style.opacity = "1";
+                }
+                }
             }
-            }
-        }
         }
     }, []);
 
