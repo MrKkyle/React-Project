@@ -5,7 +5,7 @@ import image from '../Images/Screenshot 2023-08-31 144726.png';
 import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
 import '../Css/main.css';
 
-function Home(props)
+function Home()
 {
     useEffect(()=> 
     {
@@ -136,7 +136,6 @@ function Home(props)
             <source src = {video} type = "video/mp4"></source>
         </video>
         <div className = "user-tooltip" id = "_tooltip">User Information</div>
-        <div className = "alpha"></div>
 
         <div className = "logout-confirm">
             Proceed to Logout?<br /><br />

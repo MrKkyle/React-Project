@@ -58,10 +58,12 @@ function Form(props)
         let ul = document.getElementById("table");
         let container = document.getElementById("container");
 
+        /* Check done to confirm if the user is already logged in or not */
         window.onload = function(event)
         {
             login_form.style.display = "none"; 
             video.style.display = "block";
+            if(!(ul == null)){ ul.style.display = "none"; }
             setTimeout(() =>
             {
                 /* Check if the user is already logged in */
@@ -77,6 +79,8 @@ function Form(props)
                         navigation.style.opacity = "1"; 
                         login_form.style.display = "none"; 
                         video.style.display = "none"; 
+                        if(!(ul == null)){ ul.style.display = "block"; }
+                        if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; }
                     }
                     else //Logged out
                     { 

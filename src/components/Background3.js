@@ -1,11 +1,99 @@
 import '../Css/Background.css';
 import {useEffect} from 'react';
+import $ from "jquery";
 
 function Background3(props)
 {
 
     useEffect(()=> 
     {
+        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
+
+        /* Get the form */
+        let login_form = document.getElementById("login-f");
+        let _information = document.getElementById("_information");
+        let ul = document.getElementById("table");
+        let container = document.getElementById("container");
+        /* Login form submission event */
+        login_form.onsubmit = function(event)
+        {
+            /* allows time for a form submission to be processed first */
+            setTimeout(() =>
+            {
+                /* Checks if the user is logged, and displays certain elements */
+                $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+                .done(function( _data) 
+                {
+                    if(_data === "true")
+                    { 
+                        /*
+                        ul.style.zIndex = "0";
+                        container.style.zIndex = "2";
+                        */
+                        _information.style.display = "block";
+                    }
+                    else //if not logged
+                    { 
+                        _information.style.display = "none";
+                    }
+                });
+            }, 500);
+        }
+
+        /* Guest mode button event */
+        let guest_button = document.getElementById("guest");
+        guest_button.addEventListener("click", () =>
+        {
+            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+            .done(function( _data) 
+            {
+                _information.style.display = "none";
+            });
+        });
+
+        /* Logout button event */
+        let navigation = document.getElementById("navigation");
+        let logout = document.getElementById("logout");
+        let logout_confirm = document.querySelector(".logout-confirm");
+        let logout_yes = document.getElementById("yes-btn");
+        let logout_no = document.getElementById("no-btn");
+        let video2 = document.getElementById("video2");
+        logout.addEventListener("click", () => 
+        {
+
+            logout_confirm.style.display = "block";
+            logout_yes.onclick = function(event)
+            {
+                $.post( "http://localhost:8000/session_variables.php", {action: "logout"})
+                .done(function( _data) 
+                {
+                    console.log("Data sent: " + _data);
+                    /* Fade Out */
+                    navigation.style.animation = "Fadeout 1s ease-out";
+                    video2.style.animation = "Fadeout 1s ease-out";
+
+                    /* Fade in */
+                    setTimeout(() =>
+                    {
+                        /* Perform animations */
+                        navigation.style.display = "none";
+                        video2.style.display = "none";
+                        window.location.reload();
+                    }, 500);
+                });
+            }   
+            logout_no.onclick = function(event)
+            {
+                logout_confirm.style.display = "none";
+            }
+        });
+
+        setTimeout(() =>
+        {
+            container.style.zIndex = "2";
+        },3000);
+
+
         let navbar = document.querySelector(".navbar");
         var txt = document.querySelector(".text-container").innerHTML;
         document.querySelector(".text-container").innerHTML = "";
@@ -44,24 +132,19 @@ function Background3(props)
     }, []);
     return (
     <>   
-        <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
-            <div className = "container" id = "container">
-                <div className = "text">
-                    {props.Title}
-                    <hr style = {{display: props.hr}}/>
-                </div>
-                <div className = "text-container">
-                    {props.Text}
-                </div>
+        <div className = "container" id = "container">
+            <div className = "text">
+                {props.Title}
+                <hr style = {{display: props.hr}}/>
             </div>
-            <div className = "ul" id = "table" style = {{width: '1880px', height: '980px', overflow: 'hidden'}}>
-                <li className = "ul li diamond1" style = {{display: 'block', left: '23%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
-                <li className = "ul li diamond2" style = {{display: 'block', left: '50%', top: '46%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
-                <li className = "ul li diamond3" style = {{display: 'block', left: '77%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
-                <li className = "ul li diamond4" style = {{display: 'block', left: '23%', top: '99%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
-                <li className = "ul li diamond5" style = {{display: 'block', left: '77%', top: '99%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
-                <li className = "ul li diamond6" style = {{display: 'block', left: '-4%', top: '46%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>
+            <div className = "text-container">
+                {props.Text}
             </div>
+        </div>
+        
+        <div className = "logout-confirm">
+            Proceed to Logout?<br /><br />
+            <button className = "no-btn" id = "no-btn">No</button> <button className = "yes-btn" id ="yes-btn">Yes</button>
         </div>
         
     </>     

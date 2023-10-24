@@ -37,7 +37,7 @@
     padding-right: 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     width: auto;
     height: auto;
@@ -58,6 +58,7 @@
 .modal-container
 {
 	padding: 16px;
+    user-select: none;
 }
 
 input[type = text], input[type = password]
@@ -220,6 +221,7 @@ label
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition-duration: 0.4s;
+    text-decoration: none;
 }
 #director
 {
@@ -229,7 +231,7 @@ label
     padding-right: 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     width: auto;
     height: auto;
