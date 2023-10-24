@@ -66,6 +66,7 @@ function Home()
         /* Login form submission event */
         login_form.onsubmit = function(event)
         {
+            console.log("YES");
             /* allows time for a form submission to be processed first */
             setTimeout(() =>
             {

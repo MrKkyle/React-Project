@@ -7,32 +7,7 @@ function Equipment()
 {
     useEffect(()=> 
     {
-        $.ajaxSetup({ xhrFields: { withCredentials: true }, });
-
-        /* Get the form */
-        let login_form = document.getElementById("login-f");
-        let _information = document.getElementById("_information");
-        /* Login form submission event */
-        login_form.onsubmit = function(event)
-        {
-            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-            .done(function( _data) 
-            {
-                if(_data == "true") { _information.style.display = "block"; }
-                else { _information.style.display = "none"; }
-            });
-        }
-
-        /* Guest mode button event */
-        let guest_button = document.getElementById("guest");
-        guest_button.addEventListener("click", () =>
-        {
-            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-            .done(function( _data) 
-            {
-                _information.style.display = "none";
-            });
-        });
+        
     }, []);
 
     return (

@@ -57,6 +57,7 @@ function Form(props)
         let r2 = document.getElementById("r2");
         let ul = document.getElementById("table");
         let container = document.getElementById("container");
+        let _information = document.getElementById("_information");
 
         /* Check done to confirm if the user is already logged in or not */
         window.onload = function(event)
@@ -80,7 +81,7 @@ function Form(props)
                         login_form.style.display = "none"; 
                         video.style.display = "none"; 
                         if(!(ul == null)){ ul.style.display = "block"; }
-                        if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; }
+                        if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "1"; }
                     }
                     else //Logged out
                     { 
