@@ -39,26 +39,25 @@ img
 
 .button
 {
-	padding: 0px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 12px;
 	cursor: pointer;
-	width: 150px;
+	width: 90px;
 	height: 40px;
 	position: relative;
-	background-size: cover;
+	margin: 10px;
 	color: black;
+    background-color: white;
 	border: 1px solid #000000;
-	border-radius: 4px;
-	margin: 0;
-	transition-duration: 0.4s;
+    border-radius: 10px;
+    transition-duration: 1s;
 }
 .button:hover
 {
 	color: white;
 	border: 1px solid white;
-	background-position: center;
+	background-color: black;
 }
 .error
 {

@@ -91,7 +91,7 @@ function Background3(props)
             {
                 if(_data = "true")//Logged IN ELEMENTS
                 {
-                    
+
                 }
                 else//Logged OUT ELEMENTS
                 {
@@ -140,13 +140,17 @@ function Background3(props)
     <>   
         <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
             <div className = "container" id = "container">
-                <div className = "text">
-                    {props.Title}
-                    <hr style = {{display: props.hr}}/>
+                <div className = "text">{props.Title} <hr style = {{display: props.hr}}/> </div>
+                <div className = "text-container">{props.Text}</div>
+                <div className = "edit-text">
+                    <form action = "">
+                        <p style = {{textAlign: 'center'}}>Insert Text Below </p>
+                        <textarea className = "textarea" id = "new_text" name = "new_text"/>
+                        <br />
+                        <button className = "button" type = "submit" value = "Submit" >Submit</button>
+                    </form>
                 </div>
-                <div className = "text-container">
-                    {props.Text}
-                </div>
+                <div className = "container-heading">Preview:</div>
             </div>
             <div className = "ul" id = "table" style = {{width: '1880px', height: '980px', overflow: 'hidden'}}>
                 <li className = "ul li diamond1" style = {{display: 'block', left: '23%', top: '-7%', width: '600px', height: '600px'}}><div className = "image"><div className = "text"></div></div></li>

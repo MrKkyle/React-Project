@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import $ from "jquery";
 
 import video from '../Images/Live-Wallpapers/annabella-from-tower-of-fantasy.3840x2160.mp4';
@@ -57,41 +58,41 @@ function Form(props)
         let r2 = document.getElementById("r2");
         let ul = document.getElementById("table");
         let container = document.getElementById("container");
-        let _information = document.getElementById("_information");
 
         /* Check done to confirm if the user is already logged in or not */
         window.onload = function(event)
         {
-            login_form.style.display = "none"; 
-            video.style.display = "block";
-            if(!(ul == null)){ ul.style.display = "none"; }
-            setTimeout(() =>
-            {
-                /* Check if the user is already logged in */
-                $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-                .done(function( _data) 
-                {
-                    console.log(_data);
-                    if(_data === "true") //If logged in
-                    { 
-                        video.style.animation = "Fadeout 1s ease-out";
-                        navigation.style.animation = "FadeIn 1s ease-in";
-                        navigation.style.display = "block"; 
-                        navigation.style.opacity = "1"; 
-                        login_form.style.display = "none"; 
-                        video.style.display = "none"; 
-                        if(!(ul == null)){ ul.style.display = "block"; }
-                        if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "1"; }
-                    }
-                    else //Logged out
-                    { 
-                        login_form.style.display = "block"; 
-                        navigation.style.display = "none"; 
-                        video.style.display = "block";   
-                    }
-                });
-            }, 1000)
+
         }
+        login_form.style.display = "none"; 
+        video.style.display = "block";
+        if(!(ul == null)){ ul.style.display = "none"; }
+        setTimeout(() =>
+        {
+            /* Check if the user is already logged in */
+            $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
+            .done(function( _data) 
+            {
+                console.log(_data);
+                if(_data === "true") //If logged in
+                { 
+                    video.style.animation = "Fadeout 1s ease-out";
+                    navigation.style.animation = "FadeIn 1s ease-in";
+                    navigation.style.display = "block"; 
+                    navigation.style.opacity = "1"; 
+                    login_form.style.display = "none"; 
+                    video.style.display = "none"; 
+                    if(!(ul == null)){ ul.style.display = "block"; }
+                    if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "1"; }
+                }
+                else //Logged out
+                { 
+                    login_form.style.display = "block"; 
+                    navigation.style.display = "none"; 
+                    video.style.display = "block";   
+                }
+            });
+        }, 1000)
 
         /* Setup login page on varying pages */
         navigation.style.display = "none";

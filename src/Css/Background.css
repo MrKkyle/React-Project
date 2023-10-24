@@ -203,8 +203,30 @@ body
 {
     background-color: rgba(0, 0, 0, 0.55); 
 }
+.edit-text 
+{
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 365px;
+    overflow: auto;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 0.4s;
+    color: aliceblue;
+}
+.edit-text:hover
+{
+    background-color:  rgba(0,0,0,0.6);
+}
 .text-container 
 {
+    /*
     padding-left: 500px;
     padding-right: 500px;
     text-align: center;  
@@ -217,6 +239,26 @@ body
     transform: translate(-3%, -2%);
     line-height: 1.5;
     white-space: pre-line;
+    */
+
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: monospace;
+    color: aliceblue;
+    position: relative;
+    transform: translate(-50%, -60%);
+    line-height: 1.5;
+    white-space: pre-line;
+    width: 650px;
+    left: 50%;
+    top: 75%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition-duration: 0.4s;
+}
+.text-container:hover 
+{
+    background-color:  rgba(0,0,0,0.4);
 }
 .container .text 
 {
@@ -228,6 +270,36 @@ body
     top: 2%;
     transform: translate(-3%, -30%);
     background-color: transparent;
+    transition-duration: 0.4s;
+}
+.container-heading 
+{
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    line-height: 1.5;
+    white-space: pre-line;
+    width: 650px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition-duration: 0.4s;
+}
+.textarea 
+{
+    font-family: monospace;
+    background-color: transparent;
+    border: 1px solid azure;
+    font-size: 12px;
+    resize: none;
+    width: 85%;
+    height: 250px;
+    color: white;
 }
 .fade-container
 {
