@@ -5,7 +5,7 @@ function WorldBosses()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Domain 9 World-Bosses" text = {localStorage.getItem("d9-wb")} />
+    <Background3 Background = {image} Title = "Domain 9 World-Bosses" text = {localStorage.getItem("domain9WorldBosses")} />
   </>
   );
   

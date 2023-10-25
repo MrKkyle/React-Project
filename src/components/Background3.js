@@ -17,7 +17,9 @@ function Background3(props)
     const handleSubmit = (event) =>
     {
         event.preventDefault();
-
+        
+        const pathname = window.location.pathname;
+        console.log(pathname);
         console.log(inputs.new_text);
         
         /* Allow the inserted text to replace the innerHTML of the text_container */
@@ -30,6 +32,8 @@ function Background3(props)
 
     useEffect(()=> 
     {
+
+
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");

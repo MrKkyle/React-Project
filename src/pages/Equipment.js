@@ -6,6 +6,8 @@ function Equipment(props)
 {
     useEffect(()=> 
     {
+
+
     }, []);
 
     return (

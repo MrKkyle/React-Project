@@ -4,7 +4,7 @@ function Enemies()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Domain 9 Enemies" text = {localStorage.getItem("d9-enemies")} />
+    <Background3 Background = {image} Title = "Domain 9 Enemies" text = {localStorage.getItem("domain9Enemies")}/>
   </>
   );
   

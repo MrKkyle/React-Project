@@ -1,14 +1,14 @@
 import Background3 from "../../../components/Background3";
 import image from '../../../Images/SnowField.png';
 
-function ArtificialIsland()
+function Warren()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Warren-Snowfield" text = {localStorage.getItem("warren-snowfield")}/>
+    <Background3 Background = {image} Title = "Warren-Snowfield" text = {localStorage.getItem("Warren")}/>
   </>
   );
   
 };
     
-export default ArtificialIsland;
+export default Warren;
