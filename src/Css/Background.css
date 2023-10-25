@@ -241,6 +241,7 @@ body
     top: 75%;
     background-color: rgba(0, 0, 0, 0.3);
     transition-duration: 0.4s;
+    overflow: auto;
 }
 .text-container:hover 
 {

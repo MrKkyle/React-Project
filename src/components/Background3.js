@@ -40,6 +40,10 @@ function Background3(props)
         let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
         let container = document.getElementById("container");
+
+        let text_container = document.querySelector(".text-container");
+        let edit_text = document.querySelector(".edit-text");
+        let container_heading = document.querySelector(".container-heading");
         /* Login form submission event */
         login_form.onsubmit = function(event)
         {
@@ -53,10 +57,58 @@ function Background3(props)
                     if(_data === "true")
                     { 
                         _information.style.display = "block";
+                        /* REshape the elements styles */
+                        console.log("trueeee");
+                        text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
+                        text_container.style.top = "73%"; text_container.style.transform = ""; text_container.style.width = "650px";
+                        text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+                        text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block"; 
+
+
+                        edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
+                        container_heading.style.display = "block"; container_heading.style.animation = "FadeIn 1s ease-in";
+
+                        
                     }
                     else //if not logged
                     { 
+                        console.log("falsseeee");
                         _information.style.display = "none";
+                        /* Reshape the elements styles */
+                        text_container.style.paddingLeft = "500px"; text_container.style.paddingRight = "500px"; text_container.style.fontSize = "14px";
+                        text_container.style.position = "relative"; text_container.style.left = "2%"; text_container.style.top = "2%"; 
+                        text_container.style.transform = "translate(-3%,-2%)"; text_container.style.backgroundColor = "transparent"; 
+                        text_container.style.transform = "translate()"; text_container.style.width = "auto";
+                        text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
+
+                        edit_text.style.display = "none";
+                        container_heading.style.display = "none";
+
+                        let navbar = document.querySelector(".navbar");
+                        var txt = document.querySelector(".text-container").innerHTML;
+                        document.querySelector(".text-container").innerHTML = "";
+                        var speed = 28;
+                        var i = 0;
+                        function typeWriter() 
+                        {
+                            if (i < txt.length)
+                            {
+                                document.querySelector(".text-container").innerHTML += txt.charAt(i);
+                                i++;
+                                setTimeout(typeWriter, speed);
+                            }
+                        }
+                        
+                        navbar.onclick = function(event)
+                        {
+                            txt = ""
+                        }
+                        
+                        setTimeout(() =>
+                        {
+                            typeWriter();
+                        }, 2000);
+                        
                     }
                 });
             }, 500);
@@ -123,9 +175,10 @@ function Background3(props)
                 {
                     /* REshape the elements styles */
                     text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
-                    text_container.style.top = "75%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
+                    text_container.style.top = "73%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
                     text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-                    text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block"; 
+                    text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
+                    text_container.style.height = "155px"; 
 
 
                     edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
