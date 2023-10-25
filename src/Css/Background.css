@@ -206,7 +206,7 @@ body
 .edit-text 
 {
     position: absolute;
-    display: block;
+    display: none;
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
@@ -226,21 +226,7 @@ body
 }
 .text-container 
 {
-    /*
-    padding-left: 500px;
-    padding-right: 500px;
-    text-align: center;  
-    font-size: 14px;
-    font-family: monospace;
-    color: aliceblue;
-    position: relative;
-    left: 2%;
-    top: 2%;
-    transform: translate(-3%, -2%);
-    line-height: 1.5;
-    white-space: pre-line;
-    */
-
+    display: none;
     padding: 10px;
     text-align: center;
     font-size: 12px;
@@ -274,17 +260,16 @@ body
 }
 .container-heading 
 {
-    position: absolute;
-    display: block;
+    position: fixed;
+    display: none;
     font-size: 13px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    top: 36%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
     text-align: center;
     color: aliceblue;
-    position: relative;
     line-height: 1.5;
     white-space: pre-line;
     width: 650px;

@@ -1,9 +1,33 @@
 import '../Css/Background.css';
+import {useState} from "react";
 import {useEffect} from 'react';
 import $ from "jquery";
 
 function Background3(props)
 {
+    const[inputs, setInputs] = useState({});
+    const [result, setResult] = useState("");
+    
+    const handleChange = (event) =>
+    {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
+    }
+    
+    const handleSubmit = (event) =>
+    {
+        event.preventDefault();
+
+        console.log(inputs.new_text);
+        
+        /* Allow the inserted text to replace the innerHTML of the text_container */
+        let text_container = document.querySelector(".text-container");
+        text_container.innerHTML = inputs.new_text;
+        
+        
+
+    }
 
     useEffect(()=> 
     {
@@ -17,7 +41,6 @@ function Background3(props)
             /* allows time for a form submission to be processed first */
             setTimeout(() =>
             {
-                console.log("YS");
                 /* Checks if the user is logged, and displays certain elements */
                 $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
                 .done(function( _data) 
@@ -38,6 +61,7 @@ function Background3(props)
         let guest_button = document.getElementById("guest");
         guest_button.addEventListener("click", () =>
         {
+            console.log("wow");
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
@@ -82,7 +106,7 @@ function Background3(props)
             }
         });
 
-
+        /* Determine if the user is logged or not, and then displays elements a certain way */
         setTimeout(() =>
         {
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
@@ -97,19 +121,21 @@ function Background3(props)
                     text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
                     text_container.style.top = "75%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
                     text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+                    text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block"; 
 
-                    edit_text.style.display = "block";
-                    container_heading.style.display = "block";
+
+                    edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
+                    container_heading.style.display = "block"; container_heading.style.animation = "FadeIn 1s ease-in";
 
                 }
                 else//Logged OUT ELEMENTS
                 {
-                    console.log("HEREEE");
                     /* Reshape the elements styles */
                     text_container.style.paddingLeft = "500px"; text_container.style.paddingRight = "500px"; text_container.style.fontSize = "14px";
                     text_container.style.position = "relative"; text_container.style.left = "2%"; text_container.style.top = "2%"; 
                     text_container.style.transform = "translate(-3%,-2%)"; text_container.style.backgroundColor = "transparent"; 
                     text_container.style.transform = "translate()"; text_container.style.width = "auto";
+                    text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
 
                     edit_text.style.display = "none";
                     container_heading.style.display = "none";
@@ -141,7 +167,7 @@ function Background3(props)
                     }, 2000);
                 }
             });
-        }, 1000);
+        }, 10);
 
         
 
@@ -160,16 +186,20 @@ function Background3(props)
     <>   
         <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
             <div className = "container" id = "container">
+
                 <div className = "text"> {props.Title} <hr style = {{display: props.hr}}/> </div>
-                <div className = "text-container"> {props.Text} </div>
+
+                <div className = "text-container" onChange = {props.handleChange}> {props.text} </div>
+
                 <div className = "edit-text">
-                    <form action = "">
+                    <form autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                         <p style = {{textAlign: 'center'}}>Insert Text Below </p>
-                        <textarea className = "textarea" id = "new_text" name = "new_text"/>
+                        <textarea className = "textarea" id = "new_text" name = "new_text" value={inputs.textarea} onChange = {handleChange} required/>
                         <br />
-                        <button className = "button" type = "submit" value = "Submit" >Submit</button>
+                        <button className = "button" type = "submit" value = "Submit">Submit</button>
                     </form>
                 </div>
+
                 <div className = "container-heading">Preview:</div>
             </div>
             <div className = "ul" id = "table" style = {{width: '1880px', height: '980px', overflow: 'hidden'}}>

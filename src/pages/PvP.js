@@ -12,7 +12,7 @@ function PVP()
     }, []);
     return (
     <>
-        <Background3 Title = "PvP" Text = {`
+        <Background3 Title = "PvP" text = {`
         Break from Destiny: 
         ____________________
         In Break from Destiny, players can participate in Break from Destiny seasons to compete 
