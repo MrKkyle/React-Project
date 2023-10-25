@@ -5,7 +5,7 @@ function Unknown()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Unknown" Text = "This information will be released on the 27th June 2023"  />
+    <Background3 Background = {image} Title = "Unknown" text = {localStorage.getItem("d9-unknown")}/>
   </>
   );
   

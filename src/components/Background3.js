@@ -6,7 +6,6 @@ import $ from "jquery";
 function Background3(props)
 {
     const[inputs, setInputs] = useState({});
-    const [result, setResult] = useState("");
     
     const handleChange = (event) =>
     {

@@ -5,18 +5,7 @@ function WorldBosses()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Vera World-Bosses" Text = {`
-    World Bosses that can be found in Vera include: 
-
-    •Magma
-    •Rudolph
-    •Eva 
-    •Harrah
-    •Culton
-    •Abyssant: Scylla
-    •Abyssant: Haboela
-    •Abyssant: Nakya
-    `}/>
+    <Background3 Background = {image} Title = "Vera World-Bosses" text = {localStorage.getItem("vera-wb")}/>
   </>
   );
   

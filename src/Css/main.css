@@ -101,7 +101,7 @@ img
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: auto;
     height: auto;
-    z-index: 1;
+    z-index: 2;
 }
 .yes-btn
 {

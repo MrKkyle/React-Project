@@ -4,19 +4,7 @@ function Enemies()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Vera-Enemies" Text = {`
-
-    •Hyena Destroyers
-    •Hyena Elites
-    •Hyena Warriors
-    •Hyena Wino
-    •Hyena Scouts
-    •Hyena Snipers
-    •Hyena Thugs
-    •Abyssant Weaver
-    •Abyssant Stalker
-    •Abyssant Devourer
-    `}/>
+    <Background3 Background = {image} Title = "Vera-Enemies" text = {localStorage.getItem("vera-enemies")}/>
   </>
   );
   

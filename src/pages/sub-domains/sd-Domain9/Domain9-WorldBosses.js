@@ -5,7 +5,7 @@ function WorldBosses()
 {
   return (
   <>
-    <Background3 Background = {image} Title = "Domain 9 World-Bosses" Text = "This information will be released on the 27th June 2023" />
+    <Background3 Background = {image} Title = "Domain 9 World-Bosses" text = {localStorage.getItem("d9-wb")} />
   </>
   );
   
