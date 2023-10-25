@@ -4,11 +4,6 @@ import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.
 
 function Equipment(props)
 {
-    useEffect(()=> 
-    {
-
-
-    }, []);
 
     return (
     <>

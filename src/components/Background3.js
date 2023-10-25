@@ -17,14 +17,17 @@ function Background3(props)
     const handleSubmit = (event) =>
     {
         event.preventDefault();
-        
+
         const pathname = window.location.pathname;
-        console.log(pathname);
+        /* Formats the string to be used directly inside the setItem function */
+        console.log(pathname.substring(1));
         console.log(inputs.new_text);
         
         /* Allow the inserted text to replace the innerHTML of the text_container */
         let text_container = document.querySelector(".text-container");
         text_container.innerHTML = inputs.new_text;
+        /* Set the value of inputs.new_text */
+        localStorage.setItem(pathname.substring(1), inputs.new_text);
         
         
 
@@ -32,7 +35,6 @@ function Background3(props)
 
     useEffect(()=> 
     {
-
 
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         let login_form = document.getElementById("login-f");
@@ -64,7 +66,6 @@ function Background3(props)
         let guest_button = document.getElementById("guest");
         guest_button.addEventListener("click", () =>
         {
-            console.log("wow");
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
