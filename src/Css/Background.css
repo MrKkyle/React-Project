@@ -275,6 +275,7 @@ body
 .container-heading 
 {
     position: absolute;
+    display: block;
     font-size: 13px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     top: 36%;

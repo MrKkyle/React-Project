@@ -169,6 +169,7 @@ function Form(props)
                 /* Prevent the form from being submitted */
                 login_f.onsubmit = function(event)
                 {
+                    console.log("Prevented");
                     event.preventDefault();
                 }
                 /* Remove requried field preventing form submission */
@@ -219,7 +220,7 @@ function Form(props)
                     <br />
                     <br />
                     <hr /> <a href = "#" id = "or" style = {{top: '-5px',position:'relative',fontSize:'17px'}}>or</a> <hr />
-                    <button id = "guest" className = "redirect-button">Guest Mode</button>
+                    <button id = "guest" type = "button" className = "redirect-button">Guest Mode</button>
                     
                 </div>
             </form>

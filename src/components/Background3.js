@@ -82,19 +82,39 @@ function Background3(props)
             }
         });
 
-        
-        
+
         setTimeout(() =>
         {
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
-                if(_data = "true")//Logged IN ELEMENTS
+                let text_container = document.querySelector(".text-container");
+                let edit_text = document.querySelector(".edit-text");
+                let container_heading = document.querySelector(".container-heading");
+                if(_data === "true")//Logged IN ELEMENTS
                 {
+                    /* REshape the elements styles */
+                    text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
+                    text_container.style.top = "75%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
+                    text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+
+                    edit_text.style.display = "block";
+                    container_heading.style.display = "block";
 
                 }
                 else//Logged OUT ELEMENTS
                 {
+                    console.log("HEREEE");
+                    /* Reshape the elements styles */
+                    text_container.style.paddingLeft = "500px"; text_container.style.paddingRight = "500px"; text_container.style.fontSize = "14px";
+                    text_container.style.position = "relative"; text_container.style.left = "2%"; text_container.style.top = "2%"; 
+                    text_container.style.transform = "translate(-3%,-2%)"; text_container.style.backgroundColor = "transparent"; 
+                    text_container.style.transform = "translate()"; text_container.style.width = "auto";
+
+                    edit_text.style.display = "none";
+                    container_heading.style.display = "none";
+
+
                     let navbar = document.querySelector(".navbar");
                     var txt = document.querySelector(".text-container").innerHTML;
                     document.querySelector(".text-container").innerHTML = "";
@@ -140,8 +160,8 @@ function Background3(props)
     <>   
         <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
             <div className = "container" id = "container">
-                <div className = "text">{props.Title} <hr style = {{display: props.hr}}/> </div>
-                <div className = "text-container">{props.Text}</div>
+                <div className = "text"> {props.Title} <hr style = {{display: props.hr}}/> </div>
+                <div className = "text-container"> {props.Text} </div>
                 <div className = "edit-text">
                     <form action = "">
                         <p style = {{textAlign: 'center'}}>Insert Text Below </p>
