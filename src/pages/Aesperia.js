@@ -9,7 +9,7 @@ import Image4 from '../Images/Artificial-Island.jpg';
 import Image5 from '../Images/Hykros.jpg';
 import Image6 from '../Images/Banges.png';
 import Image7 from '../Images/SnowField.png';
-import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
+import video from '../Images/Live-Wallpapers/Encounters-Tower-Of-Fantasy-3840x2160.mp4';
 
 function Aesperia()
 { 
@@ -37,6 +37,11 @@ function Aesperia()
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
+                table.style.animation = "FadeIn 1.5s ease-in";
+                setTimeout(() =>
+                {
+                    table.style.display = "block";
+                },1500);
                 _information.style.display = "none";
             });
         });

@@ -81,7 +81,7 @@ function Form(props)
                     navigation.style.opacity = "1"; 
                     login_form.style.display = "none"; 
                     video.style.display = "none"; 
-                    if(!(ul == null)){ ul.style.display = "block"; }
+                    if(!(ul == null)){ ul.style.display = "block"; ul.style.zIndex = "1"}
                     if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "1"; }
                 }
                 else //Logged out
@@ -140,7 +140,7 @@ function Form(props)
                             {
                                 navigation.style.opacity = "1";
                                 if((!video2 == null)){ video2.style.display = "block"; }
-                                if(!(ul == null)){ ul.style.zIndex = "1"; }
+                                if(!(ul == null)){ ul.style.display = "block"; ul.style.zIndex = "1"}
                                 if(!(container == null)){ container.style.zIndex = "2"; }
                             }, 100);
                         }, 1500);
@@ -168,7 +168,6 @@ function Form(props)
                 /* Prevent the form from being submitted */
                 login_f.onsubmit = function(event)
                 {
-                    console.log("Prevented");
                     event.preventDefault();
                 }
                 /* Remove requried field preventing form submission */

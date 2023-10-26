@@ -40,6 +40,11 @@ function Vera()
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
+                table.style.animation = "FadeIn 1.5s ease-in";
+                setTimeout(() =>
+                {
+                    table.style.display = "block";
+                },1500);
                 _information.style.display = "none";
             });
         });

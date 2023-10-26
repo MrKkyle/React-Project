@@ -6,7 +6,7 @@ import Image1 from '../Images/Simulacra.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
 import Image4 from '../Images/domain9.png';
-import video from '../Images/Live-Wallpapers/ruby-in-tower-of-fantasy.3840x2160.mp4';
+import video from '../Images/domain9.png';
 
 function Domain9()
 {
@@ -34,6 +34,11 @@ function Domain9()
             $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
             .done(function( _data) 
             {
+                table.style.animation = "FadeIn 1.5s ease-in";
+                setTimeout(() =>
+                {
+                    table.style.display = "block";
+                },1500);
                 _information.style.display = "none";
             });
         });

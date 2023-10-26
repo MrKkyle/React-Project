@@ -19,18 +19,11 @@ function Background3(props)
         event.preventDefault();
 
         const pathname = window.location.pathname;
-        /* Formats the string to be used directly inside the setItem function */
-        console.log(pathname.substring(1));
-        console.log(inputs.new_text);
-        
         /* Allow the inserted text to replace the innerHTML of the text_container */
         let text_container = document.querySelector(".text-container");
         text_container.innerHTML = inputs.new_text;
         /* Set the value of inputs.new_text */
         localStorage.setItem(pathname.substring(1), inputs.new_text);
-        
-        
-
     }
 
     useEffect(()=> 
@@ -58,21 +51,15 @@ function Background3(props)
                     { 
                         _information.style.display = "block";
                         /* REshape the elements styles */
-                        console.log("trueeee");
                         text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
-                        text_container.style.top = "73%"; text_container.style.transform = ""; text_container.style.width = "650px";
+                        text_container.style.top = "72.5%"; text_container.style.transform = ""; text_container.style.width = "650px";
                         text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                         text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block"; 
-
-
                         edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
                         container_heading.style.display = "block"; container_heading.style.animation = "FadeIn 1s ease-in";
-
-                        
                     }
                     else //if not logged
                     { 
-                        console.log("falsseeee");
                         _information.style.display = "none";
                         /* Reshape the elements styles */
                         text_container.style.paddingLeft = "500px"; text_container.style.paddingRight = "500px"; text_container.style.fontSize = "14px";
@@ -171,14 +158,16 @@ function Background3(props)
                 let text_container = document.querySelector(".text-container");
                 let edit_text = document.querySelector(".edit-text");
                 let container_heading = document.querySelector(".container-heading");
+                let table = document.getElementById("table");
                 if(_data === "true")//Logged IN ELEMENTS
                 {
                     /* REshape the elements styles */
                     text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
-                    text_container.style.top = "73%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
+                    text_container.style.top = "72.5%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
                     text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                     text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
                     text_container.style.height = "155px"; 
+                    //table.style.zIndex = "1";
 
 
                     edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
