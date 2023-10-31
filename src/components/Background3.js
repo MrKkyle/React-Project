@@ -28,7 +28,18 @@ function Background3(props)
 
     useEffect(()=> 
     {
-
+        /*
+        window.onload = function(event)
+        {
+            $.post( "http://localhost:8000/worker.php", {action: window.location.pathname.substring(1)})
+            .done(function( _data) 
+            {
+                console.log(_data);
+                let text_container = document.querySelector(".text-container");
+                text_container.innerHTML = _data;
+            });
+        }
+        */
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
