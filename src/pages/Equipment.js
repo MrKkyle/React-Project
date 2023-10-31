@@ -4,6 +4,17 @@ import video from '../Images/Live-Wallpapers/LiveWallpaperPC.com-Tower-Of-Fantas
 
 function Equipment(props)
 {
+    useEffect(() =>
+    {
+        /*
+        $.post( "http://localhost:8000/session_variables.php", {action: "equipment"})
+        .done(function( _data) 
+        {
+            console.log("Login: " + _data);
+        });
+        */
+
+    }, []);
 
     return (
     <>

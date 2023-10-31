@@ -82,7 +82,7 @@ function Form(props)
                     login_form.style.display = "none"; 
                     video.style.display = "none"; 
                     if(!(ul == null)){ ul.style.display = "block"; ul.style.zIndex = "1"}
-                    if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "1"; }
+                    if(!(container == null)){ container.style.animation = "FadeIn 0.5s ease-in"; container.style.zIndex = "2"; }
                 }
                 else //Logged out
                 { 

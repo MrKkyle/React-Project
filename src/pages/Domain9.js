@@ -6,7 +6,7 @@ import Image1 from '../Images/Simulacra.jpg';
 import Image2 from '../Images/enemies.jpg';
 import Image3 from '../Images/worldboss.jpg';
 import Image4 from '../Images/domain9.png';
-import video from '../Images/domain9.png';
+import Image from '../Images/domain9.png';
 
 function Domain9()
 {
@@ -160,15 +160,13 @@ function Domain9()
 
     return (
     <div>
-        <Background2
+        <Background2 background = {Image}
                     onclick1 = {navigateToSimulacra} image1 = {Image1} text1 = "Simulacra" display1 = "block"
                     onclick2 = {navigateToEnemies} image2 = {Image2} text2 = "Enemies" display2 = "block"
                     onclick3 = {navigateToWorldBosses} image3 = {Image3} text3 = "World-Bosses" display3 = "block"
                     onclick5 = {navigateToUnknown} image5 = {Image4} text5 = "Unknown" display5 = "block"
         />
-        <video loop autoPlay muted className = "video"  id = "video5">
-            <source src = {video} type = "video/mp4"></source>
-        </video>
+
         <div className = "logout-confirm">
             Proceed to Logout?<br /><br />
             <button className = "no-btn" id = "no-btn">No</button> <button className = "yes-btn" id ="yes-btn">Yes</button>

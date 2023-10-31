@@ -5,11 +5,11 @@ import video from '../Images/Live-Wallpapers/angels-of-clemency-tower-of-fantasy
 
 function PVP()
 {
-
     useEffect(()=> 
     {
         
     }, []);
+
     return (
     <>
         <Background3 Title = "PvP" text = {localStorage.getItem("PVP")}/>
