@@ -1,9 +1,6 @@
-INSERT INTO aesperia (Equipment, PVP, ArtificialIsland, Banges, Enemies, Hykros, WarrenSnowfield, WorldBosses) 
-VALUES ("
-    Equipment are items that can be equipped to boost certain stats of the Wanderer. Equipment comes in all rarities.
-    Each piece of Equipment can have 2 or 3 fixed base stats based on their type, and 2-4 random substats. 
-
-    Every current piece of gear can have any substat, except for Crit, which can only appear as a substat on Gloves and Boots pieces.
+INSERT INTO aesperia (Equipment, PVP, ArtificialIsland, Banges, aesperiaEnemies, Hykros, Warren, aesperiaWorldBosses) 
+VALUES (" Equipment are items that can be equipped to boost certain stats of the Wanderer. Equipment comes in all rarities.
+Each piece of Equipment can have 2 or 3 fixed base stats based on their type, and 2-4 random substats. Every current piece of gear can have any substat, except for Crit, which can only appear as a substat on Gloves and Boots pieces.
     ", "
         Break from Destiny: 
         ____________________
@@ -80,7 +77,7 @@ World Bosses that can be found in Aesperia include:
 •Interdimensional Frostfire Dragon
 ");
 
-INSERT INTO vera (ConfoundingAbyss, GraySpace, Innars, MiasmicSwamp, Mirroria, TwilightZone, Enemies, WorldBosses)
+INSERT INTO vera (confoundingAbyss, graySpace, innars, miasmicSwamp, mirroria, wwilightZone, veraEnemies, veraWorldBosses)
 VALUES ("
     The Confounding Abyss is an area in Vera and is physically located beneath the Mirroria. The Confounding Abyss appears immediately when the construction team of the Third City lost 
     communication a few years ago. It affects the laws of physics surrounding it, emitting a sub-gravity field where the Mirroria's anti-gravity engines rely on this field to keep Mirroria afloat.
@@ -128,5 +125,5 @@ VALUES ("
     •Abyssant: Nakya
     ");
 
-INSERT INTO domain9 (Unknown, WorldBosses, Enemies)
+INSERT INTO domain9 (Unknown, domain9WorldBosses, domain9Enemies)
 VALUES ("This will be added soon.", "This will be added soon.", "This will be added soon.");

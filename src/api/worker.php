@@ -21,7 +21,7 @@
         $query = "SELECT Equipment FROM aesperia";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
-        echo json_encode($row['column']);
+        echo json_encode($row['Equipment']);
     }
     else if($_POST["action"] == "equipment-update")
     {
@@ -30,9 +30,10 @@
 
     else if ($_POST["action"] == "PVP")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT PVP FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['PVP']);
     }
     else if($_POST["action"] == "PVP-update")
     {

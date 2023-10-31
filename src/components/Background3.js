@@ -52,7 +52,7 @@ function Background3(props)
                         _information.style.display = "block";
                         /* REshape the elements styles */
                         text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
-                        text_container.style.top = "72.5%"; text_container.style.transform = ""; text_container.style.width = "650px";
+                        text_container.style.top = "72.7%"; text_container.style.transform = ""; text_container.style.width = "650px";
                         text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                         text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block"; 
                         edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
@@ -163,7 +163,7 @@ function Background3(props)
                 {
                     /* REshape the elements styles */
                     text_container.style.fontSize = "12px"; text_container.style.position = "relative"; text_container.style.left = "50%"; 
-                    text_container.style.top = "72.5%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
+                    text_container.style.top = "72.7%"; text_container.transform = "translate(-50%,-60%)"; text_container.style.width = "650px";
                     text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                     text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
                     text_container.style.height = "155px"; 
