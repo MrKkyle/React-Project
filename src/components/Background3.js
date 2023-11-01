@@ -90,33 +90,32 @@ function Background3(props)
                         edit_text.style.display = "none";
                         container_heading.style.display = "none";
 
-                        setTimeout(()=>
+
+                        let navbar = document.querySelector(".navbar");
+                        var txt = document.querySelector(".text-container").innerHTML;
+                        document.querySelector(".text-container").innerHTML = "";
+                        var speed = 28;
+                        var i = 0;
+                        function typeWriter() 
                         {
-                            let navbar = document.querySelector(".navbar");
-                            var txt = document.querySelector(".text-container").innerHTML;
-                            document.querySelector(".text-container").innerHTML = "";
-                            var speed = 28;
-                            var i = 0;
-                            function typeWriter() 
+                            if (i < txt.length)
                             {
-                                if (i < txt.length)
-                                {
-                                    document.querySelector(".text-container").innerHTML += txt.charAt(i);
-                                    i++;
-                                    setTimeout(typeWriter, speed);
-                                }
+                                document.querySelector(".text-container").innerHTML += txt.charAt(i);
+                                i++;
+                                setTimeout(typeWriter, speed);
                             }
-                            
-                            navbar.onclick = function(event)
-                            {
-                                txt = ""
-                            }
-                            
-                            setTimeout(() =>
-                            {
-                                typeWriter();
-                            }, 2000);
-                        }, 3000);
+                        }
+                        
+                        navbar.onclick = function(event)
+                        {
+                            txt = ""
+                        }
+                        
+                        setTimeout(() =>
+                        {
+                            typeWriter();
+                        }, 2000);
+
                         
                         
                     }
@@ -207,33 +206,32 @@ function Background3(props)
                     edit_text.style.display = "none";
                     container_heading.style.display = "none";
 
-                    setTimeout(()=>
+
+                    let navbar = document.querySelector(".navbar");
+                    var txt = document.querySelector(".text-container").innerHTML;
+                    document.querySelector(".text-container").innerHTML = "";
+                    var speed = 28;
+                    var i = 0;
+                    function typeWriter() 
+                    {
+                        if (i < txt.length)
                         {
-                            let navbar = document.querySelector(".navbar");
-                            var txt = document.querySelector(".text-container").innerHTML;
-                            document.querySelector(".text-container").innerHTML = "";
-                            var speed = 28;
-                            var i = 0;
-                            function typeWriter() 
-                            {
-                                if (i < txt.length)
-                                {
-                                    document.querySelector(".text-container").innerHTML += txt.charAt(i);
-                                    i++;
-                                    setTimeout(typeWriter, speed);
-                                }
-                            }
-                            
-                            navbar.onclick = function(event)
-                            {
-                                txt = ""
-                            }
-                            
-                            setTimeout(() =>
-                            {
-                                typeWriter();
-                            }, 2000);
-                        }, 3000);
+                            document.querySelector(".text-container").innerHTML += txt.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+                    
+                    navbar.onclick = function(event)
+                    {
+                        txt = ""
+                    }
+                    
+                    setTimeout(() =>
+                    {
+                        typeWriter();
+                    }, 2000);
+
                 }
             });
         }, 10);
