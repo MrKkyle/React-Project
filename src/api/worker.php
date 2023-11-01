@@ -8,7 +8,7 @@
     $password = "";
     $dbname = "api-database";
 
-    $text = $_POST['text'];
+    $text = $_POST['data'];
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     if($conn->connect_error)
@@ -26,8 +26,9 @@
     else if($_POST["action"] == "equipment-update")
     {
         $query = "UPDATE aesperia SET Equipment = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }   
-
     else if ($_POST["action"] == "PVP")
     {
         $query = "SELECT PVP FROM aesperia";
@@ -37,220 +38,236 @@
     }
     else if($_POST["action"] == "PVP-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET PVP = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "aesperiaEnemies")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT aesperiaEnemies FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['aesperiaEnemies']);
     }
     else if($_POST["action"] == "aesperiaEnemies-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET aesperiaEnemies = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if($_POST["action"] == "aesperiaWorldBosses")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT aesperiaWorldBosses FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['aesperiaWorldBosses']);
     }
     else if($_POST["action"] == "aesperiaWorldBosses-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET aesperiaWorldBosses = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "veraEnemies")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT veraEnemies FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['veraEnemies']);
     }
     else if($_POST["action"] == "veraEnemies-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET veraEnemies = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if($_POST["action"] == "veraWorldBosses")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT veraWorldBosses FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['veraWorldBosses']);
     }
     else if($_POST["action"] == "veraWorldBosses-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET veraWorldBosses = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "domain9Enemies")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT domain9Enemies FROM domain9";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['domain9Enemies']);
     }
     else if($_POST["action"] == "domain9Enemies-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE domain9 SET domain9Enemies = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "domain9WorldBosses")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT domain9WorldBosses FROM domain9";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['domain9WorldBosses']);
     }
     else if($_POST["action"] == "domain9WorldBosses-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET domain9WorldBosses = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "ArtificialIsland")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT ArtificialIsland FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['ArtificialIsland']);
     }
     else if($_POST["action"] == "ArtificialIsland-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET ArtificialIsland = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "Banges")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT Banges FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['Banges']);
     }
     else if($_POST["action"] == "Banges-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET Banges = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "Hykros")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT Hykros FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['Hykros']);
     }
     else if($_POST["action"] == "Hykros-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET Hykros = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "Warren")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT Warren FROM aesperia";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['Warren']);
     }
     else if($_POST["action"] == "Warren-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE aesperia SET Warren = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "confoundingAbyss")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT confoundingAbyss FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['confoundingAbyss']);
     }
     /* if action variable = logout */
     else if($_POST["action"] == "confoundingAbyss-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET confoundingAbyss = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "graySpace")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT graySpace FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['graySpace']);
     }
 
     else if($_POST["action"] == "graySpace-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET graySpace = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "innars")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT innars FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['innars']);
     }
 
     else if($_POST["action"] == "innars-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET innars = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "miasmicSwamp")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT miasmicSwamp FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['miasmicSwamp']);
     }
     else if($_POST["action"] == "miasmicSwamp-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET miasmicSwamp = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "Mirroria")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT Mirroria FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['Mirroria']);
     }
     else if($_POST["action"] == "Mirroria-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET Mirroria = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
     else if ($_POST["action"] == "twilightZone")
     {
-        $isLogged = true;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "SELECT twilightZone FROM vera";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['twilightZone']);
     }
     else if($_POST["action"] == "twilightZone-update")
     {
-        $isLogged = false;
-        $_SESSION['isLogged'] = $isLogged;
-        echo json_encode($isLogged);
+        $query = "UPDATE vera SET twilightZone = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
     }
 
 ?>

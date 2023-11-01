@@ -17,31 +17,25 @@ function Background3(props)
     const handleSubmit = (event) =>
     {
         event.preventDefault();
-
-        const pathname = window.location.pathname;
         /* Allow the inserted text to replace the innerHTML of the text_container 
         let text_container = document.querySelector(".text-container");
         text_container.innerHTML = inputs.new_text;
         localStorage.setItem(pathname.substring(1), inputs.new_text);
         */
-
-       /*
-       let action = window.location.pathname.substring(1) + "-update";
-
-        $.post( "http://localhost:8000/worker.php", {action: action})
+        
+        let action = window.location.pathname.substring(1) + "-update";
+        console.log(action);
+        $.post( "http://localhost:8000/worker.php", { action: action, data: inputs.text_area })
         .done(function( _data) 
         {
-            console.log(_data);
             let text_container = document.querySelector(".text-container");
             text_container.innerHTML = _data;
         });
-        */
-
     }
 
     useEffect(()=> 
     {
-        /*
+        console.log(window.location.pathname.substring(1));
         $.post( "http://localhost:8000/worker.php", {action: window.location.pathname.substring(1)})
         .done(function( _data) 
         {
@@ -50,18 +44,10 @@ function Background3(props)
             //Format Text 
             let text = _data.substring(1);
             text = text.slice(0, -1);
-            text_container.innerHTML = _data;
+            text_container.innerHTML = text;
             console.log(text);
         });
 
-        */
-
-        
-
-        
-
-        
-        
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
@@ -277,7 +263,7 @@ function Background3(props)
                 <div className = "edit-text">
                     <form autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                         <p style = {{textAlign: 'center'}}>Insert Text Below </p>
-                        <textarea className = "textarea" id = "new_text" name = "new_text" value={inputs.textarea} onChange = {handleChange} required/>
+                        <textarea className = "textarea" id = "new_text" name = "text_area" value={inputs.textarea} onChange = {handleChange} required/>
                         <br />
                         <button className = "button" type = "submit" value = "Submit">Submit</button>
                     </form>

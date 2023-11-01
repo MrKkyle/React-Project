@@ -12,7 +12,7 @@ function PVP()
 
     return (
     <>
-        <Background3 Title = "PvP" text = {localStorage.getItem("PVP")}/>
+        <Background3 Title = "PvP"/>
         <video loop autoPlay muted className = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>

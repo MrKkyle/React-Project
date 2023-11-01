@@ -13,7 +13,7 @@ function Equipment()
 
     return (
     <>
-        <Background3 Title = "Equipment" text = {localStorage.getItem("equipment")}/>
+        <Background3 Title = "Equipment"/>
         <video loop autoPlay muted className = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>
