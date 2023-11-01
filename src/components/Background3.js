@@ -19,27 +19,49 @@ function Background3(props)
         event.preventDefault();
 
         const pathname = window.location.pathname;
-        /* Allow the inserted text to replace the innerHTML of the text_container */
+        /* Allow the inserted text to replace the innerHTML of the text_container 
         let text_container = document.querySelector(".text-container");
         text_container.innerHTML = inputs.new_text;
-        /* Set the value of inputs.new_text */
         localStorage.setItem(pathname.substring(1), inputs.new_text);
+        */
+
+       /*
+       let action = window.location.pathname.substring(1) + "-update";
+
+        $.post( "http://localhost:8000/worker.php", {action: action})
+        .done(function( _data) 
+        {
+            console.log(_data);
+            let text_container = document.querySelector(".text-container");
+            text_container.innerHTML = _data;
+        });
+        */
+
     }
 
     useEffect(()=> 
     {
         /*
-        window.onload = function(event)
+        $.post( "http://localhost:8000/worker.php", {action: window.location.pathname.substring(1)})
+        .done(function( _data) 
         {
-            $.post( "http://localhost:8000/worker.php", {action: window.location.pathname.substring(1)})
-            .done(function( _data) 
-            {
-                console.log(_data);
-                let text_container = document.querySelector(".text-container");
-                text_container.innerHTML = _data;
-            });
-        }
+            let text_container = document.querySelector(".text-container");
+
+            //Format Text 
+            let text = _data.substring(1);
+            text = text.slice(0, -1);
+            text_container.innerHTML = _data;
+            console.log(text);
+        });
+
         */
+
+        
+
+        
+
+        
+        
         $.ajaxSetup({ xhrFields: { withCredentials: true }, });
         let login_form = document.getElementById("login-f");
         let _information = document.getElementById("_information");
@@ -82,30 +104,34 @@ function Background3(props)
                         edit_text.style.display = "none";
                         container_heading.style.display = "none";
 
-                        let navbar = document.querySelector(".navbar");
-                        var txt = document.querySelector(".text-container").innerHTML;
-                        document.querySelector(".text-container").innerHTML = "";
-                        var speed = 28;
-                        var i = 0;
-                        function typeWriter() 
+                        setTimeout(()=>
                         {
-                            if (i < txt.length)
+                            let navbar = document.querySelector(".navbar");
+                            var txt = document.querySelector(".text-container").innerHTML;
+                            document.querySelector(".text-container").innerHTML = "";
+                            var speed = 28;
+                            var i = 0;
+                            function typeWriter() 
                             {
-                                document.querySelector(".text-container").innerHTML += txt.charAt(i);
-                                i++;
-                                setTimeout(typeWriter, speed);
+                                if (i < txt.length)
+                                {
+                                    document.querySelector(".text-container").innerHTML += txt.charAt(i);
+                                    i++;
+                                    setTimeout(typeWriter, speed);
+                                }
                             }
-                        }
+                            
+                            navbar.onclick = function(event)
+                            {
+                                txt = ""
+                            }
+                            
+                            setTimeout(() =>
+                            {
+                                typeWriter();
+                            }, 2000);
+                        }, 3000);
                         
-                        navbar.onclick = function(event)
-                        {
-                            txt = ""
-                        }
-                        
-                        setTimeout(() =>
-                        {
-                            typeWriter();
-                        }, 2000);
                         
                     }
                 });
@@ -169,7 +195,6 @@ function Background3(props)
                 let text_container = document.querySelector(".text-container");
                 let edit_text = document.querySelector(".edit-text");
                 let container_heading = document.querySelector(".container-heading");
-                let table = document.getElementById("table");
                 if(_data === "true")//Logged IN ELEMENTS
                 {
                     /* REshape the elements styles */
@@ -178,7 +203,6 @@ function Background3(props)
                     text_container.style.padding = "10px"; text_container.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                     text_container.style.animation = "FadeIn 1s ease-in"; text_container.style.display = "block";
                     text_container.style.height = "155px"; 
-                    //table.style.zIndex = "1";
 
 
                     edit_text.style.display = "block"; edit_text.style.animation = "FadeIn 1s ease-in";
@@ -197,31 +221,33 @@ function Background3(props)
                     edit_text.style.display = "none";
                     container_heading.style.display = "none";
 
-
-                    let navbar = document.querySelector(".navbar");
-                    var txt = document.querySelector(".text-container").innerHTML;
-                    document.querySelector(".text-container").innerHTML = "";
-                    var speed = 28;
-                    var i = 0;
-                    function typeWriter() 
-                    {
-                        if (i < txt.length)
+                    setTimeout(()=>
                         {
-                            document.querySelector(".text-container").innerHTML += txt.charAt(i);
-                            i++;
-                            setTimeout(typeWriter, speed);
-                        }
-                    }
-                    
-                    navbar.onclick = function(event)
-                    {
-                        txt = ""
-                    }
-                    
-                    setTimeout(() =>
-                    {
-                        typeWriter();
-                    }, 2000);
+                            let navbar = document.querySelector(".navbar");
+                            var txt = document.querySelector(".text-container").innerHTML;
+                            document.querySelector(".text-container").innerHTML = "";
+                            var speed = 28;
+                            var i = 0;
+                            function typeWriter() 
+                            {
+                                if (i < txt.length)
+                                {
+                                    document.querySelector(".text-container").innerHTML += txt.charAt(i);
+                                    i++;
+                                    setTimeout(typeWriter, speed);
+                                }
+                            }
+                            
+                            navbar.onclick = function(event)
+                            {
+                                txt = ""
+                            }
+                            
+                            setTimeout(() =>
+                            {
+                                typeWriter();
+                            }, 2000);
+                        }, 3000);
                 }
             });
         }, 10);
