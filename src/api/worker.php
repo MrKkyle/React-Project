@@ -122,7 +122,21 @@
     }
     else if($_POST["action"] == "domain9WorldBosses-update")
     {
-        $query = "UPDATE aesperia SET domain9WorldBosses = '$text'";
+        $query = "UPDATE domain9 SET domain9WorldBosses = '$text'";
+        mysqli_query($conn, $query);
+        echo json_encode($text);
+    }
+
+    else if ($_POST["action"] == "unknown")
+    {
+        $query = "SELECT Unknown FROM domain9";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        echo json_encode($row['Unknown']);
+    }
+    else if($_POST["action"] == "unknown-update")
+    {
+        $query = "UPDATE domain9 SET Unknown = '$text'";
         mysqli_query($conn, $query);
         echo json_encode($text);
     }
