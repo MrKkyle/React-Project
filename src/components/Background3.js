@@ -24,7 +24,6 @@ function Background3(props)
         */
         
         let action = window.location.pathname.substring(1) + "-update";
-        console.log(action);
         $.post( "http://localhost:8000/worker.php", { action: action, data: inputs.text_area })
         .done(function( _data) 
         {
@@ -35,7 +34,6 @@ function Background3(props)
 
     useEffect(()=> 
     {
-        console.log(window.location.pathname.substring(1));
         $.post( "http://localhost:8000/worker.php", {action: window.location.pathname.substring(1)})
         .done(function( _data) 
         {

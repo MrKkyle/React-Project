@@ -5,31 +5,6 @@ import Form from './components/Form';
 import Register_Form from './components/Register-form';
 import '../src/Css/main.css';
 
-/*
-useEffect(()=> 
-{
-    window.onload = function(event)
-    {
-        $.post( "http://localhost:8000/session_variables.php", {action: "validate"})
-        .done(function( _data) 
-        {
-            console.log("Data Loaded: " + _data);
-            //If the user is not logged in already
-            if(_data == false)
-            {
-                console.log("NOPE");
-            }
-            //If the user is logged in already
-            if(_data == true)
-            {
-                console.log("YUP");
-            }
-        });
-    }
-
-}, []);
-*/
-
 export default function Main()
 {
     return ( 
