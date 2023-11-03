@@ -1,5 +1,5 @@
 # React-Project Motivation
-I felt the need to broaden my front-end skills besides HTML/CSS, and react was the recommended choice.
+I felt the need to broaden my front-end skills besides HTML / CSS, and React.js was the recommended choice.
 The project is based off the game Tower of Fantasy, you can view the official website here: _https://www.toweroffantasy-global.com/home.html_.
 
 # Main Features
@@ -24,8 +24,26 @@ The project is based off the game Tower of Fantasy, you can view the official we
 - This will create your react application. Then proceed to the directory and copy my code directly into the folder, and replace all the files.
 - Finally run `npm start` and the project will be opened up in your default browser, enjoy ~
 
+# Installing React project on Ubuntu:
+- Run the command `sudo apt update`
+- Install cURL with: `sudo apt-get install curl`
+- install nvm, with: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash`
+- Thereafter verify the installation of nvm: `command -v nvm`
+- Install NodeJS in the current stable version using the command: `nvm install --lts`
+
+Now we move to the cloning of the React project:
+- Go to your ubuntu terminal and enter `code .` this should install a few things
+- Run code . again, and it should open your Visual Studio Code in that directory.
+- Create a few new folders for distinction between the different project, its a good practice
+- Now we proceed to cloning the GitHub repository through Code.
+- Navigate to the React project via `cd` and `ll` 
+- once you inside the directory of the React project run the command `npm install`
+- once the installation is complete, you can proceed to running npm start inside the same directory and it should open your React project
+~Enjoy
+
+
 # Future Plans for this website:
-- Making a login form submission using php
-- Check user credentials from a file(in an array)
-- New users credentials get added into that array, and are able to login
-- What the users see once logged in varies slightly (editing privledge follow below)
+- Incorporating the PHP framework laravel to simplify the PHP operations done in this application.
+
+
+  
