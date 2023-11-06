@@ -19,11 +19,13 @@
 
     if(mysqli_query($conn, $query))
     {
-        echo("register-true");
+        $result = array("username"=>$user, "key"=>$key, "Status"=>"register-true");
+        echo json_encode($result);
     }
     else
     {
-        echo("register-false");
+        $result = array("username"=>$user, "key"=>$key, "Status"=>"register-false");
+        echo json_encode($result);
     }
 
 ?>
