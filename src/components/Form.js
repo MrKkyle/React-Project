@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useEffect} from 'react';
+//`npm install jquery` first
 import $ from "jquery";
 
 import video from '../Images/Live-Wallpapers/annabella-from-tower-of-fantasy.3840x2160.mp4';
