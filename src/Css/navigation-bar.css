@@ -118,7 +118,6 @@ li a:hover
 .navbar a:hover, .dropdown:hover .dropbtn, .logout:hover
 {
     background-color: rgb(72, 101, 128);
-
 }
 
 .dropdown-content 
