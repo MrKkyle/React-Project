@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import '../Css/Landing-page.css'
 
 /* Must start with a Caps letter */
-function LandingPage(props)
+function LandingPage()
 {
     useEffect(()=> 
     {

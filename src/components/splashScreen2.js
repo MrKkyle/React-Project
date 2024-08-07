@@ -2,7 +2,7 @@
 import '../Css/splashScreen.css';
 import {useRef, useEffect} from 'react';
 
-function SplashScreen2(props)
+function SplashScreen2({Text})
 {
     useEffect(()=> 
 	{
@@ -19,7 +19,7 @@ function SplashScreen2(props)
     return (
     <div className = "splashScreen2">
         <div className = "splash" id = "splash">
-            {props.Text}
+            {Text}
         </div>
     </div>
     );

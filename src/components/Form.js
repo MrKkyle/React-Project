@@ -5,7 +5,7 @@ import $ from "jquery";
 
 import video from '../Images/Live-Wallpapers/annabella-from-tower-of-fantasy.3840x2160.mp4';
 import '../Css/Form.css';
-function Form(props)
+function Form({Display})
 {
 
     const[inputs, setInputs] = useState({});
@@ -206,7 +206,7 @@ function Form(props)
         <video loop autoPlay muted className = "video" id = "video">
             <source src = {video} type = "video/mp4"></source>
         </video>
-        <div className = 'modal1' id = "login-form" style = {{display: props.Display}}>
+        <div className = 'modal1' id = "login-form" style = {{display: Display}}>
             <form id = "login-f" className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
                 <div className = 'modal-container'>
                     <label><b>Username</b></label>

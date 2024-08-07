@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import $ from "jquery";
 
 import '../Css/Form.css';
-function Register_Form(props)
+function Register_Form({Display})
 {
     
     const[inputs, setInputs] = useState({});
@@ -98,7 +98,7 @@ function Register_Form(props)
 
     return (
     <div>
-        <div className = 'modal1' id = "register-form" style = {{display: props.Display}}>
+        <div className = 'modal1' id = "register-form" style = {{display: Display}}>
         <span className = "close" id = "back" title = "Close Modal">&times;</span>
             <form className = 'modal-content' autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
 

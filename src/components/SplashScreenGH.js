@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import $ from 'jquery';
 
 /* Must start with a Caps letter */
-function SplashScreenGH(props)
+function SplashScreenGH(Text1, Text2, Text3, Text4, Text5, Text6, Text7, Timeout)
 {
 
     useEffect(()=> 
@@ -15,13 +15,13 @@ function SplashScreenGH(props)
         {
             let array = 
             [
-                ['one',props.Text1],
-                ['two',props.Text2],
-                ['three', props.Text3],
-                ['four', props.Text4],
-                ['five',props.Text5],
-                ['six', props.Text6],
-                ['seven', props.Text7]
+                ['one',Text1],
+                ['two',Text2],
+                ['three', Text3],
+                ['four', Text4],
+                ['five',Text5],
+                ['six', Text6],
+                ['seven', Text7]
             ];
             let rngIndex = Math.floor(Math.random() * 7);
             let spl2Text = document.querySelector('.splashTxt');
@@ -44,7 +44,7 @@ function SplashScreenGH(props)
         setTimeout(()=>
         {
             splashIn();
-        }, props.Timeout)
+        }, Timeout)
 
     }, []);
 

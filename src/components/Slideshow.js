@@ -29,7 +29,7 @@ import simulacra10 from '../Images/simulacra/Ruby.png';
 import simulacra11 from '../Images/simulacra/Saki_Fuwa.png';
 import simulacra12 from '../Images/simulacra/TianLang.png';
 
-function Slideshow(props) 
+function Slideshow() 
 {
     useEffect(()=> 
     {

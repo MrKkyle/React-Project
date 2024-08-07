@@ -3,7 +3,7 @@ import {useState} from "react";
 import {useEffect} from 'react';
 import $ from "jquery";
 
-function Background3(props)
+function Background3({handleChange,hr,text,Title,Background})
 {
     const[inputs, setInputs] = useState({});
     
@@ -249,12 +249,12 @@ function Background3(props)
     }, []);
     return (
     <>   
-        <div className = "background-image" style = {{backgroundImage: `url(${props.Background})`}}>
+        <div className = "background-image" style = {{backgroundImage: `url(${Background})`}}>
             <div className = "container" id = "container">
 
-                <div className = "text"> {props.Title} <hr style = {{display: props.hr}}/> </div>
+                <div className = "text"> {Title} <hr style = {{display: hr}}/> </div>
 
-                <div className = "text-container" onChange = {props.handleChange}> {props.text} </div>
+                <div className = "text-container" onChange = {handleChange}> {text} </div>
 
                 <div className = "edit-text">
                     <form autoComplete = 'off' method = 'post' onSubmit={(event) => handleSubmit(event)}>
